@@ -1,0 +1,29 @@
+.hero {
+    text-align: center;
+    font-size: 60px;
+    font-family: "Chewy", sans-serif;
+    color: white /** var(--mat-sys-tertiary-container)**/;
+    margin-top: 30px;
+    margin-bottom: 100;
+    -webkit-text-stroke: 3px var(--mat-sys-primary);
+}
+
+
+.gallery {
+    --d: 6s;
+    margin-top: 15px;
+    display: grid;
+    overflow: hidden;
+    place-content: center;
+    gap: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+a:visited {
+  text-decoration: none;
+}

@@ -26,10 +26,15 @@ body {
   // Set a default background, font and text colors for the application using
   // Angular Material's system-level CSS variables. Learn more about these
   // variables at https://material.angular.dev/guide/system-variables
-  background-color: var(--mat-sys-surface);
+  background-color: white; //rgb(184, 215, 255);var(--mat-sys-on-secondary);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
-
+  background-image: url('/landing/background3.png'), url('/landing/background4.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left 0% bottom 0%, right 5% top 5% ;
+  background-size: 300px 300px, 150px 300px;
+  background-blend-mode: multiply;
   // Reset the user agent margin.
   margin: 0;
 }

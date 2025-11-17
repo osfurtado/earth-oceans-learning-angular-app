@@ -1,0 +1,31 @@
+<a [href]="this.baseUrl">
+  <div style="display: flex; gap: 5px; align-items: center; margin-left: 20px;">
+    <svg width="90" height="90" fill="#777777">       
+        <image xlink:href="/logo.svg" src="logo.svg" width="90" height="90"/>    
+    </svg>
+    <h1 style="font-weight: bold; font-size: 25px;">EOL</h1>
+  </div>
+</a>
+<h1 class="hero">Entdecke die Meere</h1>
+<div style="display: flex; gap: 50px; justify-content: center;">
+  @for(meer of meere; track meer.name){
+    <button matButton="filled" >{{meer.name}}</button>
+  }
+</div>
+<!--
+<div class="gallery">
+  <img src="/landing/gallery/tier2.jpg" alt="">
+  <img src="/landing/gallery/tier3.jpg" alt="">
+  <img src="/landing/gallery/tier4.jpg" alt="">
+  <img src="/landing/gallery/tier5.jpg" alt="">
+
+  <img src="/landing/tier6.jpg" alt="">
+  <img src="/landing/tier7.jpg" alt="">
+  <img src="/landing/tier2.jpg" alt="">
+  <img src="/landing/tier3.jpg" alt="">
+
+</div>
+-->
+<div style="display: flex; justify-content: center; margin-top: 50px;">
+  <img src="/landing/Welt.png" alt="">
+</div>
