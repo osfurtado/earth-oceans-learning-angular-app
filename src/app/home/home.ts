@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { MatButton } from '@angular/material/button';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-home',
-  imports: [MatButton],
+  imports: [MatButton, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -15,23 +16,23 @@ export class Home {
   meere = [
     {
       name: 'Atlantik',
-      path: `${this.baseUrl}/home`
+      path: 'atlantik'
     },
     {
       name: 'Indik',
-      path: `${this.baseUrl}/home`,
+      path: 'indik',
     },
     {
       name: 'Pazifik',
-      path: `${this.baseUrl}/home`
+      path: 'pazifik'
     },
     {
       name: 'Artik',
-      path: `${this.baseUrl}/home`
+      path: 'artik'
     },
     {
       name: 'Antartik',
-      path: `${this.baseUrl}/home`
+      path: 'antartik'
     }
   ]
 

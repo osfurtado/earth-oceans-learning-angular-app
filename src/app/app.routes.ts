@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
+import { Home } from './home/home';
 import { Meer } from './meer/meer';
 
 export const routes: Routes = [
     { 
-        path: 'meer', 
-        component: Meer 
+        path: '', 
+        component: Home 
     },
+    {
+        path: ':ozean',
+        component: Meer
+    }
 ];
