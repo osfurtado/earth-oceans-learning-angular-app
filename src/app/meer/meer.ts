@@ -3,6 +3,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { MeerDetails } from './meer-details/meer-details';
+import { MeerDto } from './meer.dto';
+import { MeerService } from './meer.service';
 
 @Component({
   selector: 'app-meer',
@@ -15,6 +17,8 @@ export class Meer implements OnInit {
   route = inject(ActivatedRoute)
   activeOzean: string | null = null
   router = inject(Router)
+  selectedMeer!: MeerDto
+  meerService = inject(MeerService)
 
   ngOnInit(): void {
     this.activeOzean = this.route.snapshot.paramMap.get('ozean');
@@ -23,16 +27,19 @@ export class Meer implements OnInit {
   onOceanClick(event: string){
     this.activeOzean = event
     this.router.navigate([`${this.activeOzean}`])
+    
   }
 
   baseUrl = 'http://localhost:4200'
 
   meere = [
     {
+      id: 2,
       name: 'Atlantik',
       path: 'atlantik'
     },
     {
+      id: 3,
       name: 'Indik',
       path: 'indik',
     },
@@ -41,10 +48,12 @@ export class Meer implements OnInit {
       path: 'pazifik'
     },
     {
+      id: 5,
       name: 'Artik',
       path: 'artik'
     },
     {
+      id: 2,
       name: 'Antartik',
       path: 'antartik'
     }

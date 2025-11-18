@@ -4,7 +4,7 @@
         <span>EOL</span>
     </a>
     <div style="flex-grow: 1; display: flex; justify-content: center;">
-        @for(meer of meere; track meer.name){
+        @for(meer of meere; track meer.id){
             <a mat-button [class.active]="meer.path === this.activeOzean" (click)="onOceanClick(meer.path)">{{meer.name}}</a>
         }
     </div>
