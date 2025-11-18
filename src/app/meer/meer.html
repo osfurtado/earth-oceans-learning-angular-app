@@ -1,1 +1,12 @@
-<p>{{this.activeOzean}}</p>
+<mat-toolbar>
+    <a [href]="this.baseUrl" class="logo">
+        <img src="logo2.svg" alt="app logo" height="30" width="30">
+        <span>EOL</span>
+    </a>
+    <div style="flex-grow: 1; display: flex; justify-content: center;">
+        @for(meer of meere; track meer.name){
+            <a mat-button (click)="this.activeOzean = meer.path" [class.active]="meer.path === this.activeOzean">{{meer.name}}</a>
+        }
+    </div>
+</mat-toolbar>
+<h1>{{this.activeOzean}}</h1>

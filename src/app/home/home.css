@@ -17,6 +17,8 @@
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .logo svg {
