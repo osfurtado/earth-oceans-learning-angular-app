@@ -7,9 +7,8 @@
     cursor: pointer;
 }
 
-.logo svg {
-    width: 32px;
-    height: 32px;
+.logo img {
+    filter: invert(1); 
 }
 
 .logo span {
