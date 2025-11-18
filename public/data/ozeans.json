@@ -1,55 +1,43 @@
 {
-  "oceans": [
+  "meere": [
     {
       "id": 1,
       "name": "Pazifischer Ozean",
-      "size": "168.723.000 km²",
-      "maxDepth": "11.034 m (Mariannengraben)",
-      "temperature": "-1.4°C bis 30°C",
-      "MapLocationImage": "assets/maps/pacific_location.png",
-      "specialFeatures": [
+      "tief": "11.034 m (Mariannengraben)",
+      "groesse": "168.723.000 km²",
+      "temperatur": "-1.4°C bis 30°C",
+      "bildUrl": "assets/maps/pacific_location.png",
+      "features": [
         {
-          "title": "Pazifischer Feuerring",
-          "description": "Ein hufeisenförmiges Gebiet, das für häufige Erdbeben und Vulkanausbrüche bekannt ist.",
-          "image": "assets/features/ring_of_fire.jpg"
+          "feature": "Pazifischer Feuerring",
+          "beschreibung": "Ein Gebiet mit hoher vulkanischer Aktivität und vielen Erdbeben.",
+          "bildUrl": "assets/features/ring_of_fire.jpg"
         },
         {
-          "title": "Great Barrier Reef",
-          "description": "Das größte Korallenriffsystem der Welt vor der Küste Australiens.",
-          "image": "assets/features/great_barrier_reef.jpg"
+          "feature": "Great Barrier Reef",
+          "beschreibung": "Das größte Korallenriff der Erde.",
+          "bildUrl": "assets/features/great_barrier_reef.jpg"
         }
       ],
-      "animals": [
+      "tiere": [
         {
           "id": 101,
           "name": "Blauwal",
-          "predators": [
-            {
-              "name": "Orcas (auf Kälber)",
-              "image": "assets/animals/orca_predator.jpg"
-            }
-          ],
-          "mainImage": "assets/animals/blue_whale_main.jpg",
-          "description": "Das größte Tier, das jemals auf der Erde gelebt hat. Sein Herz ist so groß wie ein Kleinwagen.",
-          "gallery": [
-            "assets/gallery/bw_1.jpg",
-            "assets/gallery/bw_2.jpg",
-            "assets/gallery/bw_3.jpg",
-            "assets/gallery/bw_4.jpg"
-          ],
-          "specialFeatures": [
-            {
-              "feature": "Gesang",
-              "image": "assets/icons/sound_wave.png"
-            }
-          ],
-          "size": "Bis zu 30 Meter",
-          "weight": "Bis zu 173 Tonnen",
-          "depth": "0-500 m",
-          "food": [
+          "beschreibung": "Das größte Tier der Geschichte, bekannt für seinen Gesang.",
+          "laenge": "Bis zu 30 Meter",
+          "gewicht": "Bis zu 173 Tonnen",
+          "bildUrl": "assets/animals/blue_whale.jpg",
+          "tief": "0-500 m",
+          "ernaerung": [
             {
               "name": "Krill",
-              "image": "assets/food/krill.jpg"
+              "bildUrl": "assets/food/krill.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Orcas (auf Kälber)",
+              "bildUrl": "assets/animals/orca.jpg"
             }
           ]
         }
@@ -57,29 +45,27 @@
       "quiz": [
         {
           "id": 1,
-          "questions": [
+          "frage": [
             {
               "id": 1,
-              "questionNumber": "1",
-              "questionText": "Welcher ist der tiefste Punkt im Pazifischen Ozean?",
-              "questionImage": "assets/quiz/pacific_trench.jpg",
-              "options": [
+              "frageText": "Wie heißt der tiefste Punkt im Pazifik?",
+              "optionen": [
                 {
-                  "text": "Puerto-Rico-Graben",
-                  "isCorrect": "false"
+                  "id": 1,
+                  "optionText": "Mariannengraben",
+                  "istRichtig": true
                 },
                 {
-                  "text": "Mariannengraben",
-                  "isCorrect": "true"
+                  "id": 2,
+                  "optionText": "Puerto-Rico-Graben",
+                  "istRichtig": false
                 },
                 {
-                  "text": "Sundagraben",
-                  "isCorrect": "false"
+                  "id": 3,
+                  "optionText": "Javagraben",
+                  "istRichtig": false
                 }
-              ],
-              "explanationCorrect": "Richtig! Der Mariannengraben erreicht eine Tiefe von etwa 11.034 Metern.",
-              "feedbackCorrect": "Ausgezeichnet! Das ist der tiefste Punkt der Erde.",
-              "feedbackWrong": "Das ist leider nicht richtig. Versuche es noch einmal!"
+              ]
             }
           ]
         }
@@ -88,52 +74,45 @@
     {
       "id": 2,
       "name": "Atlantischer Ozean",
-      "size": "85.133.000 km²",
-      "maxDepth": "8.486 m (Puerto-Rico-Graben)",
-      "temperature": "-2°C bis 29°C",
-      "MapLocationImage": "assets/maps/atlantic_location.png",
-      "specialFeatures": [
+      "tief": "8.486 m (Puerto-Rico-Graben)",
+      "groesse": "85.133.000 km²",
+      "temperatur": "-2°C bis 29°C",
+      "bildUrl": "assets/maps/atlantic_location.png",
+      "features": [
         {
-          "title": "Golfstrom",
-          "description": "Eine starke Meeresströmung, die warmes Wasser vom Golf von Mexiko in den Nordatlantik bringt.",
-          "image": "assets/features/gulf_stream.jpg"
+          "feature": "Mittelatlantischer Rücken",
+          "beschreibung": "Ein riesiges Unterwassergebirge, das den Ozean teilt.",
+          "bildUrl": "assets/features/mid_atlantic_ridge.jpg"
+        },
+        {
+          "feature": "Golfstrom",
+          "beschreibung": "Eine warme Meeresströmung, die das Klima in Europa beeinflusst.",
+          "bildUrl": "assets/features/gulf_stream.jpg"
         }
       ],
-      "animals": [
+      "tiere": [
         {
           "id": 201,
           "name": "Weißer Hai",
-          "predators": [
-            {
-              "name": "Orcas",
-              "image": "assets/animals/orca.jpg"
-            }
-          ],
-          "mainImage": "assets/animals/great_white_main.jpg",
-          "description": "Ein großer Raubfisch, der für seinen ausgeprägten Geruchssinn bekannt ist.",
-          "gallery": [
-            "assets/gallery/gw_1.jpg",
-            "assets/gallery/gw_2.jpg",
-            "assets/gallery/gw_3.jpg",
-            "assets/gallery/gw_4.jpg"
-          ],
-          "specialFeatures": [
-            {
-              "feature": "Zahnreihen",
-              "image": "assets/icons/teeth.png"
-            }
-          ],
-          "size": "4 bis 6 Meter",
-          "weight": "Bis zu 2 Tonnen",
-          "depth": "0-1200 m",
-          "food": [
+          "beschreibung": "Ein großer Raubfisch mit einem perfekten Geruchssinn.",
+          "laenge": "4 bis 6 Meter",
+          "gewicht": "Bis zu 2 Tonnen",
+          "bildUrl": "assets/animals/great_white.jpg",
+          "tief": "0-1200 m",
+          "ernaerung": [
             {
               "name": "Robben",
-              "image": "assets/food/seal.jpg"
+              "bildUrl": "assets/food/seal.jpg"
             },
             {
               "name": "Thunfisch",
-              "image": "assets/food/tuna.jpg"
+              "bildUrl": "assets/food/tuna.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Orcas",
+              "bildUrl": "assets/animals/orca.jpg"
             }
           ]
         }
@@ -141,25 +120,27 @@
       "quiz": [
         {
           "id": 2,
-          "questions": [
+          "frage": [
             {
               "id": 1,
-              "questionNumber": "1",
-              "questionText": "Welches berühmte Schiff sank im Atlantik?",
-              "questionImage": "assets/quiz/ship.jpg",
-              "options": [
+              "frageText": "Welcher Ozean liegt zwischen Amerika und Europa?",
+              "optionen": [
                 {
-                  "text": "Titanic",
-                  "isCorrect": "true"
+                  "id": 1,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
                 },
                 {
-                  "text": "Santa Maria",
-                  "isCorrect": "false"
+                  "id": 2,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
                 }
-              ],
-              "explanationCorrect": "Korrekt. Die Titanic sank 1912 im Nordatlantik nach einer Kollision mit einem Eisberg.",
-              "feedbackCorrect": "Super gemacht!",
-              "feedbackWrong": "Falsch. Denk an den Film mit Leonardo DiCaprio."
+              ]
             }
           ]
         }
@@ -168,48 +149,36 @@
     {
       "id": 3,
       "name": "Indischer Ozean",
-      "size": "70.560.000 km²",
-      "maxDepth": "7.290 m (Sundagraben)",
-      "temperature": "22°C bis 28°C",
-      "MapLocationImage": "assets/maps/indian_location.png",
-      "specialFeatures": [
+      "tief": "7.290 m (Sundagraben)",
+      "groesse": "70.560.000 km²",
+      "temperatur": "22°C bis 28°C",
+      "bildUrl": "assets/maps/indian_location.png",
+      "features": [
         {
-          "title": "Monsun",
-          "description": "Der Ozean hat einen großen Einfluss auf das Klima, insbesondere durch die Monsunwinde.",
-          "image": "assets/features/monsoon.jpg"
+          "feature": "Monsun-Einfluss",
+          "beschreibung": "Der Ozean steuert die Monsunregen in Asien.",
+          "bildUrl": "assets/features/monsoon.jpg"
         }
       ],
-      "animals": [
+      "tiere": [
         {
           "id": 301,
           "name": "Mantarochen",
-          "predators": [
-            {
-              "name": "Große Haie",
-              "image": "assets/animals/shark_generic.jpg"
-            }
-          ],
-          "mainImage": "assets/animals/manta_main.jpg",
-          "description": "Riesige Rochen, die sanft durch das Wasser gleiten und sich von Plankton ernähren.",
-          "gallery": [
-            "assets/gallery/manta_1.jpg",
-            "assets/gallery/manta_2.jpg",
-            "assets/gallery/manta_3.jpg",
-            "assets/gallery/manta_4.jpg"
-          ],
-          "specialFeatures": [
-            {
-              "feature": "Flügelschlag",
-              "image": "assets/icons/wings.png"
-            }
-          ],
-          "size": "Bis zu 7 Meter Spannweite",
-          "weight": "Bis zu 1.350 kg",
-          "depth": "0-1000 m",
-          "food": [
+          "beschreibung": "Sanfte Riesen, die durch das Wasser 'fliegen'.",
+          "laenge": "7 Meter Spannweite",
+          "gewicht": "Bis zu 1.350 kg",
+          "bildUrl": "assets/animals/manta.jpg",
+          "tief": "0-1000 m",
+          "ernaerung": [
             {
               "name": "Plankton",
-              "image": "assets/food/plankton.jpg"
+              "bildUrl": "assets/food/plankton.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Große Haie",
+              "bildUrl": "assets/animals/shark_generic.jpg"
             }
           ]
         }
@@ -217,25 +186,27 @@
       "quiz": [
         {
           "id": 3,
-          "questions": [
+          "frage": [
             {
               "id": 1,
-              "questionNumber": "1",
-              "questionText": "Der Indische Ozean ist der ______ größte Ozean der Welt.",
-              "questionImage": "assets/quiz/size_chart.jpg",
-              "options": [
+              "frageText": "Der Indische Ozean ist der ______ größte Ozean.",
+              "optionen": [
                 {
-                  "text": "zweit",
-                  "isCorrect": "false"
+                  "id": 1,
+                  "optionText": "zweit",
+                  "istRichtig": false
                 },
                 {
-                  "text": "dritt",
-                  "isCorrect": "true"
+                  "id": 2,
+                  "optionText": "dritt",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "viert",
+                  "istRichtig": false
                 }
-              ],
-              "explanationCorrect": "Genau, er kommt nach dem Pazifik und dem Atlantik.",
-              "feedbackCorrect": "Richtig!",
-              "feedbackWrong": "Nicht ganz. Er ist kleiner als der Atlantik."
+              ]
             }
           ]
         }
@@ -244,52 +215,44 @@
     {
       "id": 4,
       "name": "Südlicher Ozean",
-      "size": "20.327.000 km²",
-      "maxDepth": "7.236 m (Süd-Sandwich-Graben)",
-      "temperature": "-2°C bis 10°C",
-      "MapLocationImage": "assets/maps/southern_location.png",
-      "specialFeatures": [
+      "tief": "7.236 m (Süd-Sandwich-Graben)",
+      "groesse": "20.327.000 km²",
+      "temperatur": "-2°C bis 10°C",
+      "bildUrl": "assets/maps/southern_location.png",
+      "features": [
         {
-          "title": "Zirkumpolarstrom",
-          "description": "Die stärkste Meeresströmung der Welt, die die Antarktis umrundet.",
-          "image": "assets/features/current.jpg"
+          "feature": "Antarktischer Zirkumpolarstrom",
+          "beschreibung": "Die stärkste Strömung der Welt, die die Antarktis isoliert.",
+          "bildUrl": "assets/features/current.jpg"
         }
       ],
-      "animals": [
+      "tiere": [
         {
           "id": 401,
           "name": "Kaiserpinguin",
-          "predators": [
+          "beschreibung": "Die größte Pinguinart, brütet im antarktischen Winter.",
+          "laenge": "115 cm",
+          "gewicht": "Bis zu 40 kg",
+          "bildUrl": "assets/animals/emperor_penguin.jpg",
+          "tief": "Taucht bis 500 m",
+          "ernaerung": [
             {
-              "name": "Seehecht",
-              "image": "assets/animals/leopard_seal.jpg"
-            }
-          ],
-          "mainImage": "assets/animals/penguin_main.jpg",
-          "description": "Die größte Pinguinart. Sie brüten im härtesten Winter auf dem Eis.",
-          "gallery": [
-            "assets/gallery/pen_1.jpg",
-            "assets/gallery/pen_2.jpg",
-            "assets/gallery/pen_3.jpg",
-            "assets/gallery/pen_4.jpg"
-          ],
-          "specialFeatures": [
-            {
-              "feature": "Kälteschutz",
-              "image": "assets/icons/feathers.png"
-            }
-          ],
-          "size": "100-130 cm",
-          "weight": "22 bis 45 kg",
-          "depth": "Taucht bis 500 m",
-          "food": [
-            {
-              "name": "Fische",
-              "image": "assets/food/fish.jpg"
+              "name": "Fisch",
+              "bildUrl": "assets/food/fish.jpg"
             },
             {
               "name": "Krill",
-              "image": "assets/food/krill.jpg"
+              "bildUrl": "assets/food/krill.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Seehecht",
+              "bildUrl": "assets/animals/leopard_seal.jpg"
+            },
+            {
+              "name": "Orca",
+              "bildUrl": "assets/animals/orca.jpg"
             }
           ]
         }
@@ -297,25 +260,27 @@
       "quiz": [
         {
           "id": 4,
-          "questions": [
+          "frage": [
             {
               "id": 1,
-              "questionNumber": "1",
-              "questionText": "Welchen Kontinent umgibt der Südliche Ozean?",
-              "questionImage": "assets/quiz/antarctica.jpg",
-              "options": [
+              "frageText": "Was umgibt der Südliche Ozean?",
+              "optionen": [
                 {
-                  "text": "Australien",
-                  "isCorrect": "false"
+                  "id": 1,
+                  "optionText": "Den Nordpol",
+                  "istRichtig": false
                 },
                 {
-                  "text": "Antarktis",
-                  "isCorrect": "true"
+                  "id": 2,
+                  "optionText": "Die Antarktis",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Australien",
+                  "istRichtig": false
                 }
-              ],
-              "explanationCorrect": "Richtig, er umschließt den Kontinent Antarktika vollständig.",
-              "feedbackCorrect": "Korrekt!",
-              "feedbackWrong": "Falsch, schau dir die Karte nochmal an."
+              ]
             }
           ]
         }
@@ -324,52 +289,40 @@
     {
       "id": 5,
       "name": "Arktischer Ozean",
-      "size": "14.056.000 km²",
-      "maxDepth": "5.450 m (Litke-Tief)",
-      "temperature": "-1.8°C bis 4°C",
-      "MapLocationImage": "assets/maps/arctic_location.png",
-      "specialFeatures": [
+      "tief": "5.450 m",
+      "groesse": "14.056.000 km²",
+      "temperatur": "-1.8°C bis 4°C",
+      "bildUrl": "assets/maps/arctic_location.png",
+      "features": [
         {
-          "title": "Polareis",
-          "description": "Ein Großteil des Ozeans ist das ganze Jahr über von Meereis bedeckt.",
-          "image": "assets/features/sea_ice.jpg"
+          "feature": "Packeis",
+          "beschreibung": "Ein Großteil ist ganzjährig von Eis bedeckt.",
+          "bildUrl": "assets/features/pack_ice.jpg"
         }
       ],
-      "animals": [
+      "tiere": [
         {
           "id": 501,
           "name": "Walross",
-          "predators": [
+          "beschreibung": "Robbenart mit großen Stoßzähnen.",
+          "laenge": "3,5 Meter",
+          "gewicht": "Bis zu 1.200 kg",
+          "bildUrl": "assets/animals/walrus.jpg",
+          "tief": "10-80 m",
+          "ernaerung": [
+            {
+              "name": "Muscheln",
+              "bildUrl": "assets/food/clams.jpg"
+            }
+          ],
+          "raubtiere": [
             {
               "name": "Eisbär",
-              "image": "assets/animals/polar_bear.jpg"
+              "bildUrl": "assets/animals/polar_bear.jpg"
             },
             {
               "name": "Orca",
-              "image": "assets/animals/orca.jpg"
-            }
-          ],
-          "mainImage": "assets/animals/walrus_main.jpg",
-          "description": "Bekannt für ihre langen Stoßzähne und den Schnurrbart. Sie leben auf dem Meereis.",
-          "gallery": [
-            "assets/gallery/wal_1.jpg",
-            "assets/gallery/wal_2.jpg",
-            "assets/gallery/wal_3.jpg",
-            "assets/gallery/wal_4.jpg"
-          ],
-          "specialFeatures": [
-            {
-              "feature": "Stoßzähne",
-              "image": "assets/icons/tusks.png"
-            }
-          ],
-          "size": "Bis zu 3,6 Meter",
-          "weight": "Bis zu 1.500 kg",
-          "depth": "10-80 m",
-          "food": [
-            {
-              "name": "Muscheln",
-              "image": "assets/food/clams.jpg"
+              "bildUrl": "assets/animals/orca.jpg"
             }
           ]
         }
@@ -377,25 +330,27 @@
       "quiz": [
         {
           "id": 5,
-          "questions": [
+          "frage": [
             {
               "id": 1,
-              "questionNumber": "1",
-              "questionText": "Der Arktische Ozean ist der ______ Ozean der Welt.",
-              "questionImage": "assets/quiz/arctic_map.jpg",
-              "options": [
+              "frageText": "Welcher Ozean ist der kleinste?",
+              "optionen": [
                 {
-                  "text": "kleinste",
-                  "isCorrect": "true"
+                  "id": 1,
+                  "optionText": "Arktischer Ozean",
+                  "istRichtig": true
                 },
                 {
-                  "text": "größte",
-                  "isCorrect": "false"
+                  "id": 2,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Südlicher Ozean",
+                  "istRichtig": false
                 }
-              ],
-              "explanationCorrect": "Stimmt, er ist sowohl der kleinste als auch der flachste der fünf Ozeane.",
-              "feedbackCorrect": "Perfekt!",
-              "feedbackWrong": "Nein, das Gegenteil ist der Fall."
+              ]
             }
           ]
         }
