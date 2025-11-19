@@ -1,23 +1,25 @@
-<div style="margin: 50px 150px; display: flex; align-items: center; justify-content: space-between;">
+<div style="margin: 20px 150px; display: flex; align-items: center; justify-content: space-between;">
     <button matButton="filled" (click)="onBack()">Zurück</button>
     <button matButton="filled">Vergleichen</button>
 </div>
-<div style="display: flex; gap: 20px; flex-direction: row; flex-wrap: wrap;">
-    <div style="margin: 0 200px ;height: 200px; width: 200px; background-color: rgb(192, 190, 190); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-    <span style="font-size: 20px; color: white;">Tier Bild</span>
+<div class="carousel-wrapper">
+    <button mat-icon-button class="nav-btn left" (click)="scroll('left')">
+        <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <div class="scroll-container" #scrollContainer>
+        @for(item of items; track item.id){
+        <div class="story-item" (click)="selectItem(item.id)" [class.active]="selectedItemId === item.id">
+            <div class="image-wrapper">
+                <div class="image"></div>
+            </div>
+            <span class="caption">Tier {{ item.id }}</span>
+        </div>
+        }
+
     </div>
-    <div style="margin: 0 200px ;height: 200px; width: 200px; background-color: rgb(192, 190, 190); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 20px; color: white;">Tier Bild</span>
-    </div>
-    <div style="margin: 0 200px ;height: 200px; width: 200px; background-color: rgb(192, 190, 190); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 20px; color: white;">Tier Bild</span>
-    </div>
-    <div style="margin: 0 200px ;height: 200px; width: 200px; background-color: rgb(192, 190, 190); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 20px; color: white;">Tier Bild</span>
-    </div>
-    <div style="margin: 0 200px ;height: 200px; width: 200px; background-color: rgb(192, 190, 190); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 20px; color: white;">Tier Bild</span>
-    </div>
+
+    <button mat-icon-button class="nav-btn right" (click)="scroll('right')">
+        <mat-icon>chevron_right</mat-icon>
+    </button>
 </div>
-
-
