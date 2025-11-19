@@ -1,12 +1,16 @@
 <mat-toolbar>
-    <a [href]="this.baseUrl" class="logo">
+    <a href="/" class="logo">
         <img src="logo2.svg" alt="app logo" height="30" width="30">
         <span>EOL</span>
     </a>
     <div style="flex-grow: 1; display: flex; justify-content: center;">
-        @for(meer of meere; track meer.id){
-            <a mat-button [class.active]="meer.path === this.activeOzean" (click)="onOceanClick(meer.path)">{{meer.name}}</a>
+        @for(meer of meere; track meer.path){
+            <a mat-button [routerLink]="[`/${meer.path}`]" [class.active]="meer.path === this.activeOzean" (click)="onOceanClick(meer.path)">{{meer.path}}</a>
         }
     </div>
 </mat-toolbar>
-<app-meer-details [meer]="this.activeOzean"></app-meer-details>
+<router-outlet></router-outlet>
+
+<!--
+<app-meer-details [meer]="this.activeOzeanId"></app-meer-details>
+-->
