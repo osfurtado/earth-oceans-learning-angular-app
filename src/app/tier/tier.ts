@@ -6,6 +6,8 @@ import { MeerDto } from '../meer/meer.dto';
 import { lastValueFrom, Observable } from 'rxjs';
 import { MeerService } from '../meer/meer.service';
 import { TierDto } from './tier.dto';
+import { AsyncPipe } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 interface TierDtoTemp {
   id: number;
@@ -15,7 +17,7 @@ interface TierDtoTemp {
 
 @Component({
   selector: 'app-tier',
-  imports: [MatButtonModule, MatIconModule],
+  imports: [MatButtonModule, MatIconModule, MatCardModule, MatIconModule],
   templateUrl: './tier.html',
   styleUrl: './tier.css',
 })
@@ -25,6 +27,7 @@ export class Tier implements OnInit{
   router = inject(Router)
   activeOcean:string | null = null
   selectedItemId: number | null = null
+  selectedTier!: TierDto
   activeOzeanId!: number 
   meerObservable!: Observable<MeerDto>
   meerService = inject(MeerService)
@@ -47,12 +50,15 @@ export class Tier implements OnInit{
 
   selectItem(id: number): void {
     this.selectedItemId = id;
+    this.selectedTier = this.tiere.filter(t => t.id == this.selectedItemId)[0]
   }
 
   private async getMeer(id: number){
     this.meerObservable = this.meerService.getMeerById(id);
     this.selectedMeer = await lastValueFrom(this.meerObservable)
     this.tiere = this.selectedMeer.tiere
+    this.selectedItemId = this.tiere[0].id
+    this.selectedTier = this.tiere.filter(t => t.id == this.selectedItemId)[0]
   }
 
   scroll(direction: 'left' | 'right'){
