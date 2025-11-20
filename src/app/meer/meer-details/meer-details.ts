@@ -1,5 +1,5 @@
 import { Component, inject, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MeerDto } from '../meer.dto';
 import { MeerService } from '../meer.service';
 import { lastValueFrom, Observable } from 'rxjs';
@@ -11,7 +11,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-meer-details',
-  imports: [AsyncPipe, MatButtonModule, MatCardModule, MatIconModule, MatProgressSpinnerModule, RouterLink],
+  imports: [AsyncPipe, MatButtonModule, MatCardModule, MatIconModule, MatProgressSpinnerModule],
   templateUrl: './meer-details.html',
   styleUrl: './meer-details.css',
 })
@@ -25,33 +25,29 @@ export class MeerDetails implements OnInit {
   activeOzean: string | null = null
   activeOzeanId!: number 
   meerService = inject(MeerService)
+  router = inject(Router)
   meerObservable!: Observable<MeerDto>
 
 
   async ngOnInit() {
     this.route.paramMap.subscribe( params => {
       this.activeOzean = params.get('ozean')
-      console.log('Oceano selecionado: ', this.activeOzean)
       this.activeOzeanId = this.meere.filter(m => m.path === this.activeOzean)[0].id
       this.getMeer(this.activeOzeanId)
     })
 
-
   }
 
-  /** 
-  async ngOnChanges(changes: SimpleChanges) {
-    if (changes['activeOzeanId'] && !changes['activeOzeanId'].firstChange) {
-      this.getMeer(this.activeOzeanId)
-    }
+  onTierClick(){
+    this.router.navigate([this.activeOzean, 'tiere'])
   }
-  */
+
   
 
   private async getMeer(id: number){
     this.meerObservable = this.meerService.getMeerById(id);
     this.selectedMeer = await lastValueFrom(this.meerObservable)
-    console.log('Este foi o Mar selecionado: ',this.selectedMeer)
+    
   }
 
 

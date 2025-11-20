@@ -1,28 +1,17 @@
-<a [href]="this.baseUrl" class="logo">
-  <img src="logo2.svg" alt="app logo" height="30" width="30">
-  <span>EOL</span>
-</a>
-<h1 class="hero">Entdecke die Meere</h1>
-<div style="display: flex; gap: 50px; justify-content: center;">
-  @for(meer of meere; track meer.name){
-  <button matButton="filled" style="width: 200px; height: 50px; font-size: 25px;"
-    [routerLink]="meer.path">{{meer.name}}</button>
-  }
-</div>
-<!--
-<div class="gallery">
-  <img src="/landing/gallery/tier2.jpg" alt="">
-  <img src="/landing/gallery/tier3.jpg" alt="">
-  <img src="/landing/gallery/tier4.jpg" alt="">
-  <img src="/landing/gallery/tier5.jpg" alt="">
+<div class="home-container">
+  <a [href]="this.baseUrl" class="logo">
+    <img src="logo2.svg" alt="app logo" height="30" width="30">
+    <span>EOL</span>
+  </a>
+  <h1 class="hero">Entdecke die Meere</h1>
+  <div style="display: flex; gap: 50px; justify-content: center;">
+    @for(meer of meere; track meer.name){
+    <button matButton="filled" style="width: 200px; height: 50px; font-size: 25px;"
+      [routerLink]="meer.path">{{meer.name}}</button>
+    }
+  </div>
 
-  <img src="/landing/tier6.jpg" alt="">
-  <img src="/landing/tier7.jpg" alt="">
-  <img src="/landing/tier2.jpg" alt="">
-  <img src="/landing/tier3.jpg" alt="">
-
-</div>
--->
-<div style="display: flex; justify-content: center; margin-top: 50px;">
-  <img src="/landing/Welt.png" alt="">
+  <div style="display: flex; justify-content: center; margin-top: 50px;">
+    <img src="/landing/Welt.png" alt="">
+  </div>
 </div>

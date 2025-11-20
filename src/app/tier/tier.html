@@ -8,12 +8,12 @@
     </button>
 
     <div class="scroll-container" #scrollContainer>
-        @for(item of items; track item.id){
+        @for(item of tiere; track item.id){
         <div class="story-item" (click)="selectItem(item.id)" [class.active]="selectedItemId === item.id">
             <div class="image-wrapper">
                 <div class="image"></div>
             </div>
-            <span class="caption">Tier {{ item.id }}</span>
+            <span class="caption">{{item.name}}</span>
         </div>
         }
 

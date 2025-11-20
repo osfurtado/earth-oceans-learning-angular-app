@@ -1,0 +1,9 @@
+.meer-details-container{
+    margin: 0;
+    padding: 0;
+    background-image: url('/landing/backgroundMeer1.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left 0% bottom 0%;
+    background-size: 300px 300px, 150px 300px, contain;
+}

@@ -1,54 +1,56 @@
-@if(meerObservable | async) {
-    <div style="margin: 50px 150px; display: flex; justify-content: space-between; ">
-        <h1>{{this.selectedMeer.name}}</h1>
-        <button mat-flat-button> Vergleichen </button>
-    </div>
-    <div style="border-radius: 15px ; background-color: gray; height: 250px; margin: 0 150px; display: flex; align-items: center; justify-content: center;">
-        <h1 style="text-align: center; color: white;">Bild: {{this.selectedMeer.bildUrl}}</h1>
-    </div>
-    <div style="margin: 50px 150px; display: flex; gap: 15px;">
-        <mat-card appearance="filled" style="width: 20%; height: 100%; background-color: var(--mat-sys-secondary-container);">
+<div class="meer-details-container">
+    @if(meerObservable | async) {
+        <div style="margin: 20px 150px; display: flex; justify-content: space-between; ">
+            <h1>{{this.selectedMeer.name}}</h1>
+            <button mat-flat-button> Vergleichen </button>
+        </div>
+        <div style="border-radius: 15px ; background-color: gray; height: 250px; margin: 0 150px; display: flex; align-items: center; justify-content: center;">
+            <h1 style="text-align: center; color: white;">Bild: {{this.selectedMeer.bildUrl}}</h1>
+        </div>
+        <div style="margin: 50px 150px; display: flex; gap: 15px;">
+            <mat-card appearance="filled" style="width: 20%; height: 100%; background-color: var(--mat-sys-secondary-container);">
+                <mat-card-content>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 5px;">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">open_in_full</mat-icon>
+                        <span style="font-weight: bold; font-size: 18px;">Größe</span>
+                    </div>
+                    <span style="margin-left: 25px; font-size: 18px;">{{this.selectedMeer.groesse}}</span>
+                </mat-card-content>
+            </mat-card>
+            <mat-card appearance="filled" style="width: 35%; height: 100%; background-color: var(--mat-sys-secondary-container);">
+                <mat-card-content>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 5px;">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
+                        <span style="font-weight: bold; font-size: 18px;">Tief</span> <br>
+                    </div>
+                    <span style="margin-left: 25px; font-size: 18px;">{{this.selectedMeer.tief}}</span>
+                </mat-card-content>
+            </mat-card>
+            <mat-card appearance="filled" style="width: 35%; height: 100%; background-color: var(--mat-sys-secondary-container);">
+                <mat-card-content>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 5px;">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">thermostat</mat-icon>
+                        <span style="font-weight: bold; font-size: 18px;">Temperatur</span>
+                    </div>
+                    <span style="margin-left: 25px; font-size: 18px;">{{this.selectedMeer.temperatur}}</span>
+                </mat-card-content>
+            </mat-card>
+            <mat-card appearance="filled" (click)="onTierClick()" style="width: 10%; height: 100%; background-color: var(--mat-sys-primary); cursor: pointer;" >
+                <mat-card-content style="display: flex; justify-content: center;">
+                    <span style="color: white; font-weight: bold;">Tiere Entdecken</span>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <mat-card appearance="filled" style="margin: 0 150px;">
             <mat-card-content>
-                <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 5px;">
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">open_in_full</mat-icon>
-                    <span style="font-weight: bold; font-size: 18px;">Größe</span>
-                </div>
-                <span style="margin-left: 25px; font-size: 18px;">{{this.selectedMeer.groesse}}</span>
+                <h2>Weitere Info</h2>
+                <p>{{this.selectedMeer.features[0].beschreibung}}</p>
+                <p>{{this.selectedMeer.features[1]?.beschreibung}}</p>
             </mat-card-content>
         </mat-card>
-        <mat-card appearance="filled" style="width: 35%; height: 100%; background-color: var(--mat-sys-secondary-container);">
-            <mat-card-content>
-                <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 5px;">
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
-                    <span style="font-weight: bold; font-size: 18px;">Tief</span> <br>
-                </div>
-                <span style="margin-left: 25px; font-size: 18px;">{{this.selectedMeer.tief}}</span>
-            </mat-card-content>
-        </mat-card>
-        <mat-card appearance="filled" style="width: 35%; height: 100%; background-color: var(--mat-sys-secondary-container);">
-            <mat-card-content>
-                <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 5px;">
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">thermostat</mat-icon>
-                    <span style="font-weight: bold; font-size: 18px;">Temperatur</span>
-                </div>
-                <span style="margin-left: 25px; font-size: 18px;">{{this.selectedMeer.temperatur}}</span>
-            </mat-card-content>
-        </mat-card>
-        <mat-card appearance="filled" style="width: 10%; height: 100%; background-color: var(--mat-sys-primary); cursor: pointer;" [routerLink]="['tiere']">
-            <mat-card-content style="display: flex; justify-content: center;">
-                <span style="color: white; font-weight: bold;">Tiere Entdecken</span>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <mat-card appearance="filled" style="margin: 0 150px;">
-        <mat-card-content>
-            <h2>Weitere Info</h2>
-            <p>{{this.selectedMeer.features[0].beschreibung}}</p>
-            <p>{{this.selectedMeer.features[1]?.beschreibung}}</p>
-        </mat-card-content>
-    </mat-card>
-} @else {
-    <mat-spinner style="width: 100%; height: 100%; margin: auto;"></mat-spinner>
-}
+    } @else {
+        <mat-spinner style="width: 100%; height: 100%; margin: auto;"></mat-spinner>
+    }
+</div>
 
 
