@@ -18,7 +18,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 export class MeerDetails implements OnInit {
 
   route = inject(ActivatedRoute)
-  //@Input({required: true}) meer!: number 
+
 
 
   selectedMeer!: MeerDto
@@ -33,6 +33,7 @@ export class MeerDetails implements OnInit {
     this.route.paramMap.subscribe( params => {
       this.activeOzean = params.get('ozean')
       this.activeOzeanId = this.meere.filter(m => m.path === this.activeOzean)[0].id
+      console.log(this.activeOzeanId)
       this.getMeer(this.activeOzeanId)
     })
 
@@ -48,6 +49,10 @@ export class MeerDetails implements OnInit {
     this.meerObservable = this.meerService.getMeerById(id);
     this.selectedMeer = await lastValueFrom(this.meerObservable)
     
+  }
+
+  onVergleich(){
+    this.router.navigate(['/vergleich'], { queryParams: { oceanId: this.activeOzeanId, source: 'ocean' } })
   }
 
 

@@ -6,7 +6,7 @@
       "tief": "11.034 m (Mariannengraben)",
       "groesse": "168.723.000 km²",
       "temperatur": "-1.4°C bis 50°C",
-      "bildUrl": "assets/maps/pacific_location.png",
+      "bildUrl": "/meere/pazifik/pazifik.jpg",
       "features": [
         {
           "feature": "Pazifischer Feuerring",
@@ -26,12 +26,12 @@
           "beschreibung": "Das größte Tier der Geschichte, bekannt für seinen Gesang.",
           "laenge": "Bis zu 30 Meter",
           "gewicht": "Bis zu 173 Tonnen",
-          "bildUrl": "assets/animals/blue_whale.jpg",
+          "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
           "tief": "0-500 m",
           "ernaerung": [
             {
               "name": "Krill",
-              "bildUrl": "assets/food/krill.jpg"
+              "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg"
             }
           ],
           "raubtiere": [
@@ -47,7 +47,7 @@
             "beschreibung": "Einer der größten Raubfische der Welt. Er ist bekannt für seine Größe und seine Jagdgewohnheiten. Der Pazifik beheimatet eine der größten Populationen, besonders vor der Küste Kaliforniens und Südaustraliens/Neuseelands.",
             "laenge": "3,5 bis 6 Meter",
             "gewicht": "bis zu 2 Tonnen",
-            "bildUrl": "https://example.com/bild/weisser_hai.jpg",
+            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
             "tief": "0 bis 1.200 Meter",
             "ernaerung": [
               {
@@ -76,7 +76,7 @@
             "beschreibung": "Ein großer Tintenfisch, der im Nordpazifik, insbesondere in den Gewässern um Japan und Korea, heimisch ist. Er ist bekannt für seine enormen Augen und seine nächtliche Jagd.",
             "laenge": "Gesamtlänge bis zu 5 Meter",
             "gewicht": "bis zu 50 kg",
-            "bildUrl": "https://example.com/bild/riesenkalmar.jpg",
+            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
             "tief": "ca. 100 bis 1.000 Meter",
             "ernaerung": [
               {
@@ -109,7 +109,7 @@
             "beschreibung": "Dieser massige Fisch, oft als **Goliath-Zackenbarsch** des Pazifiks bezeichnet, kommt in Riffgebieten des Indo-Pazifiks vor, ist aber ein charakteristisches Tier der pazifischen Korallenriffe.",
             "laenge": "bis zu 2,7 Meter",
             "gewicht": "bis zu 400 kg",
-            "bildUrl": "https://example.com/bild/riesenzackenbarsch.jpg",
+            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
             "tief": "5 bis 100 Meter",
             "ernaerung": [
               {
@@ -138,7 +138,7 @@
             "beschreibung": "Ein Hochseehai, der hauptsächlich in tropischen und subtropischen Gewässern des Pazifiks, Atlantiks und Indischen Ozeans lebt, aber im Pazifik sehr verbreitet ist. Er ist bekannt für seine breiten, abgerundeten Flossenspitzen.",
             "laenge": "ca. 1,5 bis 3 Meter",
             "gewicht": "bis zu 170 kg",
-            "bildUrl": "https://example.com/bild/weissspitzenhai.jpg",
+            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
             "tief": "Oberfläche bis 300 Meter",
             "ernaerung": [
               {
@@ -167,7 +167,7 @@
             "beschreibung": "Ein Meeressäuger, der für seine Fähigkeit bekannt ist, Steine als Werkzeuge zu verwenden. Er ist typisch für die Küstengewässer des Nordpazifiks.",
             "laenge": "1,2 bis 1,5 Meter",
             "gewicht": "14 bis 45 kg",
-            "bildUrl": "https://example.com/bild/seeotter.jpg",
+            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
             "tief": "Oberfläche bis 50 Meter",
             "ernaerung": [
               {
@@ -230,7 +230,7 @@
       "tief": "8.486 m (Puerto-Rico-Graben)",
       "groesse": "85.133.000 km²",
       "temperatur": "-2°C bis 29°C",
-      "bildUrl": "assets/maps/atlantic_location.png",
+      "bildUrl": "/meere/atlantik/atlantik.jpg",
       "features": [
         {
           "feature": "Mittelatlantischer Rücken",

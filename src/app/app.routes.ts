@@ -3,6 +3,7 @@ import { Home } from './home/home';
 import { Meer } from './meer/meer';
 import { Tier } from './tier/tier';
 import { MeerDetails } from './meer/meer-details/meer-details';
+import { Vergleich } from './vergleich/vergleich';
 
 
 export const routes: Routes = [
@@ -16,12 +17,16 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                component: MeerDetails
+                component: MeerDetails,
             },
             {
                 path: 'tiere',
-                component: Tier
-            }
+                component: Tier,
+            },
         ]
+    },
+    {
+        path: 'vergleich',
+        component: Vergleich
     }
 ];

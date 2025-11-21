@@ -11,7 +11,7 @@
         @for(item of tiere; track item.id){
         <div class="story-item" (click)="selectItem(item.id)" [class.active]="selectedItemId === item.id">
             <div class="image-wrapper">
-                <div class="image"></div>
+                <img class="image" [src]="item.bildUrl" [alt]="item.name">
             </div>
             <span class="caption">{{item.name}}</span>
         </div>

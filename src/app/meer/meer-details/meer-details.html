@@ -2,10 +2,10 @@
     @if(meerObservable | async) {
         <div style="margin: 20px 150px; display: flex; justify-content: space-between; ">
             <h1>{{this.selectedMeer.name}}</h1>
-            <button mat-flat-button> Vergleichen </button>
+            <button mat-flat-button (click)="onVergleich()"> Vergleichen </button>
         </div>
         <div style="border-radius: 15px ; background-color: gray; height: 250px; margin: 0 150px; display: flex; align-items: center; justify-content: center;">
-            <h1 style="text-align: center; color: white;">Bild: {{this.selectedMeer.bildUrl}}</h1>
+            <img [src]="this.selectedMeer.bildUrl" [alt]="this.selectedMeer.name" style="height: 100%; width: 100%; object-fit: cover; border-radius: 15px;">
         </div>
         <div style="margin: 50px 150px; display: flex; gap: 15px;">
             <mat-card appearance="filled" style="width: 20%; height: 100%; background-color: var(--mat-sys-secondary-container);">
@@ -49,7 +49,9 @@
             </mat-card-content>
         </mat-card>
     } @else {
-        <mat-spinner style="width: 100%; height: 100%; margin: auto;"></mat-spinner>
+        <div style="height:100%; width:100%; display: flex; align-items: center; justify-content: center; ">
+            <mat-spinner></mat-spinner>
+        </div>
     }
 </div>
 

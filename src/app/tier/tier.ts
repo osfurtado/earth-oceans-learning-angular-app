@@ -48,6 +48,10 @@ export class Tier implements OnInit{
     this.router.navigate([this.activeOcean])
   }
 
+  onVergleich(){
+    this.router.navigate([ '/vergleich'], { queryParams: { oceanId: this.activeOzeanId, tierId: this.selectedTier.id, source:'tier'} })
+  }
+
   selectItem(id: number): void {
     this.selectedItemId = id;
     this.selectedTier = this.tiere.filter(t => t.id == this.selectedItemId)[0]
@@ -83,7 +87,7 @@ export class Tier implements OnInit{
     { id: 8, src: 'https://via.placeholder.com/250', alt: 'Tier 8' },
   ];
 
-      meere = [
+  meere = [
     {
       id: 2,
       path: 'atlantik'
