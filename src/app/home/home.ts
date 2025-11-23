@@ -31,8 +31,8 @@ export class Home {
       path: 'artik'
     },
     {
-      name: 'Antartik',
-      path: 'antartik'
+      name: 'Antarktik',
+      path: 'antarktik'
     }
   ]
 

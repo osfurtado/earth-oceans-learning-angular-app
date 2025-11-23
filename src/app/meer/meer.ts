@@ -31,23 +31,28 @@ export class Meer implements OnInit {
   meere = [
     {
       id: 2,
-      path: 'atlantik'
+      path: 'atlantik',
+      name: 'Atlantik'
     },
     {
       id: 3,
       path: 'indik',
+      name: 'Indik'
     },
     {
       id: 1,
-      path: 'pazifik'
+      path: 'pazifik',
+      name: 'Pazifik'
     },
     {
       id: 5,
-      path: 'artik'
+      path: 'artik',
+      name: 'Artik'
     },
     {
       id: 4,
-      path: 'antartik'
+      path: 'antarktik',
+      name: 'Antarktik'
     }
   ]
 

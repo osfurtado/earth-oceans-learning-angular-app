@@ -1,5 +1,5 @@
 import { Component, inject, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { MeerDto } from '../meer.dto';
 import { MeerService } from '../meer.service';
 import { lastValueFrom, Observable } from 'rxjs';
@@ -11,7 +11,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-meer-details',
-  imports: [AsyncPipe, MatButtonModule, MatCardModule, MatIconModule, MatProgressSpinnerModule],
+  imports: [AsyncPipe, MatButtonModule, MatCardModule, MatIconModule, MatProgressSpinnerModule, RouterLink],
   templateUrl: './meer-details.html',
   styleUrl: './meer-details.css',
 })
@@ -52,8 +52,9 @@ export class MeerDetails implements OnInit {
   }
 
   onVergleich(){
-    this.router.navigate(['/vergleich'], { queryParams: { oceanId: this.activeOzeanId, source: 'ocean' } })
+    this.router.navigate([this.activeOzean ,'vergleich'], { queryParams: { source:'ocean'} })
   }
+
 
 
     meere = [
@@ -75,7 +76,7 @@ export class MeerDetails implements OnInit {
     },
     {
       id: 4,
-      path: 'antartik'
+      path: 'antarktik'
     }
   ]
 

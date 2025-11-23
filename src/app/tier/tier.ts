@@ -49,7 +49,7 @@ export class Tier implements OnInit{
   }
 
   onVergleich(){
-    this.router.navigate([ '/vergleich'], { queryParams: { oceanId: this.activeOzeanId, tierId: this.selectedTier.id, source:'tier'} })
+    this.router.navigate([ this.activeOcean,'vergleich'], { queryParams: { source:'tier', tierId: this.selectedTier.id } })
   }
 
   selectItem(id: number): void {

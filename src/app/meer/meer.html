@@ -5,7 +5,8 @@
     </a>
     <div style="flex-grow: 1; display: flex; justify-content: center;">
         @for(meer of meere; track meer.path){
-            <a mat-button [routerLink]="[`/${meer.path}`]" [class.active]="meer.path === this.activeOzean" (click)="onOceanClick(meer.path)">{{meer.path}}</a>
+        <a mat-button [routerLink]="[`/${meer.path}`]" [class.active]="meer.path === this.activeOzean"
+            (click)="onOceanClick(meer.path)">{{meer.name}}</a>
         }
     </div>
 </mat-toolbar>

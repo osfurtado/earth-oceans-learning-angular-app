@@ -20,13 +20,13 @@ export const routes: Routes = [
                 component: MeerDetails,
             },
             {
+                path: "vergleich",
+                component: Vergleich,
+            },
+            {
                 path: 'tiere',
                 component: Tier,
-            },
+            }
         ]
-    },
-    {
-        path: 'vergleich',
-        component: Vergleich
     }
 ];

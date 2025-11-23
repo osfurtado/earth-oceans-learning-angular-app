@@ -23,18 +23,24 @@ export class Vergleich implements OnInit {
   meerObservable!: Observable<MeerDto>
   meerService = inject(MeerService)
   source: string = ''
+  typ!: string;
 
   ngOnInit(): void {
 
+
+
+
     this.route.queryParams.subscribe( params => {
       this.source = params['source']
+
+          /*
       this.activeOzeanId = params['oceanId']
       this.getMeer(this.activeOzeanId)
 
       if(this.source == 'tier'){
         this.activeTierId =  params['tierId']
         this.getTier(this.activeTierId)
-      }     
+      }     */
       
     })
  
