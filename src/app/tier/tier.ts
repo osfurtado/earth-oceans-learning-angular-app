@@ -17,7 +17,7 @@ interface TierDtoTemp {
 
 @Component({
   selector: 'app-tier',
-  imports: [MatButtonModule, MatIconModule, MatCardModule, MatIconModule],
+  imports: [MatButtonModule, MatIconModule, MatCardModule, MatIconModule, AsyncPipe],
   templateUrl: './tier.html',
   styleUrl: './tier.css',
 })
@@ -49,7 +49,7 @@ export class Tier implements OnInit{
   }
 
   onVergleich(){
-    this.router.navigate([ this.activeOcean,'vergleich'], { queryParams: { source:'tier', tierId: this.selectedTier.id } })
+    this.router.navigate([ this.activeOcean,'vergleich'], { queryParams: { source:'tier', oceanId: this.activeOzeanId,tierId: this.selectedTier.id } })
   }
 
   selectItem(id: number): void {
@@ -61,8 +61,7 @@ export class Tier implements OnInit{
     this.meerObservable = this.meerService.getMeerById(id);
     this.selectedMeer = await lastValueFrom(this.meerObservable)
     this.tiere = this.selectedMeer.tiere
-    this.selectedItemId = this.tiere[0].id
-    this.selectedTier = this.tiere.filter(t => t.id == this.selectedItemId)[0]
+    this.selectItem(this.tiere[0].id)
   }
 
   scroll(direction: 'left' | 'right'){

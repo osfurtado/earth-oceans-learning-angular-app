@@ -11,7 +11,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-meer-details',
-  imports: [AsyncPipe, MatButtonModule, MatCardModule, MatIconModule, MatProgressSpinnerModule, RouterLink],
+  imports: [AsyncPipe, MatButtonModule, MatCardModule, MatIconModule, MatProgressSpinnerModule],
   templateUrl: './meer-details.html',
   styleUrl: './meer-details.css',
 })
@@ -52,7 +52,7 @@ export class MeerDetails implements OnInit {
   }
 
   onVergleich(){
-    this.router.navigate([this.activeOzean ,'vergleich'], { queryParams: { source:'ocean'} })
+    this.router.navigate([this.activeOzean ,'vergleich'], { queryParams: { source:'ocean', oceanId: this.activeOzeanId} })
   }
 
 

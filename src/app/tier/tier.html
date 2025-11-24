@@ -2,7 +2,8 @@
     <button matButton="filled" (click)="onBack()">Zurück</button>
     <button matButton="filled" (click)="onVergleich()">Vergleichen</button>
 </div>
-<div class="carousel-wrapper">
+@if( meerObservable | async){
+    <div class="carousel-wrapper">
     <button mat-icon-button class="nav-btn left" (click)="scroll('left')">
         <mat-icon>chevron_left</mat-icon>
     </button>
@@ -29,3 +30,4 @@
         <p style="font-size: 16px;">{{this.selectedTier.beschreibung}}</p>
     </mat-card-content>
 </mat-card>
+}

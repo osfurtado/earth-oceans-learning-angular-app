@@ -20,9 +20,10 @@ export class MeerService {
         return found
       })
     )
+  }
 
-
-
+  public getAllMeere(): Observable<MeerDto[]> {
+    return this.http.get<MeerDto[]>(this.url)
   }
 
 
