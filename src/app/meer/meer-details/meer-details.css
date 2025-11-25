@@ -2,10 +2,23 @@
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0 150px;
     background-image: url('/landing/backgroundMeer1.svg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left 0% bottom 0%;
     background-size: 300px 300px, 150px 300px, contain;
 }
+
+.quiz{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+
+

@@ -63,16 +63,4 @@ export class Vergleich implements OnInit {
   }
 
 
-  onMeerChange(optionen:MatListOption[]){
-    console.log(optionen)
-  }
-
-
-
-
-
-
-
-
-
 }

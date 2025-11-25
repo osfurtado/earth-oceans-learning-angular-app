@@ -1,15 +1,15 @@
 <div class="meer-details-container">
     @if(meerObservable | async) {
-    <div style="margin: 20px 150px; display: flex; justify-content: space-between; ">
+    <div style="margin: 20px 0; display: flex; justify-content: space-between; ">
         <h1>{{this.selectedMeer.name}}</h1>
         <button mat-flat-button (click)="onVergleich()"> Vergleichen </button>
     </div>
     <div
-        style="border-radius: 15px ; background-color: gray; height: 250px; margin: 0 150px; display: flex; align-items: center; justify-content: center;">
+        style="border-radius: 15px ; background-color: rgb(240, 239, 239); height: 250px; display: flex; align-items: center; justify-content: center;">
         <img src="/meere/welt.png" [alt]="this.selectedMeer.name"
             style="height: 100%; width: 100%; object-fit: cover; border-radius: 15px; object-position: top;">
     </div>
-    <div style="margin: 50px 150px; display: flex; gap: 15px;">
+    <div style="margin: 50px 0; display: flex; gap: 15px;">
         <mat-card appearance="filled"
             style="width: 20%; height: 100%; background-color: var(--mat-sys-secondary-container);">
             <mat-card-content>
@@ -47,13 +47,27 @@
             </mat-card-content>
         </mat-card>
     </div>
-    <mat-card appearance="filled" style="margin: 0 150px;">
-        <mat-card-content>
-            <h2>Weitere Info</h2>
-            <p>{{this.selectedMeer.features[0].beschreibung}}</p>
-            <p>{{this.selectedMeer.features[1]?.beschreibung}}</p>
+    <mat-card appearance="raised" style="padding: 20px;" >
+        <mat-card-header style="padding: 20px;">
+            <mat-card-title style="font-weight: bold;">Weitere Info</mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap;">
+            @for(f of this.selectedMeer.features; track f.feature){
+                <mat-card appearance="outlined" style="max-width: 500px;">
+                    <mat-card-header style="padding: 10px;">
+                        <mat-card-title style="font-size: 18px;">{{f.feature}}</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image [src]="f.bildUrl" [alt]="f.feature">
+                    <mat-card-content>
+                        <p>{{f.beschreibung}}</p>
+                    </mat-card-content>
+                </mat-card>
+            }
         </mat-card-content>
     </mat-card>
+    <div class="quiz">
+        <button mat-flat-button (click)="onQuizClick()">Quiz</button>
+    </div>
     } @else {
     <div style="height:100%; width:100%; display: flex; align-items: center; justify-content: center; ">
         <mat-spinner></mat-spinner>

@@ -9,14 +9,19 @@
       "bildUrl": "/meere/pazifik/pazifik.jpg",
       "features": [
         {
+          "feature": "Größte Ozean",
+          "beschreibung": "Der Pazifik ist der größte Ozean. Westlich des Ozeans liegen die Kontinente Asien und Australien, östlich vom Ozean befinden sich Nord- und Südamerika. Mit einer Fläche von etwa 165 Millionen Quadratkilometern und einer maximalen Tiefe von ca. 11.000 Metern (Mariannengraben), ist er deutlich größer und tiefer als alle anderen Weltmeere der Erde. Außerdem grenzt er an jeden anderen Ozean.",
+          "bildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg"
+        },
+        {
           "feature": "Pazifischer Feuerring",
           "beschreibung": "Ein Gebiet mit hoher vulkanischer Aktivität und vielen Erdbeben.",
-          "bildUrl": "assets/features/ring_of_fire.jpg"
+          "bildUrl": "meere/pazifik/eigenschaften/pazifischer_feuerring.png"
         },
         {
           "feature": "Great Barrier Reef",
           "beschreibung": "Das größte Korallenriff der Erde.",
-          "bildUrl": "assets/features/great_barrier_reef.jpg"
+          "bildUrl": "meere/pazifik/eigenschaften/great_barrier_reef.jpg"
         }
       ],
       "tiere": [
@@ -219,6 +224,110 @@
                   "istRichtig": false
                 }
               ]
+            },
+            {
+              "id": 2,
+              "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Vier",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Fünf",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Sechs",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Sieben",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "frageText": "Welcher Ozean ist der größte der Welt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Arktischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Zuckerozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": true
+                }
+              ]
+            },
+            {
+              "id": 5,
+              "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Antarktischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 2,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": false
+                }
+              ]
             }
           ]
         }
@@ -233,14 +342,24 @@
       "bildUrl": "/meere/atlantik/atlantik.jpg",
       "features": [
         {
+          "feature": "zweitgrößte Ozean",
+          "beschreibung": "Der Atlantik ist nur der zweitgrößte Ozean. Er befindet sich zwischen den Kontinenten Nord- und Südamerika auf der einen Seite und Europa sowie Afrika auf der anderen Seite. Durch das europäische Mittelmeer hat der atlantische Ozean auch eine Verbindung zum asiatischen Kontinent.",
+          "bildUrl": "meere/atlantik/eigenschaften/atlantik-2.jpg"
+        },
+        {
+          "feature": "Entstehung",
+          "beschreibung": "Der Atlantische Ozean entstand erst vor etwa 150 Millionen Jahren durch die Verschiebung der Kontinente — also als der Urkontinent Pangäa auseinanderbrach.",
+          "bildUrl": "meere/atlantik/eigenschaften/atlantik-2.jpg"
+        },
+        {
           "feature": "Mittelatlantischer Rücken",
           "beschreibung": "Ein riesiges Unterwassergebirge, das den Ozean teilt.",
-          "bildUrl": "assets/features/mid_atlantic_ridge.jpg"
+          "bildUrl": "meere/atlantik/eigenschaften/atlantik-2.jpg"
         },
         {
           "feature": "Golfstrom",
           "beschreibung": "Eine warme Meeresströmung, die das Klima in Europa beeinflusst.",
-          "bildUrl": "assets/features/gulf_stream.jpg"
+          "bildUrl": "meere/atlantik/eigenschaften/atlantik-2.jpg"
         }
       ],
       "tiere": [
@@ -294,6 +413,110 @@
                   "istRichtig": false
                 }
               ]
+            },
+            {
+              "id": 2,
+              "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Vier",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Fünf",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Sechs",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Sieben",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "frageText": "Welcher Ozean ist der größte der Welt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Arktischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Zuckerozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": true
+                }
+              ]
+            },
+            {
+              "id": 5,
+              "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Antarktischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 2,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": false
+                }
+              ]
             }
           ]
         }
@@ -310,7 +533,7 @@
         {
           "feature": "Monsun-Einfluss",
           "beschreibung": "Der Ozean steuert die Monsunregen in Asien.",
-          "bildUrl": "assets/features/monsoon.jpg"
+          "bildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg"
         }
       ],
       "tiere": [
@@ -360,6 +583,110 @@
                   "istRichtig": false
                 }
               ]
+            },
+            {
+              "id": 2,
+              "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Vier",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Fünf",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Sechs",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Sieben",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "frageText": "Welcher Ozean ist der größte der Welt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Arktischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Zuckerozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": true
+                }
+              ]
+            },
+            {
+              "id": 5,
+              "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Antarktischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 2,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": false
+                }
+              ]
             }
           ]
         }
@@ -376,7 +703,7 @@
         {
           "feature": "Antarktischer Zirkumpolarstrom",
           "beschreibung": "Die stärkste Strömung der Welt, die die Antarktis isoliert.",
-          "bildUrl": "assets/features/current.jpg"
+          "bildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg"
         }
       ],
       "tiere": [
@@ -434,6 +761,110 @@
                   "istRichtig": false
                 }
               ]
+            },
+            {
+              "id": 2,
+              "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Vier",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Fünf",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Sechs",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Sieben",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "frageText": "Welcher Ozean ist der größte der Welt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Arktischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Zuckerozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": true
+                }
+              ]
+            },
+            {
+              "id": 5,
+              "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Antarktischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 2,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": false
+                }
+              ]
             }
           ]
         }
@@ -450,7 +881,7 @@
         {
           "feature": "Packeis",
           "beschreibung": "Ein Großteil ist ganzjährig von Eis bedeckt.",
-          "bildUrl": "assets/features/pack_ice.jpg"
+          "bildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg"
         }
       ],
       "tiere": [
@@ -501,6 +932,110 @@
                 {
                   "id": 3,
                   "optionText": "Südlicher Ozean",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Vier",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Fünf",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Sechs",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Sieben",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "frageText": "Welcher Ozean ist der größte der Welt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 3,
+                  "optionText": "Arktischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 2,
+                  "optionText": "Zuckerozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
+                  "istRichtig": true
+                }
+              ]
+            },
+            {
+              "id": 5,
+              "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "optionen": [
+                {
+                  "id": 1,
+                  "optionText": "Antarktischer Ozean",
+                  "istRichtig": true
+                },
+                {
+                  "id": 2,
+                  "optionText": "Indischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 3,
+                  "optionText": "Pazifischer Ozean",
+                  "istRichtig": false
+                },
+                {
+                  "id": 4,
+                  "optionText": "Atlantischer Ozean",
                   "istRichtig": false
                 }
               ]

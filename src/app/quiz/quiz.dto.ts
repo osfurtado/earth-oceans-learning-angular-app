@@ -3,14 +3,14 @@ export interface QuizDto {
     frage: Frage[]
 }
 
-interface Frage {
+export interface Frage {
     id: number;
     frageText: string;
     optionen: Option[]
 
 }
 
-interface Option {
+export interface Option {
     id: number;
     optionText: string;
     istRichtig: boolean;

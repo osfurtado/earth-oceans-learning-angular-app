@@ -14,7 +14,7 @@
 .item{
     flex-grow: 1;
     height: 100%;
-    background-color: rgb(223, 218, 218);
+    background-color: rgb(240, 239, 239);
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -23,7 +23,6 @@
 }
 
 .separator-x{
-
     height: 1px;
     background-color: rgb(197, 192, 192);
     width: 100%;

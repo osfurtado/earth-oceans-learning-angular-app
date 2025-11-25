@@ -4,6 +4,7 @@ import { Meer } from './meer/meer';
 import { Tier } from './tier/tier';
 import { MeerDetails } from './meer/meer-details/meer-details';
 import { Vergleich } from './vergleich/vergleich';
+import { Quiz } from './quiz/quiz';
 
 
 export const routes: Routes = [
@@ -26,6 +27,10 @@ export const routes: Routes = [
             {
                 path: 'tiere',
                 component: Tier,
+            },
+            {
+                path: 'quiz',
+                component: Quiz
             }
         ]
     }

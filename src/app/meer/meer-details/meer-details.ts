@@ -55,6 +55,10 @@ export class MeerDetails implements OnInit {
     this.router.navigate([this.activeOzean ,'vergleich'], { queryParams: { source:'ocean', oceanId: this.activeOzeanId} })
   }
 
+  onQuizClick(){
+    this.router.navigate([this.activeOzean ,'quiz'], { queryParams: { source:'ocean', oceanId: this.activeOzeanId} })
+  }
+
 
 
     meere = [
