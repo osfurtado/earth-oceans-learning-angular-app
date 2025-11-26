@@ -2,35 +2,42 @@
 @if(meerObservable | async){
     <h2>Quiz von {{this.selectedMeer.name}}</h2>
     <div class="frage-nummer">
-        @for(f of this.frage; track f.id){
-            <button mat-flat-button>{{f.id}}</button>
-        }
+        <mat-button-toggle-group class="frage-nummer-buttons">
+            @for(f of this.quizBeantwortung; track f.id){               
+                <mat-button-toggle
+                    [class.richtigBeantwortet]="f.richtig"
+                    [class.falshBeantwortet]="f.beantwortet && !f.richtig"
+                    (click)="onFrageNummerClick(f.id)"
+                >
+                    {{f.id}}
+                </mat-button-toggle>
+            }
+        </mat-button-toggle-group>
     </div>
     <div class="frage-container">
         <div class="frage-bild"></div>
         <div class="frage-text">
-            <h4>{{this.frage[0].frageText}}</h4>
+            <h4>{{this.activeFrage.frageText}}</h4>
         </div>
         <div class="frage-optionen">
             <mat-button-toggle-group 
                 class="option-grid"
-                [disabled]="geantwortet"
+                [disabled]="this.activeFrage.beantwortet"
                 hideSingleSelectionIndicator="true"
                 >
-                @for (option of this.frage[0].optionen; track option.id) {
+                @for (option of this.activeFrage.optionen; track option.id) {
                     <mat-button-toggle
                         [value]="option.id"
                         (click)="onOptionClick(option)"
-                        [class.istRichtig]="this.geantwortet && option.istRichtig"
-                        [class.istFalsh]="this.geantwortet && !option.istRichtig && this.selectedOptionId === option.id"
-                        
+                        [class.istRichtig]="this.activeFrage.beantwortet && option.istRichtig"
+                        [class.istFalsh]="this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id"
                     >
                     <div class="option-content">
                     <span>{{option.optionText}}</span>
-                        @if (this.geantwortet && option.istRichtig) {
+                        @if (this.activeFrage.beantwortet && option.istRichtig) {
                             <mat-icon>check_circle</mat-icon>
                         }
-                        @if (this.geantwortet && !option.istRichtig && this.selectedOptionId === option.id) {
+                        @if (this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id) {
                             <mat-icon>cancel</mat-icon>
                         }
                     </div>

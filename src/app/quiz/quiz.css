@@ -4,12 +4,20 @@
     padding: 0 150px;
 }
 
-.frage-nummer{
+.frage-nummer-buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 5px;
 }
+
+mat-button-toggle.richtigBeantwortet {
+    background-color: #2e7d32
+}
+
+mat-button-toggle.falshBeantwortet {
+    background-color: #c62828
+}
+
 
 .frage-container{
     margin-top: 20px;
@@ -68,7 +76,6 @@ mat-button-toggle.istFalsh {
   mat-icon {
     color: #c62828;
   }
-
 
 }
 
