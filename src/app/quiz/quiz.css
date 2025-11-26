@@ -109,3 +109,78 @@
     align-items: center;
     width: 100%;
 }
+
+
+/* Quiz Ergebnis*/
+
+.quiz-ergebnis-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.ergebnis{
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.ergebnis-bild{
+    height: 100%;
+    background-color: rgb(240, 239, 239);
+    border-radius: 15px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.ergebnis-noten{
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.anzahl-richtig {
+    padding: 20px;
+    background-color: var(--mat-sys-secondary);
+    text-align: center;
+}
+
+.anzahl-richtig span{
+    font-size: 20px;
+    color: var(--mat-sys-on-secondary);
+}
+
+.anzahl-falsch{
+    padding: 20px;
+    background-color: var(--mat-sys-secondary);
+    text-align: center;
+}
+
+.anzahl-falsch span{
+    font-size: 20px;
+    color: var(--mat-sys-on-secondary);
+}
+
+.quiz-wieder-oder-exit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ergebnis-nachricht {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(240, 239, 239);
+    font-weight: bold;
+}
+
+
+
+

@@ -1,60 +1,96 @@
 <div class="quiz-container">
 @if(meerObservable | async){
-    <h2>Quiz von {{this.selectedMeer.name}}</h2>
-    <mat-button-toggle-group 
-        class="frage-nummer-buttons" 
-        hideSingleSelectionIndicator="true" 
-    >
-        @for(f of this.quizBeantwortung; track f.id){               
-            <mat-button-toggle
-                class="frage-nummer"
-                [class.richtigBeantwortet]="f.richtig"
-                [class.falshBeantwortet]="f.beantwortet && !f.richtig"
-                (click)="onFrageNummerClick(f.id)"
-            >
-                {{f.id}}
-            </mat-button-toggle>
-        }
-    </mat-button-toggle-group>
-
-    <div class="frage-container">
-        <div class="frage-bild"></div>
-        <div class="frage-text">
-            <h4>{{this.activeFrage.frageText}}</h4>
-        </div>
-        <div class="frage-optionen">
-            <mat-button-toggle-group 
-                class="option-grid"
-                [disabled]="this.activeFrage.beantwortet"
-                hideSingleSelectionIndicator="true" 
-                [(value)]="this.toggleValue"
+    @if (!this.quizBeenden) {
+        <h2>Quiz von {{this.selectedMeer.name}}</h2>
+        <mat-button-toggle-group 
+            class="frage-nummer-buttons" 
+            hideSingleSelectionIndicator="true" 
+        >
+            @for(f of this.quizBeantwortung; track f.id; let index = $index){               
+                <mat-button-toggle
+                    class="frage-nummer"
+                    [class.richtigBeantwortet]="f.richtig"
+                    [class.falshBeantwortet]="f.beantwortet && !f.richtig"
+                    (click)="onFrageNummerClick(index)"
+                    [class.mat-button-toggle-checked]="this.activeFrageIndex == index"
                 >
-                @for (option of this.activeFrage.optionen; track option.id) {
-                    <mat-button-toggle
-                        class="option"
-                        [value]="option.id"
-                        (click)="onOptionClick(option)"
-                        [class.istRichtig]="this.activeFrage.beantwortet && option.istRichtig"
-                        [class.istFalsh]="this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id"
-                    >
-                    <div class="option-content">
-                    <span>{{option.optionText}}</span>
-                        @if (this.activeFrage.beantwortet && option.istRichtig) {
-                            <mat-icon>check_circle</mat-icon>
-                        }
-                        @if (this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id) {
-                            <mat-icon>cancel</mat-icon>
-                        }
-                    </div>
-
+                    {{f.id}}
                 </mat-button-toggle>
-                }
-            </mat-button-toggle-group>
+            }
+        </mat-button-toggle-group>
+
+        <div class="frage-container">
+            <div class="frage-bild"></div>
+            <div class="frage-text">
+                <h4>{{this.activeFrage.frageText}}</h4>
+            </div>
+            <div class="frage-optionen">
+                <mat-button-toggle-group 
+                    class="option-grid"
+                    [disabled]="this.activeFrage.beantwortet"
+                    hideSingleSelectionIndicator="true" 
+                    [(value)]="this.toggleValue"
+                    >
+                    @for (option of this.activeFrage.optionen; track option.id) {
+                        <mat-button-toggle
+                            class="option"
+                            [value]="option.id"
+                            (click)="onOptionClick(option)"
+                            [class.istRichtig]="this.activeFrage.beantwortet && option.istRichtig"
+                            [class.istFalsh]="this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id"
+                        >
+                        <div class="option-content">
+                        <span>{{option.optionText}}</span>
+                            @if (this.activeFrage.beantwortet && option.istRichtig) {
+                                <mat-icon>check_circle</mat-icon>
+                            }
+                            @if (this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id) {
+                                <mat-icon>cancel</mat-icon>
+                            }
+                        </div>
+
+                    </mat-button-toggle>
+                    }
+                </mat-button-toggle-group>
+            </div>
         </div>
-    </div>
-    
-    <div class="next">
-        <button mat-flat-button>Weiter</button>
-    </div>
+        
+        <div class="next">
+            @if(this.activeFrageIndex === this.quizBeantwortung.length-1){
+                <button mat-flat-button [disabled]="this.anzahlBeantwortet !== this.quizBeantwortung.length" (click)="onQuizEndeClick()">Beenden</button>
+            }@else {
+                <button mat-flat-button (click)="onWeiterClick()">Weiter</button>
+            }
+        </div>
+
+
+
+    }@else {
+        <div class="quiz-ergebnis-container">
+            <div>
+                <h1>Quiz Ergebnis</h1>
+            </div>
+            <div class="ergebnis">
+                <div class="ergebnis-bild">
+                    <span>Bild</span>
+                </div>
+                <div class="ergebnis-noten">
+                    <div class="anzahl-richtig">
+                        <span>Richtig:  {{this.anzahlRichtig}}</span>
+                    </div>
+                    <div class="anzahl-falsch">
+                        <span>Falsh:  {{this.anzahlFalsch}}</span>
+                    </div>
+                </div>            
+            </div>
+            <div class="ergebnis-nachricht">
+                <span>Ergebnis Nachricht</span>
+            </div>
+            <div class="quiz-wieder-oder-exit">
+                <button mat-flat-button (click)="onWiederholungClick()">Wiederholen</button>
+                <button mat-flat-button (click)="onQuizExitClick()">Exit Quiz</button>
+            </div>  
+        </div>
+    }
 }
 </div>

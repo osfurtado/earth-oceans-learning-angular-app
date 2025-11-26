@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TierDto } from '../tier/tier.dto';
 import { MeerDto } from '../meer/meer.dto';
 import { lastValueFrom, Observable } from 'rxjs';
@@ -29,6 +29,7 @@ interface QuizBeantwortung extends Frage {
 export class Quiz implements OnInit{
 
   route = inject(ActivatedRoute)
+  router = inject(Router)
 
   //Ozean Tier Quiz Daten
   activeOcean: string| null = null 
@@ -43,12 +44,16 @@ export class Quiz implements OnInit{
   
 
   // Quiz steuern
-  geantwortet = false
-  selectedOptionId: number | null = null
   quizBeantwortung: QuizBeantwortung[] = []
   activeFrage!: QuizBeantwortung
   toggleValue: any
+  activeFrageIndex: number = 0
+  anzahlBeantwortet = 0
+  quizBeenden = false
 
+  //Quiz Ergegnis
+  anzahlRichtig: number = 0
+  anzahlFalsch: number = 0
 
 
   
@@ -96,8 +101,8 @@ export class Quiz implements OnInit{
     })
 
     
-    this.activeFrage = this.quizBeantwortung[0]
-    console.log('Quiz Active Frage: ',this.activeFrage )
+    this.activeFrage = this.quizBeantwortung[this.activeFrageIndex]
+    
 
 
   }
@@ -105,29 +110,96 @@ export class Quiz implements OnInit{
   onOptionClick(op: Option){
     if(this.activeFrage.beantwortet){return}
 
-      this.activeFrage.beantwortet = true
-      this.activeFrage.selectedOptionId = op.id
-      this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].beantwortet = true
-      this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].selectedOptionId = op.id
+    this.anzahlBeantwortet = 0
+    this.activeFrage.beantwortet = true
+    this.activeFrage.selectedOptionId = op.id
+    this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].beantwortet = true
+    this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].selectedOptionId = op.id
 
-      if(op.istRichtig){
-        this.activeFrage.richtig = true
-        this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].richtig = true
-      } else {
-        this.activeFrage.richtig = false
-        this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].richtig = false
-      }
+    if(op.istRichtig){
+      this.activeFrage.richtig = true
+      this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].richtig = true
+    } else {
+      this.activeFrage.richtig = false
+      this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].richtig = false
+    }
 
-      console.log('Quiz Active Frage: ',this.activeFrage )
-      console.log('Quiz Beantwortung: ',this.quizBeantwortung )
+    this.quizBeantwortung.forEach( q => {
+      if(q.beantwortet){this.anzahlBeantwortet++}
+    })
+
+    console.log('Soll Quiz beenden: ', !this.quizBeenden, !(this.anzahlBeantwortet !== this.quizBeantwortung.length))
+
+    
+
 
   }
 
-  onFrageNummerClick(frageId: number){
+  onFrageNummerClick(frageIndex: number){
     this.toggleValue = null
-    this.activeFrage = this.quizBeantwortung.filter(f => f.id === frageId)[0]
-    console.log('Quiz Active Frage: ',this.activeFrage )
+    this.activeFrage = this.quizBeantwortung[frageIndex]
+    this.activeFrageIndex = frageIndex
+
+    
+    
+
   }
+
+  onWeiterClick(){
+    this.toggleValue = null
+    this.activeFrageIndex++
+    this.activeFrage = this.quizBeantwortung[this.activeFrageIndex]
+    
+    
+  }
+
+  onQuizEndeClick(){
+    this.quizBeenden = true
+    this.anzahlRichtig = this.quizBeantwortung.filter(f => f.richtig).length
+    this.anzahlFalsch = this.quizBeantwortung.length - this.anzahlRichtig
+  }
+
+  // Quiz Ergebnis
+  onWiederholungClick(){
+
+      // Neustarten
+      this.toggleValue = null
+      this.quizBeenden = false
+      this.anzahlBeantwortet = 0
+      this.anzahlRichtig = 0
+      this.anzahlFalsch = 0
+      this.quizBeantwortung = []
+
+      //Quiz Hochladen
+      this.quiz = this.selectedMeer.quiz[0]
+      
+      this.quiz.frage.forEach( f => {
+
+
+        this.quizBeantwortung.push(
+          {
+            id: f.id,
+            frageText: f.frageText,
+            optionen: f.optionen,
+            beantwortet: false,
+            richtig: null,
+            selectedOptionId: null
+          }
+        )
+      })
+      this.activeFrageIndex = 0
+      this.activeFrage = this.quizBeantwortung[this.activeFrageIndex]
+
+  }
+
+  onQuizExitClick(){
+    const url = this.route.snapshot.pathFromRoot[1].url[0].path
+    
+    console.log('Active Ocean: ', url)
+
+    this.router.navigate([url])
+  }
+  
 
 
 }
