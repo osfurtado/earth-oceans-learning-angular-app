@@ -8,14 +8,31 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: none;
+
 }
 
-mat-button-toggle.richtigBeantwortet {
-    background-color: #2e7d32
+.frage-nummer {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc !important;
+    font-weight: bold;
+
 }
 
-mat-button-toggle.falshBeantwortet {
-    background-color: #c62828
+.richtigBeantwortet {
+    background-color: #2e7d32 !important;
+    color: white !important
+}
+
+.falshBeantwortet {
+    background-color: #c62828 !important;
+    color: white !important;
+    
 }
 
 
@@ -45,7 +62,7 @@ mat-button-toggle.falshBeantwortet {
     border-radius: 0;
 }
 
-.option-grid mat-button-toggle {
+.option {
     border: 2px solid #ccc;
     border-radius: 8px !important;
     height: 80px;
@@ -54,7 +71,7 @@ mat-button-toggle.falshBeantwortet {
     align-items: center;
 }
 
-mat-button-toggle.istRichtig {
+.istRichtig {
   background-color: #e8f5e9 !important; 
   border-color: #2e7d32 !important;     
   color: #2e7d32 !important;             
@@ -67,7 +84,7 @@ mat-button-toggle.istRichtig {
 
 }
 
-mat-button-toggle.istFalsh {
+.istFalsh {
   background-color: #ffebee !important; 
   border-color: #c62828 !important;     
   color: #c62828 !important;             

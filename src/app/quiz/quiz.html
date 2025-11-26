@@ -1,19 +1,22 @@
 <div class="quiz-container">
 @if(meerObservable | async){
     <h2>Quiz von {{this.selectedMeer.name}}</h2>
-    <div class="frage-nummer">
-        <mat-button-toggle-group class="frage-nummer-buttons">
-            @for(f of this.quizBeantwortung; track f.id){               
-                <mat-button-toggle
-                    [class.richtigBeantwortet]="f.richtig"
-                    [class.falshBeantwortet]="f.beantwortet && !f.richtig"
-                    (click)="onFrageNummerClick(f.id)"
-                >
-                    {{f.id}}
-                </mat-button-toggle>
-            }
-        </mat-button-toggle-group>
-    </div>
+    <mat-button-toggle-group 
+        class="frage-nummer-buttons" 
+        hideSingleSelectionIndicator="true" 
+    >
+        @for(f of this.quizBeantwortung; track f.id){               
+            <mat-button-toggle
+                class="frage-nummer"
+                [class.richtigBeantwortet]="f.richtig"
+                [class.falshBeantwortet]="f.beantwortet && !f.richtig"
+                (click)="onFrageNummerClick(f.id)"
+            >
+                {{f.id}}
+            </mat-button-toggle>
+        }
+    </mat-button-toggle-group>
+
     <div class="frage-container">
         <div class="frage-bild"></div>
         <div class="frage-text">
@@ -23,10 +26,12 @@
             <mat-button-toggle-group 
                 class="option-grid"
                 [disabled]="this.activeFrage.beantwortet"
-                hideSingleSelectionIndicator="true"
+                hideSingleSelectionIndicator="true" 
+                [(value)]="this.toggleValue"
                 >
                 @for (option of this.activeFrage.optionen; track option.id) {
                     <mat-button-toggle
+                        class="option"
                         [value]="option.id"
                         (click)="onOptionClick(option)"
                         [class.istRichtig]="this.activeFrage.beantwortet && option.istRichtig"
@@ -49,7 +54,7 @@
     </div>
     
     <div class="next">
-        <button mat-flat-button>Next</button>
+        <button mat-flat-button>Weiter</button>
     </div>
 }
 </div>

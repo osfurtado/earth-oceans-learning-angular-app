@@ -47,6 +47,7 @@ export class Quiz implements OnInit{
   selectedOptionId: number | null = null
   quizBeantwortung: QuizBeantwortung[] = []
   activeFrage!: QuizBeantwortung
+  toggleValue: any
 
 
 
@@ -103,6 +104,7 @@ export class Quiz implements OnInit{
 
   onOptionClick(op: Option){
     if(this.activeFrage.beantwortet){return}
+
       this.activeFrage.beantwortet = true
       this.activeFrage.selectedOptionId = op.id
       this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].beantwortet = true
@@ -122,6 +124,7 @@ export class Quiz implements OnInit{
   }
 
   onFrageNummerClick(frageId: number){
+    this.toggleValue = null
     this.activeFrage = this.quizBeantwortung.filter(f => f.id === frageId)[0]
     console.log('Quiz Active Frage: ',this.activeFrage )
   }
