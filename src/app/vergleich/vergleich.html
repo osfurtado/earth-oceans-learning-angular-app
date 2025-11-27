@@ -1,36 +1,40 @@
 @if(meerObservable | async){
     <div class="vergleich-container">
         <h2>{{this.source =='ocean' ? 'Ozeane ': 'Tiere '}} vergleichen </h2>
-        <div class="vergleich-content">
-            <div class="item item1">
+        <div class="vergleich-content-container">
+            <div class="item-1">
                 <div class="name1">
                     {{this.source =='ocean' ? this.selectedMeer1.name: this.selectedTier1.name}}
                 </div>
-                <div class="feature">
-                    {{this.source =='ocean' ? 'Größe': 'Länge'}}
+                <div class="vergleich-content">
+                    <div class="bild">Bild</div>
+                    <div class="merkmale">
+                        <div class="feature">
+                            {{this.source =='ocean' ? 'Größe': 'Länge'}}
+                        </div>
+                        <div class="feature-detail">
+                            {{this.source =='ocean' ? this.selectedMeer1.groesse: this.selectedTier1.laenge}}
+                        </div>
+                        <div class="separator-x"></div>
+                        <div class="feature">
+                            Tief
+                        </div>
+                        <div class="feature-detail">
+                            {{this.source =='ocean' ? this.selectedMeer1.tief : this.selectedTier1.tief}}
+                        </div>
+                        <div class="separator-x"></div>
+                        <div class="feature">
+                            {{this.source =='ocean' ? 'Temperatur' : 'Gewicht'}}
+                        </div>
+                        <div class="feature-detail">
+                            {{this.source =='ocean' ? this.selectedMeer1.temperatur	 : this.selectedTier1.gewicht}}
+                        </div>
+                        <div class="separator-x"></div>
+                    </div>   
                 </div>
-                <div class="feature-detail">
-                    {{this.source =='ocean' ? this.selectedMeer1.groesse: this.selectedTier1.laenge}}
-                </div>
-                <div class="separator-x"></div>
-                <div class="feature">
-                    Tief
-                </div>
-                <div class="feature-detail">
-                    {{this.source =='ocean' ? this.selectedMeer1.tief : this.selectedTier1.tief}}
-                </div>
-                <div class="separator-x"></div>
-                <div class="feature">
-                    {{this.source =='ocean' ? 'Temperatur' : 'Gewicht'}}
-                </div>
-                <div class="feature-detail">
-                    {{this.source =='ocean' ? this.selectedMeer1.temperatur	 : this.selectedTier1.gewicht}}
-                </div>
-                <div class="separator-x"></div>
             </div>
-            <div class="separator">
-            </div>
-            <div class="item item2">
+            <div class="separator"></div>
+            <div class="item-2">
                 <mat-form-field>
                     <mat-label>{{this.source =='ocean' ? 'Ozean': 'Tier'}}</mat-label>
                     @if(this.source == 'ocean'){
@@ -47,27 +51,32 @@
                         </mat-select>
                     }
                 </mat-form-field>
-                <div class="feature">
-                    {{this.source =='ocean' ? 'Größe': 'Länge'}}
+                <div class="vergleich-content">
+                    <div class="merkmale">
+                        <div class="feature">
+                            {{this.source =='ocean' ? 'Größe': 'Länge'}}
+                        </div>
+                        <div class="feature-detail">
+                            {{this.source =='ocean' ? this.selectedMeer2.groesse: this.selectedTier2.laenge}}
+                        </div>
+                        <div class="separator-x"></div>
+                        <div class="feature">
+                            Tief
+                        </div>
+                        <div class="feature-detail">
+                            {{this.source =='ocean' ? this.selectedMeer2.tief : this.selectedTier2.tief}}
+                        </div>
+                        <div class="separator-x"></div>
+                        <div class="feature">
+                            {{this.source =='ocean' ? 'Temperatur' : 'Gewicht'}}
+                        </div>
+                        <div class="feature-detail">
+                            {{this.source =='ocean' ? this.selectedMeer2.temperatur	 : this.selectedTier2.gewicht}}
+                        </div>
+                        <div class="separator-x"></div>
+                    </div>
+                    <div class="bild">Bild</div>
                 </div>
-                <div class="feature-detail">
-                    {{this.source =='ocean' ? this.selectedMeer2.groesse: this.selectedTier2.laenge}}
-                </div>
-                <div class="separator-x"></div>
-                <div class="feature">
-                    Tief
-                </div>
-                <div class="feature-detail">
-                    {{this.source =='ocean' ? this.selectedMeer2.tief : this.selectedTier2.tief}}
-                </div>
-                <div class="separator-x"></div>
-                <div class="feature">
-                    {{this.source =='ocean' ? 'Temperatur' : 'Gewicht'}}
-                </div>
-                <div class="feature-detail">
-                    {{this.source =='ocean' ? this.selectedMeer2.temperatur	 : this.selectedTier2.gewicht}}
-                </div>
-                <div class="separator-x"></div>
             </div>
         </div>
     </div>

@@ -181,6 +181,16 @@
     font-weight: bold;
 }
 
+.frage-bild{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
 
 
 
