@@ -19,6 +19,18 @@
     right: 20px;
 }
 
+.vergleich{
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--mat-sys-primary);
+    box-shadow: 1px 2px black;
+    color: white !important;
+}
+
 
 
 

@@ -2,7 +2,7 @@
     @if(meerObservable | async) {
     <div style="margin: 20px 0; display: flex; justify-content: space-between; ">
         <h1>{{this.selectedMeer.name}}</h1>
-        <button mat-flat-button (click)="onVergleich()"> Vergleichen </button>
+        <button class="vergleich" (click)="onVergleich()"> Vergleichen </button>
     </div>
     <div
         style="border-radius: 15px ; background-color: rgb(240, 239, 239); height: 250px; display: flex; align-items: center; justify-content: center;">
