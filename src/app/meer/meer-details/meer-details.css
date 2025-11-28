@@ -2,12 +2,13 @@
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0 150px;
-    background-image: url('/landing/backgroundMeer1.svg');
+    padding: 0 150px;/*
+    background-image: url('/meere/menu/top-menu.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left 0% bottom 0%;
-    background-size: 300px 300px, 150px 300px, contain;
+    background-size: 200px 200px; */
+    background-color: var(--mat-sys-surface-container-high) /*var(--mat-sys-surface-container-high)*/;
 }
 
 .quiz{
@@ -20,15 +21,46 @@
 }
 
 .vergleich{
-    padding: 8px;
+    padding: 12px;
+    cursor: pointer;
     border: 2px solid black;
     border-radius: 5px;
-    width: 100px;
+    width: 120px;
     text-align: center;
     font-weight: bold;
     background-color: var(--mat-sys-primary);
-    box-shadow: 1px 2px black;
     color: white !important;
+}
+
+.vergleich:hover{
+    box-shadow: 3px 4px black;
+}
+
+.tier-entdecken {
+    cursor: pointer;
+    flex-grow: 1;
+    color: var(--mat-sys-on-secondary);
+    font-weight: bold;
+    border-radius: 6px;
+    border: 2px solid black;
+    padding: 14px;
+    background-color: var(--mat-sys-secondary);
+    box-shadow: 2px 4px black;
+}
+
+.tier-entdecken:hover{
+    background-color: var(--mat-sys-primary);
+    color: var(--mat-sys-on-primary);
+}
+
+.basic-info-card{
+    flex-grow: 1;
+    height: 100%; 
+    background-color: var(--mat-sys-secondary-container); 
+    padding: 12px; 
+    border-radius: 12px; 
+    border: 2px solid black; 
+    box-shadow: 2px 4px;
 }
 
 

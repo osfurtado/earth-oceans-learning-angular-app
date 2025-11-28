@@ -2,12 +2,12 @@
     text-align: center;
     font-size: 60px;
     font-family: "Chewy", sans-serif;
-    color: var(--mat-sys-primary)
+    color: var(--mat-sys-surface-variant)
         /** var(--mat-sys-tertiary-container)**/
     ;
     margin-top: 30px;
     margin-bottom: 100;
-    -webkit-text-stroke: 2px white /* rgb(56, 55, 55) */;
+    -webkit-text-stroke: 2px black /* rgb(56, 55, 55) */;
 }
 
 .logo {
@@ -59,17 +59,24 @@
     width: 700px;
     margin-top: 50px;
     border-radius: 50%;
-    border: 3px solid var(--mat-sys-secondary);
-    background-image: url('/landing/Welt.png');
+    border: 3px solid black;
+    background-image: url('/landing/welt.png');
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 5px 10px var(--mat-sys-primary);
+    box-shadow: 5px 10px var(--mat-sys-secondary);
 }
 
 button {
-    border: 2px solid var(--mat-sys-secondary);
-    background-color: white;
-    box-shadow: 2px 4px var(--mat-sys-primary);
+    box-shadow: 2px 4px black;
+    border: 2px solid black;
+    background-color: var(--mat-sys-primary);
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
+    color: var(--mat-sys-on-primary);
+}
+
+button:hover{
+    background-color: var(--mat-sys-secondary);
+    color: var(--mat-sys-on-secondary);
 }

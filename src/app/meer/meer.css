@@ -17,7 +17,7 @@
 }
 
 .active{
-    background-color: var(--mat-sys-primary);
+    background-color: var(--mat-sys-primary) !important;
     box-shadow: 1px 2px black;
     color: white !important;
 }
@@ -38,6 +38,13 @@
   text-decoration: none;
   color: black;
   font-weight: bold;
+  background-color: var(--mat-sys-surface-container-high);
+}
+
+.meu-item:hover {
+    background-color: var(--mat-sys-tertiary);
+    box-shadow: 1px 2px black;
+    color: white !important;
 }
 
 .top{
@@ -46,5 +53,13 @@
     flex-direction: row;
     border-bottom: 2px solid black;
     padding: 15px;
-
+    overflow: hidden;
+    position: fixed; 
+    top: 0;
+    background-color: white !important;
+    z-index: 100;
+    background-image: url('/meere/menu/top-menu.jpg');
+    background-repeat: no-repeat;
+    background-position: right 10% top 10%;
+    background-size: 400px;
 }
