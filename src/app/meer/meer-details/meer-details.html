@@ -1,14 +1,10 @@
 <div class="meer-details-container">
     @if(meerObservable | async) {
-    <div style="padding: 120px 0 20px 0; display: flex; justify-content: space-between; align-items: center;">
-        <h1 style="font-family: Finger Paint; font-size: 35px;">{{this.selectedMeer.name}}</h1>
+    <div class="title">
+        <h1 style="font-family: Finger Paint; font-size: 35px;">{{this.activeOzean.name}}</h1>
         <button class="vergleich" (click)="onVergleich()"> Vergleichen </button>
     </div>
-    <div
-        style="border-radius: 15px ; padding: 2px;border: 2px solid black; background-color: rgb(240, 239, 239); height: 250px; display: flex; align-items: center; justify-content: center;">
-        <img src="/meere/welt.png" [alt]="this.selectedMeer.name"
-            style="height: 100%; width: 100%; object-fit: cover; border-radius: 15px; object-position: top;">
-    </div>
+    <div class="banner"></div>
     <div style="margin: 50px 0; display: flex; gap: 15px;">
         <div class="basic-info-card">
             <div>
@@ -16,7 +12,7 @@
                     <mat-icon aria-hidden="false" aria-label="Example home icon">open_in_full</mat-icon>
                     <span style="font-weight: bold; font-size: 18px;">Größe</span>
                 </div>
-                <span style="margin-left: 25px; font-size: 18px;">{{this.selectedMeer.groesse}}</span>
+                <span style="margin-left: 25px; font-size: 18px;">{{this.activeOzean.groesse}}</span>
             </div>
         </div>
         <div class="basic-info-card">
@@ -25,7 +21,7 @@
                     <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
                     <span style="font-weight: bold; font-size: 18px;">Tief</span> <br>
                 </div>
-                <span style="margin-left: 25px; font-size: 18px;">{{this.selectedMeer.tief}}</span>
+                <span style="margin-left: 25px; font-size: 18px;">{{this.activeOzean.tief}}</span>
             </div>
         </div>
         <div class="basic-info-card">
@@ -34,28 +30,29 @@
                     <mat-icon aria-hidden="false" aria-label="Example home icon">thermostat</mat-icon>
                     <span style="font-weight: bold; font-size: 18px;">Temperatur</span>
                 </div>
-                <span style="margin-left: 25px; font-size: 18px;">{{this.selectedMeer.temperatur}}</span>
+                <span style="margin-left: 25px; font-size: 18px;">{{this.activeOzean.temperatur}}</span>
             </div>
         </div>
         <button (click)="onTierClick()" class="tier-entdecken">
             Tiere Entdecken
         </button>
     </div>
-    <div style="padding: 50px; border: 2px solid black; background-color: white;" >
-        <div style="padding: 20px; ">
-            <span style="font-weight: bold;">Weitere Info</span>
-        </div>
+    <div style="padding: 30px; border: 2px solid black;background-color: white;">
         <div style="display: flex; flex-direction: row; gap: 50px; flex-wrap: wrap; ">
-            @for(f of this.selectedMeer.features; track f.feature){
-                <div style="color: white;max-width: 350px; padding: 20px; display: flex; flex-direction: column; gap: 15px; border: 2px solid black; border-radius: 10px; box-shadow: 2px 4px black;">
-                    <div style="padding: 10px; border-bottom: 2px solid black; background-color: var(--mat-sys-primary) ">
-                        <span style="font-size: 18px; font-weight: bold;">{{f.feature}}</span>
-                    </div>
-                    <img [src]="f.bildUrl" [alt]="f.feature" style="height: 100%; width: 100%; object-fit: contain;">
-                    <div>
-                        <p>{{f.beschreibung}}</p>
-                    </div>
+            @for(f of this.activeOzean.features; track f.feature){
+            <div
+                style="max-width: 350px; display: flex; flex-direction: column; border: 2px solid black; border-radius: 10px; box-shadow: 2px 4px black;">
+                <div
+                    style="color: var(--mat-sys-on-primary);padding: 12px; border-bottom: 2px solid black; border-radius: 10px 10px 0 0; background-color: var(--mat-sys-primary) ">
+                    <span style="font-size: 16px; font-weight: bold;">{{f.feature}}</span>
                 </div>
+                <div style="border-bottom: 2px solid black;">
+                    <img [src]="f.bildUrl" [alt]="f.feature" style="height: 100%; width: 100%; object-fit: contain;">
+                </div>
+                <div style="color: black; padding: 0 10px 0 10px;">
+                    <p style="text-align: justify;">{{f.beschreibung}}</p>
+                </div>
+            </div>
             }
         </div>
     </div>
@@ -63,7 +60,7 @@
         <button mat-flat-button (click)="onQuizClick()">Quiz</button>
     </div>
     } @else {
-    <div style="height:100%; width:100%; display: flex; align-items: center; justify-content: center; ">
+    <div class="spinner">
         <mat-spinner></mat-spinner>
     </div>
     }

@@ -1,33 +1,36 @@
-<div style="margin: 20px 150px; display: flex; align-items: center; justify-content: space-between;">
-    <button matButton="filled" (click)="onBack()">Zurück</button>
-    <button matButton="filled" (click)="onVergleich()">Vergleichen</button>
-</div>
-@if( meerObservable | async){
-    <div class="carousel-wrapper">
-    <button mat-icon-button class="nav-btn left" (click)="scroll('left')">
-        <mat-icon>chevron_left</mat-icon>
-    </button>
-
-    <div class="scroll-container" #scrollContainer>
-        @for(item of tiere; track item.id){
-        <div class="story-item" (click)="selectItem(item.id)" [class.active]="selectedItemId === item.id">
-            <div class="image-wrapper">
-                <img class="image" [src]="item.bildUrl" [alt]="item.name">
-            </div>
-            <span class="caption">{{item.name}}</span>
-        </div>
-        }
-
+<div class="tier-container">
+    <div style="margin: 20px 150px; display: flex; align-items: center; justify-content: space-between;">
+        <button matButton="filled" (click)="onBack()">Zurück</button>
+        <button matButton="filled" (click)="onVergleich()">Vergleichen</button>
     </div>
+    @if( meerObservable | async){
+    <div class="carousel-wrapper">
+        <button mat-icon-button class="nav-btn left" (click)="scroll('left')">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
 
-    <button mat-icon-button class="nav-btn right" (click)="scroll('right')">
-        <mat-icon>chevron_right</mat-icon>
-    </button>
+        <div class="scroll-container" #scrollContainer>
+            @for(item of tiere; track item.id){
+            <div class="story-item" (click)="selectItem(item.id)" [class.active]="selectedItemId === item.id">
+                <div class="image-wrapper">
+                    <img class="image" [src]="item.bildUrl" [alt]="item.name">
+                </div>
+                <span class="caption">{{item.name}}</span>
+            </div>
+            }
+
+        </div>
+
+        <button mat-icon-button class="nav-btn right" (click)="scroll('right')">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+    <div
+        style="margin: 50px 150px; border: 2px solid black; box-shadow: 2px 4px black; padding: 30px; border-radius: 10px;">
+        <div>
+            <h2>Weitere Info</h2>
+            <p style="font-size: 16px;">{{this.selectedTier.beschreibung}}</p>
+        </div>
+    </div>
+    }
 </div>
-<mat-card appearance="filled" style="margin: 50px 150px;">
-    <mat-card-content>
-        <h2>Weitere Info</h2>
-        <p style="font-size: 16px;">{{this.selectedTier.beschreibung}}</p>
-    </mat-card-content>
-</mat-card>
-}

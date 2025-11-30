@@ -2,7 +2,7 @@
   "meere": [
     {
       "id": 1,
-      "name": "Pazifischer Ozean",
+      "name": "Pazifik - Pazifischer Ozean",
       "tief": "11.034 m (Mariannengraben)",
       "groesse": "168.723.000 km²",
       "temperatur": "-1.4°C bis 50°C",
@@ -47,158 +47,158 @@
           ]
         },
         {
-            "id": 1,
-            "name": "Großer Weißhai",
-            "beschreibung": "Einer der größten Raubfische der Welt. Er ist bekannt für seine Größe und seine Jagdgewohnheiten. Der Pazifik beheimatet eine der größten Populationen, besonders vor der Küste Kaliforniens und Südaustraliens/Neuseelands.",
-            "laenge": "3,5 bis 6 Meter",
-            "gewicht": "bis zu 2 Tonnen",
-            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
-            "tief": "0 bis 1.200 Meter",
-            "ernaerung": [
-              {
-                "name": "Robben",
-                "bildUrl": "https://example.com/bild/robbe_nahrung.jpg"
-              },
-              {
-                "name": "Seelöwen",
-                "bildUrl": "https://example.com/bild/seeloewe_nahrung.jpg"
-              },
-              {
-                "name": "Wale (Aas)",
-                "bildUrl": "https://example.com/bild/wal_aas.jpg"
-              }
-            ],
-            "raubtiere": [
-              {
-                "name": "Orca (Schwertwal)",
-                "bildUrl": "https://example.com/bild/orca_raubtier.jpg"
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Japanischer Riesenkalmar",
-            "beschreibung": "Ein großer Tintenfisch, der im Nordpazifik, insbesondere in den Gewässern um Japan und Korea, heimisch ist. Er ist bekannt für seine enormen Augen und seine nächtliche Jagd.",
-            "laenge": "Gesamtlänge bis zu 5 Meter",
-            "gewicht": "bis zu 50 kg",
-            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
-            "tief": "ca. 100 bis 1.000 Meter",
-            "ernaerung": [
-              {
-                "name": "Kleine Fische",
-                "bildUrl": "https://example.com/bild/fisch_nahrung.jpg"
-              },
-              {
-                "name": "Krebstiere",
-                "bildUrl": "https://example.com/bild/krebstier_nahrung.jpg"
-              },
-              {
-                "name": "Andere Kalmare",
-                "bildUrl": "https://example.com/bild/kalmar_nahrung.jpg"
-              }
-            ],
-            "raubtiere": [
-              {
-                "name": "Pottwal",
-                "bildUrl": "https://example.com/bild/pottwal_raubtier.jpg"
-              },
-              {
-                "name": "Seelöwen",
-                "bildUrl": "https://example.com/bild/seeloewe_raubtier.jpg"
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "name": "Riesenzackenbarsch",
-            "beschreibung": "Dieser massige Fisch, oft als **Goliath-Zackenbarsch** des Pazifiks bezeichnet, kommt in Riffgebieten des Indo-Pazifiks vor, ist aber ein charakteristisches Tier der pazifischen Korallenriffe.",
-            "laenge": "bis zu 2,7 Meter",
-            "gewicht": "bis zu 400 kg",
-            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
-            "tief": "5 bis 100 Meter",
-            "ernaerung": [
-              {
-                "name": "Krustentiere",
-                "bildUrl": "https://example.com/bild/krustentier_nahrung.jpg"
-              },
-              {
-                "name": "Andere Fische",
-                "bildUrl": "https://example.com/bild/fisch_nahrung.jpg"
-              },
-              {
-                "name": "Kleine Haie/Rochen",
-                "bildUrl": "https://example.com/bild/hai_rochen_nahrung.jpg"
-              }
-            ],
-            "raubtiere": [
-              {
-                "name": "Große Haie",
-                "bildUrl": "https://example.com/bild/hai_raubtier.jpg"
-              }
-            ]
-          },
-          {
-            "id": 4,
-            "name": "Ozeanischer Weißspitzenhai",
-            "beschreibung": "Ein Hochseehai, der hauptsächlich in tropischen und subtropischen Gewässern des Pazifiks, Atlantiks und Indischen Ozeans lebt, aber im Pazifik sehr verbreitet ist. Er ist bekannt für seine breiten, abgerundeten Flossenspitzen.",
-            "laenge": "ca. 1,5 bis 3 Meter",
-            "gewicht": "bis zu 170 kg",
-            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
-            "tief": "Oberfläche bis 300 Meter",
-            "ernaerung": [
-              {
-                "name": "Thunfische",
-                "bildUrl": "https://example.com/bild/thunfisch_nahrung.jpg"
-              },
-              {
-                "name": "Tintenfische",
-                "bildUrl": "https://example.com/bild/tintenfisch_nahrung.jpg"
-              },
-              {
-                "name": "Meeresschildkröten",
-                "bildUrl": "https://example.com/bild/schildkroete_nahrung.jpg"
-              }
-            ],
-            "raubtiere": [
-              {
-                "name": "Orca (Schwertwal)",
-                "bildUrl": "https://example.com/bild/orca_raubtier.jpg"
-              }
-            ]
-          },
-          {
-            "id": 5,
-            "name": "Seeotter",
-            "beschreibung": "Ein Meeressäuger, der für seine Fähigkeit bekannt ist, Steine als Werkzeuge zu verwenden. Er ist typisch für die Küstengewässer des Nordpazifiks.",
-            "laenge": "1,2 bis 1,5 Meter",
-            "gewicht": "14 bis 45 kg",
-            "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
-            "tief": "Oberfläche bis 50 Meter",
-            "ernaerung": [
-              {
-                "name": "Seeigel",
-                "bildUrl": "https://example.com/bild/seeigel_nahrung.jpg"
-              },
-              {
-                "name": "Krabben",
-                "bildUrl": "https://example.com/bild/krabbe_nahrung.jpg"
-              },
-              {
-                "name": "Muscheln",
-                "bildUrl": "https://example.com/bild/muschel_nahrung.jpg"
-              }
-            ],
-            "raubtiere": [
-              {
-                "name": "Großer Weißhai",
-                "bildUrl": "https://example.com/bild/weisser_hai_raubtier.jpg"
-              },
-              {
-                "name": "Orca (Schwertwal)",
-                "bildUrl": "https://example.com/bild/orca_raubtier.jpg"
-              }
-            ]
-          }
+          "id": 1,
+          "name": "Großer Weißhai",
+          "beschreibung": "Einer der größten Raubfische der Welt. Er ist bekannt für seine Größe und seine Jagdgewohnheiten. Der Pazifik beheimatet eine der größten Populationen, besonders vor der Küste Kaliforniens und Südaustraliens/Neuseelands.",
+          "laenge": "3,5 bis 6 Meter",
+          "gewicht": "bis zu 2 Tonnen",
+          "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
+          "tief": "0 bis 1.200 Meter",
+          "ernaerung": [
+            {
+              "name": "Robben",
+              "bildUrl": "https://example.com/bild/robbe_nahrung.jpg"
+            },
+            {
+              "name": "Seelöwen",
+              "bildUrl": "https://example.com/bild/seeloewe_nahrung.jpg"
+            },
+            {
+              "name": "Wale (Aas)",
+              "bildUrl": "https://example.com/bild/wal_aas.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Orca (Schwertwal)",
+              "bildUrl": "https://example.com/bild/orca_raubtier.jpg"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Japanischer Riesenkalmar",
+          "beschreibung": "Ein großer Tintenfisch, der im Nordpazifik, insbesondere in den Gewässern um Japan und Korea, heimisch ist. Er ist bekannt für seine enormen Augen und seine nächtliche Jagd.",
+          "laenge": "Gesamtlänge bis zu 5 Meter",
+          "gewicht": "bis zu 50 kg",
+          "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
+          "tief": "ca. 100 bis 1.000 Meter",
+          "ernaerung": [
+            {
+              "name": "Kleine Fische",
+              "bildUrl": "https://example.com/bild/fisch_nahrung.jpg"
+            },
+            {
+              "name": "Krebstiere",
+              "bildUrl": "https://example.com/bild/krebstier_nahrung.jpg"
+            },
+            {
+              "name": "Andere Kalmare",
+              "bildUrl": "https://example.com/bild/kalmar_nahrung.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Pottwal",
+              "bildUrl": "https://example.com/bild/pottwal_raubtier.jpg"
+            },
+            {
+              "name": "Seelöwen",
+              "bildUrl": "https://example.com/bild/seeloewe_raubtier.jpg"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Riesenzackenbarsch",
+          "beschreibung": "Dieser massige Fisch, oft als **Goliath-Zackenbarsch** des Pazifiks bezeichnet, kommt in Riffgebieten des Indo-Pazifiks vor, ist aber ein charakteristisches Tier der pazifischen Korallenriffe.",
+          "laenge": "bis zu 2,7 Meter",
+          "gewicht": "bis zu 400 kg",
+          "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
+          "tief": "5 bis 100 Meter",
+          "ernaerung": [
+            {
+              "name": "Krustentiere",
+              "bildUrl": "https://example.com/bild/krustentier_nahrung.jpg"
+            },
+            {
+              "name": "Andere Fische",
+              "bildUrl": "https://example.com/bild/fisch_nahrung.jpg"
+            },
+            {
+              "name": "Kleine Haie/Rochen",
+              "bildUrl": "https://example.com/bild/hai_rochen_nahrung.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Große Haie",
+              "bildUrl": "https://example.com/bild/hai_raubtier.jpg"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Ozeanischer Weißspitzenhai",
+          "beschreibung": "Ein Hochseehai, der hauptsächlich in tropischen und subtropischen Gewässern des Pazifiks, Atlantiks und Indischen Ozeans lebt, aber im Pazifik sehr verbreitet ist. Er ist bekannt für seine breiten, abgerundeten Flossenspitzen.",
+          "laenge": "ca. 1,5 bis 3 Meter",
+          "gewicht": "bis zu 170 kg",
+          "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
+          "tief": "Oberfläche bis 300 Meter",
+          "ernaerung": [
+            {
+              "name": "Thunfische",
+              "bildUrl": "https://example.com/bild/thunfisch_nahrung.jpg"
+            },
+            {
+              "name": "Tintenfische",
+              "bildUrl": "https://example.com/bild/tintenfisch_nahrung.jpg"
+            },
+            {
+              "name": "Meeresschildkröten",
+              "bildUrl": "https://example.com/bild/schildkroete_nahrung.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Orca (Schwertwal)",
+              "bildUrl": "https://example.com/bild/orca_raubtier.jpg"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Seeotter",
+          "beschreibung": "Ein Meeressäuger, der für seine Fähigkeit bekannt ist, Steine als Werkzeuge zu verwenden. Er ist typisch für die Küstengewässer des Nordpazifiks.",
+          "laenge": "1,2 bis 1,5 Meter",
+          "gewicht": "14 bis 45 kg",
+          "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
+          "tief": "Oberfläche bis 50 Meter",
+          "ernaerung": [
+            {
+              "name": "Seeigel",
+              "bildUrl": "https://example.com/bild/seeigel_nahrung.jpg"
+            },
+            {
+              "name": "Krabben",
+              "bildUrl": "https://example.com/bild/krabbe_nahrung.jpg"
+            },
+            {
+              "name": "Muscheln",
+              "bildUrl": "https://example.com/bild/muschel_nahrung.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Großer Weißhai",
+              "bildUrl": "https://example.com/bild/weisser_hai_raubtier.jpg"
+            },
+            {
+              "name": "Orca (Schwertwal)",
+              "bildUrl": "https://example.com/bild/orca_raubtier.jpg"
+            }
+          ]
+        }
       ],
       "quiz": [
         {
@@ -335,7 +335,7 @@
     },
     {
       "id": 2,
-      "name": "Atlantischer Ozean",
+      "name": "Atlantik - Atlantischer Ozean",
       "tief": "8.486 m (Puerto-Rico-Graben)",
       "groesse": "85.133.000 km²",
       "temperatur": "-2°C bis 29°C",
@@ -524,7 +524,7 @@
     },
     {
       "id": 3,
-      "name": "Indischer Ozean",
+      "name": "Indik - Indischer Ozean",
       "tief": "7.290 m (Sundagraben)",
       "groesse": "70.560.000 km²",
       "temperatur": "22°C bis 28°C",
@@ -694,7 +694,7 @@
     },
     {
       "id": 4,
-      "name": "Südlicher Ozean",
+      "name": "Antarktik - Antarktischer Ozean",
       "tief": "7.236 m (Süd-Sandwich-Graben)",
       "groesse": "20.327.000 km²",
       "temperatur": "-2°C bis 10°C",
@@ -872,7 +872,7 @@
     },
     {
       "id": 5,
-      "name": "Arktischer Ozean",
+      "name": "Arktik - Arktischer Ozean",
       "tief": "5.450 m",
       "groesse": "14.056.000 km²",
       "temperatur": "-1.8°C bis 4°C",

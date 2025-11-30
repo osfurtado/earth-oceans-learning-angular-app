@@ -13,50 +13,21 @@ import { MeerDetails } from './meer-details/meer-details';
 export class Meer implements OnInit {
 
   route = inject(ActivatedRoute)
-  activeOzean: string | null = null
-
   router = inject(Router)
-
+  activeOzean: string | null = null
+  meere = [
+    { id: 2, path: 'atlantik', name: 'Atlantik' },
+    { id: 3, path: 'indik', name: 'Indik'},
+    { id: 1, path: 'pazifik', name: 'Pazifik'},
+    { id: 5, path: 'artik', name: 'Artik'},
+    { id: 4, path: 'antarktik', name: 'Antarktik'}
+  ]
 
   ngOnInit(): void {
     this.activeOzean = this.route.snapshot.paramMap.get('ozean');
   }
 
-  onOceanClick(event: string){
-    this.activeOzean = event
-    //this.router.navigate([`${this.activeOzean}`])
+  onOceanClick(ozean: string){
+    this.activeOzean = ozean
   }
-
-
-  meere = [
-    {
-      id: 2,
-      path: 'atlantik',
-      name: 'Atlantik'
-    },
-    {
-      id: 3,
-      path: 'indik',
-      name: 'Indik'
-    },
-    {
-      id: 1,
-      path: 'pazifik',
-      name: 'Pazifik'
-    },
-    {
-      id: 5,
-      path: 'artik',
-      name: 'Artik'
-    },
-    {
-      id: 4,
-      path: 'antarktik',
-      name: 'Antarktik'
-    }
-  ]
-
-
-
-
 }

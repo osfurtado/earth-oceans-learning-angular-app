@@ -1,15 +1,14 @@
 <div class="home-container">
   <div style="display: flex; justify-content: start; width: 100%;">
-      <a [href]="this.baseUrl" class="logo">
+    <a href="/" class="logo">
       <img src="logo2.svg" alt="app logo" height="30" width="30">
       <span>EOL</span>
-  </a>
+    </a>
   </div>
   <h1 class="hero">Entdecke die Meere</h1>
   <div style="display: flex; gap: 50px; justify-content: center;">
     @for(meer of meere; track meer.name){
-    <button style="width: 200px; height: 50px; font-size: 25px;"
-      [routerLink]="meer.path">{{meer.name}}</button>
+    <button style="width: 200px; height: 50px; font-size: 25px;" [routerLink]="meer.path">{{meer.name}}</button>
     }
   </div>
   <div class="home-welt"></div>

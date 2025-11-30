@@ -1,17 +1,39 @@
-.meer-details-container{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0 150px;/*
+.meer-details-container {
+    padding: 0 150px;
+    /*
     background-image: url('/meere/menu/top-menu.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left 0% bottom 0%;
     background-size: 200px 200px; */
-    background-color: var(--mat-sys-surface-container-high) /*var(--mat-sys-surface-container-high)*/;
+    background-color: var(--mat-sys-surface)
+        /*var(--mat-sys-surface-container-high)*/
+    ;
 }
 
-.quiz{
+.title {
+    padding: 95px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner {
+    border-radius: 15px;
+    padding: 2px;
+    border: 2px solid black;
+    background-color: rgb(240, 239, 239);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/meere/welt.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.quiz {
     display: flex;
     width: 100%;
     justify-content: end;
@@ -20,7 +42,7 @@
     right: 20px;
 }
 
-.vergleich{
+.vergleich {
     padding: 12px;
     cursor: pointer;
     border: 2px solid black;
@@ -29,10 +51,10 @@
     text-align: center;
     font-weight: bold;
     background-color: var(--mat-sys-primary);
-    color: white !important;
+    color: var(--mat-sys-on-primary) !important;
 }
 
-.vergleich:hover{
+.vergleich:hover {
     box-shadow: 3px 4px black;
 }
 
@@ -48,21 +70,25 @@
     box-shadow: 2px 4px black;
 }
 
-.tier-entdecken:hover{
+.tier-entdecken:hover {
     background-color: var(--mat-sys-primary);
     color: var(--mat-sys-on-primary);
 }
 
-.basic-info-card{
+.basic-info-card {
     flex-grow: 1;
-    height: 100%; 
-    background-color: var(--mat-sys-secondary-container); 
-    padding: 12px; 
-    border-radius: 12px; 
-    border: 2px solid black; 
+    height: 100%;
+    background-color: var(--mat-sys-secondary-container);
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid black;
     box-shadow: 2px 4px;
 }
 
-
-
-
+.spinner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

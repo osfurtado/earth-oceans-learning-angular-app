@@ -28,8 +28,10 @@ export class Vergleich implements OnInit {
   selectedTier1!: TierDto
   selectedTier2!: TierDto
   meerObservable!: Observable<MeerDto[]>
+  tierObservable!: Observable<TierDto[]>
   meerService = inject(MeerService)
-  meere!:MeerDto[] 
+  meere!:MeerDto[]
+  tiere!: TierDto[] 
   source: string = ''
   typ!: string;
   
@@ -49,6 +51,8 @@ export class Vergleich implements OnInit {
     //Meer
     this.meerObservable = this.meerService.getAllMeere();
     this.meere = await lastValueFrom(this.meerObservable)
+    this.tierObservable = this.meerService.getAllTiere()
+    this.tiere = await lastValueFrom(this.tierObservable)
     this.selectedMeer1 = this.meere.filter(m => m.id == this.activeOzeanId)[0]
     this.selectedMeer2 = this.meere[0]
     console.log('Selected Meer: ', this.selectedMeer1.name)
@@ -56,7 +60,7 @@ export class Vergleich implements OnInit {
     //Tier
     if(this.source == 'tier'){
       this.selectedTier1 = this.selectedMeer1.tiere.filter( t => t.id == this.activeTierId)[0]
-      this.selectedTier2 = this.selectedMeer1.tiere[0]
+      this.selectedTier2 = this.tiere[0]
       console.log('Nome do animal: ',this.selectedTier1.name)
     }
 

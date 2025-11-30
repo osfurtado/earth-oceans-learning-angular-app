@@ -4,14 +4,11 @@ import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-home',
-  imports: [MatButton, RouterLink],
+  imports: [RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
-
-   baseUrl = 'http://localhost:4200'
-
 
   meere = [
     {
