@@ -1,13 +1,15 @@
 @if(meerObservable | async){
 <div class="vergleich-container">
-    <h2>{{this.source =='ocean' ? 'Ozeane ': 'Tiere '}} vergleichen </h2>
+    <h2 style="margin-bottom: 50px;">{{this.source =='ocean' ? 'Ozeane ': 'Tiere '}} vergleichen </h2>
     <div class="vergleich-content-container">
         <div class="item-1">
             <div class="name1">
                 {{this.source =='ocean' ? this.selectedMeer1.name: this.selectedTier1.name}}
             </div>
             <div class="vergleich-content">
-                <div class="bild">Bild</div>
+                <div class="bild">
+                     <img [src]="this.selectedMeer1.features[0].bildUrl" [alt]="this.selectedMeer1.name" style="border-radius: 10px;height: 100%; width: 100%; object-fit: contain;">
+                </div>
                 <div class="merkmale">
                     <div class="feature">
                         {{this.source =='ocean' ? 'Größe': 'Länge'}}
@@ -35,22 +37,19 @@
         </div>
         <div class="separator"></div>
         <div class="item-2">
-            <mat-form-field>
-                <mat-label>{{this.source =='ocean' ? 'Ozean': 'Tier'}}</mat-label>
                 @if(this.source == 'ocean'){
-                <mat-select [(value)]="selectedMeer2">
+                <mat-select [(value)]="selectedMeer2" style="border: 2px solid black; padding: 8px; background-color: var(--mat-sys-primary); color: var(--mat-sys-on-primary); font-weight: bold; font-size: 15px;">
                     @for (item of this.meere; track item.id) {
                     <mat-option [value]="item">{{item.name}}</mat-option>
                     }
                 </mat-select>
                 } @else {
-                <mat-select [(value)]="selectedTier2">
+                <mat-select [(value)]="selectedTier2" style="border: 2px solid black; padding: 8px; background-color: var(--mat-sys-primary); color: var(--mat-sys-on-primary); font-weight: bold; font-size: 15px;">
                     @for (item of this.tiere; track item.id) {
                     <mat-option [value]="item">{{item.name}}</mat-option>
                     }
                 </mat-select>
                 }
-            </mat-form-field>
             <div class="vergleich-content">
                 <div class="merkmale">
                     <div class="feature">
@@ -75,7 +74,9 @@
                     </div>
                     <div class="separator-x"></div>
                 </div>
-                <div class="bild">Bild</div>
+                <div class="bild">
+                    <img [src]="this.selectedMeer2.features[0].bildUrl" [alt]="this.selectedMeer2.name" style="border-radius: 10px;height: 100%; width: 100%; object-fit: contain;">
+                </div>
             </div>
         </div>
     </div>

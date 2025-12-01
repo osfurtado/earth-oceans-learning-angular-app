@@ -105,7 +105,7 @@ export class Tier implements OnInit{
     },
     {
       id: 4,
-      path: 'antartik'
+      path: 'antarktik'
     }
   ]
 

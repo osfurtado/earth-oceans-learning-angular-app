@@ -41,12 +41,12 @@
         <div style="display: flex; flex-direction: row; gap: 50px; flex-wrap: wrap; ">
             @for(f of this.activeOzean.features; track f.feature){
             <div
-                style="max-width: 350px; display: flex; flex-direction: column; border: 2px solid black; border-radius: 10px; box-shadow: 2px 4px black;">
+                style="width: 350px; display: flex; flex-direction: column; border: 2px solid black; border-radius: 10px; box-shadow: 2px 4px black;">
                 <div
                     style="color: var(--mat-sys-on-primary);padding: 12px; border-bottom: 2px solid black; border-radius: 10px 10px 0 0; background-color: var(--mat-sys-primary) ">
                     <span style="font-size: 16px; font-weight: bold;">{{f.feature}}</span>
                 </div>
-                <div style="border-bottom: 2px solid black;">
+                <div style="border-bottom: 2px solid black; height: 300px; background-color: var(--mat-sys-surface-container);">
                     <img [src]="f.bildUrl" [alt]="f.feature" style="height: 100%; width: 100%; object-fit: contain;">
                 </div>
                 <div style="color: black; padding: 0 10px 0 10px;">

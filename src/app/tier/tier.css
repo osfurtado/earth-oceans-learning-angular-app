@@ -2,6 +2,21 @@
     padding: 75px 0 20px 0;
 }
 
+.buttons {
+    padding: 8px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--mat-sys-primary);
+    color: var(--mat-sys-on-primary) !important;
+}
+
+.buttons:hover {
+    box-shadow: 3px 4px black;
+}
 
 .carousel-wrapper {
     position: relative;
@@ -25,9 +40,8 @@
     }
 
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
+
 }
 
 .story-item {

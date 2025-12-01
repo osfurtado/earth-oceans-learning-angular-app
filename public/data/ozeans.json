@@ -2,29 +2,244 @@
   "meere": [
     {
       "id": 1,
-      "name": "Pazifik - Pazifischer Ozean",
+      "name": "Pazifischer Ozean",
       "tief": "11.034 m (Mariannengraben)",
       "groesse": "168.723.000 km²",
       "temperatur": "-1.4°C bis 50°C",
       "bildUrl": "/meere/pazifik/pazifik.jpg",
       "features": [
         {
-          "feature": "Größte Ozean",
-          "beschreibung": "Der Pazifik ist der größte Ozean. Westlich des Ozeans liegen die Kontinente Asien und Australien, östlich vom Ozean befinden sich Nord- und Südamerika. Mit einer Fläche von etwa 165 Millionen Quadratkilometern und einer maximalen Tiefe von ca. 11.000 Metern (Mariannengraben), ist er deutlich größer und tiefer als alle anderen Weltmeere der Erde. Außerdem grenzt er an jeden anderen Ozean.",
+          "feature": "Lage des Ozeans",
+          "beschreibung": "Westlich des Ozeans liegen die Kontinente Asien und Australien, östlich vom Ozean befinden sich Nord- und Südamerika",
           "bildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg"
         },
         {
+            "feature": "Marianengraben",
+            "beschreibung": "Die tiefste bekannte Stelle der Weltmeere.",
+            "bildUrl": "meere/pazifik/eigenschaften/marianengraben.jpg"
+        },
+        {
           "feature": "Pazifischer Feuerring",
-          "beschreibung": "Ein Gebiet mit hoher vulkanischer Aktivität und vielen Erdbeben.",
+          "beschreibung": "Ein Gebiet mit vielen Vulkanen und Erdbeben rund um den Pazifik.",
           "bildUrl": "meere/pazifik/eigenschaften/pazifischer_feuerring.png"
         },
         {
           "feature": "Great Barrier Reef",
           "beschreibung": "Das größte Korallenriff der Erde.",
           "bildUrl": "meere/pazifik/eigenschaften/great_barrier_reef.jpg"
+        },
+        {
+          "feature": "Größte Ozean",
+          "beschreibung": "Mit einer Fläche von etwa 165 Millionen Quadratkilometern und einer maximalen Tiefe von ca. 11.000 Metern (Mariannengraben), ist er deutlich größer und tiefer als alle anderen Weltmeere der Erde. Außerdem grenzt er an jeden anderen Ozean.",
+          "bildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg"
         }
+
       ],
       "tiere": [
+        {
+            "id": 20,
+            "name": "Galapagos-Pinguin",
+            "beschreibung": "Die einzige Pinguinart, die nördlich des Äquators lebt.",
+            "laenge": "ca. 49 cm",
+            "gewicht": "ca. 2,5 kg",
+            "bildUrl": "/meere/pazifik/tiere/galapagos-pinguin.jpg",
+            "tief": "bis zu 30 Meter",
+            "ernaerung": [
+                {
+                    "name": "kleine Fische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Haie",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Robben",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+          "id": 21,
+          "name": "Seeotter",
+          "beschreibung": "Ein Meeressäuger, der für seine Fähigkeit bekannt ist, Steine als Werkzeuge zu verwenden. Er ist typisch für die Küstengewässer des Nordpazifiks.",
+          "laenge": "1,2 bis 1,5 Meter",
+          "gewicht": "14 bis 45 kg",
+          "bildUrl": "/meere/pazifik/tiere/seeotter.jpg",
+          "tief": "Oberfläche bis 50 Meter",
+          "ernaerung": [
+            {
+              "name": "Seeigel",
+              "bildUrl": "https://example.com/bild/seeigel_nahrung.jpg"
+            },
+            {
+              "name": "Krabben",
+              "bildUrl": "https://example.com/bild/krabbe_nahrung.jpg"
+            },
+            {
+              "name": "Muscheln",
+              "bildUrl": "https://example.com/bild/muschel_nahrung.jpg"
+            }
+          ],
+          "raubtiere": [
+            {
+              "name": "Großer Weißhai",
+              "bildUrl": "https://example.com/bild/weisser_hai_raubtier.jpg"
+            },
+            {
+              "name": "Orca (Schwertwal)",
+              "bildUrl": "https://example.com/bild/orca_raubtier.jpg"
+            }
+          ]
+        },
+        {
+            "id": 22,
+            "name": "Stellerscher Seelöwe",
+            "beschreibung": "Der größte Seelöwe der Welt. Die Männchen haben eine dicke Mähne und sind sehr laut.",
+            "laenge": "bis zu 3,3 Meter",
+            "gewicht": "bis zu 1.100 kg",
+            "bildUrl": "/meere/pazifik/tiere/stellerscher-seelöwe.jpg",
+            "tief": "bis zu 400 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Tintenfische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Krebse",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Orcas",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Haie",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "name": "Pazifischer Weißseitendelfin",
+            "beschreibung": "Ein sehr schneller und akrobatischer Delfin, der in großen Gruppen im Nordpazifik lebt und gerne aus dem Wasser springt.",
+            "laenge": "bis zu 2,5 Meter",
+            "gewicht": "bis zu 200 kg",
+            "bildUrl": "/meere/pazifik/tiere/pazifischer-weißseitendelfin.jpg",
+            "tief": "bis zu 200 Meter",
+            "ernaerung": [
+                {
+                    "name": "Hering",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Sardinen",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Tintenfische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Orcas",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Große Haie",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "name": "Nördlicher See-Elefant",
+            "beschreibung": "Die Männchen haben eine große, rüsselartige Nase, die sie im Kampf benutzen. Sie sind die größten Robben der nördlichen Hemisphäre.",
+            "laenge": "bis zu 5 Meter",
+            "gewicht": "bis zu 2.500 kg",
+            "bildUrl": "/meere/pazifik/tiere/nördlicher-see-elefant.jpg",
+            "tief": "bis zu 1.500 Meter",
+            "ernaerung": [
+                {
+                    "name": "Tintenfische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Rochen",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Kleine Haie",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Große Haie",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Orcas",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "name": "Clownfisch",
+            "beschreibung": "Lebt in Symbiose mit Seeanemonen und ist durch den Film 'Findet Nemo' berühmt geworden.",
+            "laenge": "ca. 11 cm",
+            "gewicht": "ca. 250 g",
+            "bildUrl": "/meere/pazifik/tiere/clownfisch.jpg",
+            "tief": "bis zu 15 Meter",
+            "ernaerung": [
+                {
+                    "name": "Algen",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Zooplankton",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "größere Fische",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "name": "Japanische Riesenkrabbe",
+            "beschreibung": "Die größte bekannte Krebsart der Welt.",
+            "laenge": "bis zu 3,8 Meter (Beinspannweite)",
+            "gewicht": "bis zu 19 kg",
+            "bildUrl": "/meere/pazifik/tiere/japanische-riesenkrabbe.jpg",
+            "tief": "150 bis 300 Meter",
+            "ernaerung": [
+                {
+                    "name": "Aas",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Weichtiere",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": []
+        },
+
+
         {
           "id": 101,
           "name": "Blauwal",
@@ -165,40 +380,8 @@
               "bildUrl": "https://example.com/bild/orca_raubtier.jpg"
             }
           ]
-        },
-        {
-          "id": 5,
-          "name": "Seeotter",
-          "beschreibung": "Ein Meeressäuger, der für seine Fähigkeit bekannt ist, Steine als Werkzeuge zu verwenden. Er ist typisch für die Küstengewässer des Nordpazifiks.",
-          "laenge": "1,2 bis 1,5 Meter",
-          "gewicht": "14 bis 45 kg",
-          "bildUrl": "/meere/pazifik/tiere/groesserWeisserhai.jpg",
-          "tief": "Oberfläche bis 50 Meter",
-          "ernaerung": [
-            {
-              "name": "Seeigel",
-              "bildUrl": "https://example.com/bild/seeigel_nahrung.jpg"
-            },
-            {
-              "name": "Krabben",
-              "bildUrl": "https://example.com/bild/krabbe_nahrung.jpg"
-            },
-            {
-              "name": "Muscheln",
-              "bildUrl": "https://example.com/bild/muschel_nahrung.jpg"
-            }
-          ],
-          "raubtiere": [
-            {
-              "name": "Großer Weißhai",
-              "bildUrl": "https://example.com/bild/weisser_hai_raubtier.jpg"
-            },
-            {
-              "name": "Orca (Schwertwal)",
-              "bildUrl": "https://example.com/bild/orca_raubtier.jpg"
-            }
-          ]
         }
+    
       ],
       "quiz": [
         {
@@ -335,34 +518,190 @@
     },
     {
       "id": 2,
-      "name": "Atlantik - Atlantischer Ozean",
+      "name": "Atlantischer Ozean",
       "tief": "8.486 m (Puerto-Rico-Graben)",
       "groesse": "85.133.000 km²",
       "temperatur": "-2°C bis 29°C",
       "bildUrl": "/meere/atlantik/atlantik.jpg",
       "features": [
         {
-          "feature": "zweitgrößte Ozean",
-          "beschreibung": "Der Atlantik ist nur der zweitgrößte Ozean. Er befindet sich zwischen den Kontinenten Nord- und Südamerika auf der einen Seite und Europa sowie Afrika auf der anderen Seite. Durch das europäische Mittelmeer hat der atlantische Ozean auch eine Verbindung zum asiatischen Kontinent.",
+          "feature": "Lage des Ozeans",
+          "beschreibung": "Er befindet sich zwischen den Kontinenten Nord- und Südamerika auf der einen Seite und Europa sowie Afrika auf der anderen Seite",
           "bildUrl": "meere/atlantik/eigenschaften/atlantik-2.jpg"
         },
         {
-          "feature": "Entstehung",
-          "beschreibung": "Der Atlantische Ozean entstand erst vor etwa 150 Millionen Jahren durch die Verschiebung der Kontinente — also als der Urkontinent Pangäa auseinanderbrach.",
+          "feature": "zweitgrößte Ozean",
+          "beschreibung": "Der Atlantik ist nur der zweitgrößte Ozean. Durch das europäische Mittelmeer hat der atlantische Ozean auch eine Verbindung zum asiatischen Kontinent.",
           "bildUrl": "meere/atlantik/eigenschaften/atlantik-2.jpg"
         },
         {
           "feature": "Mittelatlantischer Rücken",
           "beschreibung": "Ein riesiges Unterwassergebirge, das den Ozean teilt.",
-          "bildUrl": "meere/atlantik/eigenschaften/atlantik-2.jpg"
+          "bildUrl": "meere/atlantik/eigenschaften/mittelatlantischer-rücken.jpg"
         },
         {
           "feature": "Golfstrom",
           "beschreibung": "Eine warme Meeresströmung, die das Klima in Europa beeinflusst.",
-          "bildUrl": "meere/atlantik/eigenschaften/atlantik-2.jpg"
+          "bildUrl": "meere/atlantik/eigenschaften/golfstrom.png"
         }
       ],
       "tiere": [
+        {
+            "id": 20,
+            "name": "Papageitaucher",
+            "beschreibung": "Ein bunter Seevogel, der an den Küsten des Nordatlantiks lebt.",
+            "laenge": "ca. 30 cm",
+            "gewicht": "ca. 500 g",
+            "bildUrl": "/meere/atlantik/tiere/papageitaucher.jpg",
+            "tief": "bis zu 60 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Füchse",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "name": "Amerikanische Hummer",
+            "beschreibung": "Ein großes Krebstier mit starken Scheren.",
+            "laenge": "bis zu 60 cm",
+            "gewicht": "bis zu 20 kg",
+            "bildUrl": "/meere/atlantik/tiere/amerikanische-hummer.jpg",
+            "tief": "bis zu 50 Meter",
+            "ernaerung": [
+                {
+                    "name": "Muscheln",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "kleine Fische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Kabeljau",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "name": "Grüne Meeresschildkröte",
+            "beschreibung": "Meeresschildkröten sind Reptilien, die fast ihr ganzes Leben im Meer verbringen.",
+            "laenge": "bis zu 2,5 Meter",
+            "gewicht": "bis zu 800 kg",
+            "bildUrl": "/meere/atlantik/tiere/gruene-meeresschildkroete.jpg",
+            "tief": "bis zu 300 Meter",
+            "ernaerung": [
+                {
+                    "name": "Quallen",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Pflanzen",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Haie",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "name": "Manati (Seekuh)",
+            "beschreibung": "Ein großes, friedliches Meeressäugetier, das auch 'Seekuh' genannt wird. Sie sind Pflanzenfresser und leben in flachen, warmen Gewässern.",
+            "laenge": "bis zu 4,5 Meter",
+            "gewicht": "bis zu 600 kg",
+            "bildUrl": "/meere/atlantik/tiere/manati.jpeg",
+            "tief": "lebt in flachen Küstengewässern",
+            "ernaerung": [
+                {
+                    "name": "Seegras",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Wasserpflanzen",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Krokodile (für Jungtiere)",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Haie (selten)",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "name": "Mittelmeer-Mönchsrobbe",
+            "beschreibung": "Eine sehr seltene Robbenart, die früher im gesamten Mittelmeer und im Atlantik lebte. Sie ist eine der am stärksten bedrohten Robbenarten der Welt.",
+            "laenge": "bis zu 2,8 Meter",
+            "gewicht": "bis zu 400 kg",
+            "bildUrl": "/meere/atlantik/tiere/mittelmeer-moenchsrobbe.jpg",
+            "tief": "lebt küstennah, oft in Höhlen",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Tintenfische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Große Haie (selten)",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "name": "Zitronenhai",
+            "beschreibung": "Ein Hai, der seinen Namen von seiner gelblich-braunen Farbe hat. Er lebt in flachen Küstengewässern und ist bekannt für seine Intelligenz.",
+            "laenge": "bis zu 3,4 Meter",
+            "gewicht": "bis zu 250 kg",
+            "bildUrl": "/meere/atlantik/tiere/zitronenhai.jpg",
+            "tief": "bis zu 90 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Rochen",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Krebse",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Größere Haie",
+                    "bildUrl": ""
+                }
+            ]
+        },
+
+
         {
           "id": 201,
           "name": "Weißer Hai",
@@ -524,19 +863,105 @@
     },
     {
       "id": 3,
-      "name": "Indik - Indischer Ozean",
+      "name": "Indischer Ozean",
       "tief": "7.290 m (Sundagraben)",
       "groesse": "70.560.000 km²",
       "temperatur": "22°C bis 28°C",
       "bildUrl": "assets/maps/indian_location.png",
       "features": [
         {
+          "feature": "Lage des Ozeans",
+          "beschreibung": "Wie dir der Name schon verrät, grenzt der Indische Ozean an Indien — er liegt also südlich von Asien. Außerdem liegt der Ozean östlich von Afrika und westlich von Australien",
+          "bildUrl": "meere/indik/eigenschaften/indik-2.jpg"
+        },
+        {
+            "feature": "Wärmstes Meer",
+            "beschreibung": "Der Indische Ozean ist der wärmste aller Ozeane mit durchschnittlich 22-28°C.",
+            "bildUrl": "meere/indik/eigenschaften/wärmstes-meer.jpg"
+        },
+        {
           "feature": "Monsun-Einfluss",
-          "beschreibung": "Der Ozean steuert die Monsunregen in Asien.",
-          "bildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg"
+          "beschreibung": "Starke Winde, die je nach Jahreszeit ihre Richtung ändern und viel Regen bringen.",
+          "bildUrl": "meere/indik/eigenschaften/monsun-einfluss.png"
         }
       ],
       "tiere": [
+          {
+              "id": 20,
+              "name": "Dugong",
+              "beschreibung": "Ein großes, pflanzenfressendes Meeressäugetier, auch Seekuh genannt.",
+              "laenge": "bis zu 3 Meter",
+              "gewicht": "bis zu 400 kg",
+              "bildUrl": "/meere/indik/tiere/dugong.jpg",
+              "tief": "lebt in flachen Küstengewässern",
+              "ernaerung": [
+                  {
+                      "name": "Seegras",
+                      "bildUrl": ""
+                  }
+              ],
+              "raubtiere": [
+                  {
+                      "name": "Haie",
+                      "bildUrl": ""
+                  },
+                  {
+                      "name": "Krokodile",
+                      "bildUrl": ""
+                  }
+              ]
+          },
+          {
+              "id": 21,
+              "name": "Blaupunktrochen",
+              "beschreibung": "Ein farbenfroher Rochen mit leuchtend blauen Punkten.",
+              "laenge": "bis zu 70 cm (Durchmesser)",
+              "gewicht": "bis zu 5 kg",
+              "bildUrl": "/meere/indik/tiere/blaupunktrochen.jpg",
+              "tief": "bis zu 30 Meter",
+              "ernaerung": [
+                  {
+                      "name": "Krebse",
+                      "bildUrl": ""
+                  },
+                  {
+                      "name": "Würmer",
+                      "bildUrl": ""
+                  }
+              ],
+              "raubtiere": [
+                  {
+                      "name": "Haie",
+                      "bildUrl": ""
+                  }
+              ]
+          },
+          {
+              "id": 22,
+              "name": "Indopazifischer Segelfisch",
+              "beschreibung": "Einer der schnellsten Fische der Welt, mit einem großen, segelartigen Rückenflosse.",
+              "laenge": "bis zu 3,4 Meter",
+              "gewicht": "bis zu 100 kg",
+              "bildUrl": "/meere/indik/tiere/indopazifischer-segelfisch.jpg",
+              "tief": "bis zu 200 Meter",
+              "ernaerung": [
+                  {
+                      "name": "Fische",
+                      "bildUrl": ""
+                  },
+                  {
+                      "name": "Kalmare",
+                      "bildUrl": ""
+                  }
+              ],
+              "raubtiere": [
+                  {
+                      "name": "Haie",
+                      "bildUrl": ""
+                  }
+              ]
+          },
+
         {
           "id": 301,
           "name": "Mantarochen",
@@ -694,47 +1119,272 @@
     },
     {
       "id": 4,
-      "name": "Antarktik - Antarktischer Ozean",
+      "name": "Antarktischer Ozean",
       "tief": "7.236 m (Süd-Sandwich-Graben)",
       "groesse": "20.327.000 km²",
       "temperatur": "-2°C bis 10°C",
       "bildUrl": "assets/maps/southern_location.png",
       "features": [
         {
+          "feature": "Lage des Ozeans",
+          "beschreibung": "Er ist nämlich der südlichste der Ozeane und somit auch der einzige, der ausschließlich auf der Südhalbkugel liegt. Der Kontinent Antarktika wird komplett von ihm umschlossen",
+          "bildUrl": "meere/antarktik/eigenschaften/antarktik-2.jpg"
+        },
+        {
+            "feature": "Eisberge",
+            "beschreibung": "Riesige Eisblöcke, die von den Gletschern der Antarktis abbrechen und im Meer treiben.",
+            "bildUrl": "meere/antarktik/eigenschaften/eisberge.jpg"
+        },
+        {
           "feature": "Antarktischer Zirkumpolarstrom",
-          "beschreibung": "Die stärkste Strömung der Welt, die die Antarktis isoliert.",
-          "bildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg"
+          "beschreibung": "Die stärkste Strömung der Welt, die die Antarktis umkreist.",
+          "bildUrl": "meere/antarktik/eigenschaften/zirkumpolarstrom.jpeg"
         }
       ],
       "tiere": [
+            {
+                "id": 20,
+                "name": "Kaiserpinguin",
+                "beschreibung": "Der größte Pinguin der Welt, der in der extremen Kälte der Antarktis brütet.",
+                "laenge": "bis zu 1,2 Meter",
+                "gewicht": "bis zu 40 kg",
+                "bildUrl": "/meere/antarktik/tiere/kaiserpinguin.jpg",
+                "tief": "bis zu 500 Meter",
+                "ernaerung": [
+                    {
+                        "name": "Fische",
+                        "bildUrl": ""
+                    },
+                    {
+                        "name": "Krill",
+                        "bildUrl": ""
+                    }
+                ],
+                "raubtiere": [
+                    {
+                        "name": "Seeleoparden",
+                        "bildUrl": ""
+                    },
+                    {
+                        "name": "Orcas",
+                        "bildUrl": ""
+                    }
+                ]
+            },
         {
-          "id": 401,
-          "name": "Kaiserpinguin",
-          "beschreibung": "Die größte Pinguinart, brütet im antarktischen Winter.",
-          "laenge": "115 cm",
-          "gewicht": "Bis zu 40 kg",
-          "bildUrl": "assets/animals/emperor_penguin.jpg",
-          "tief": "Taucht bis 500 m",
-          "ernaerung": [
-            {
-              "name": "Fisch",
-              "bildUrl": "assets/food/fish.jpg"
-            },
-            {
-              "name": "Krill",
-              "bildUrl": "assets/food/krill.jpg"
-            }
-          ],
-          "raubtiere": [
-            {
-              "name": "Seehecht",
-              "bildUrl": "assets/animals/leopard_seal.jpg"
-            },
-            {
-              "name": "Orca",
-              "bildUrl": "assets/animals/orca.jpg"
-            }
-          ]
+            "id": 2,
+            "name": "Seeleopard",
+            "beschreibung": "Ein großes, schlankes Raubtier und der Hauptfeind der Pinguine.",
+            "laenge": "bis zu 3,5 Meter",
+            "gewicht": "bis zu 600 kg",
+            "bildUrl": "",
+            "tief": "lebt an der Eiskante",
+            "ernaerung": [
+                {
+                    "name": "Pinguine",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Robben",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Orcas",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Weddellrobbe",
+            "beschreibung": "Eine Robbe, die erstaunlich tief und lange tauchen kann.",
+            "laenge": "bis zu 3,5 Meter",
+            "gewicht": "bis zu 600 kg",
+            "bildUrl": "",
+            "tief": "bis zu 700 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Orcas",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Seeleoparden",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Antarktischer Krill",
+            "beschreibung": "Winzige Krebstiere, die in riesigen Schwärmen leben und die Nahrungsgrundlage für viele Tiere sind.",
+            "laenge": "bis zu 6 cm",
+            "gewicht": "ca. 2 g",
+            "bildUrl": "",
+            "tief": "lebt in den oberen Wasserschichten",
+            "ernaerung": [
+                {
+                    "name": "Phytoplankton",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Wale",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Pinguine",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Schwarzer Seehecht",
+            "beschreibung": "Ein Tiefseefisch, der auch als Antarktisdorsch bekannt ist.",
+            "laenge": "bis zu 2 Meter",
+            "gewicht": "bis zu 100 kg",
+            "bildUrl": "",
+            "tief": "300 bis 2.500 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Kalmare",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Pottwale",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Wanderalbatros",
+            "beschreibung": "Einer der größten flugfähigen Vögel der Welt, mit einer riesigen Flügelspannweite.",
+            "laenge": "bis zu 3,5 Meter (Flügelspannweite)",
+            "gewicht": "bis zu 12 kg",
+            "bildUrl": "",
+            "tief": "lebt auf dem offenen Meer",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Tintenfische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": []
+        },
+        {
+            "id": 7,
+            "name": "Orca (Schwertwal)",
+            "beschreibung": "Ein sehr intelligentes und soziales Raubtier an der Spitze der Nahrungskette.",
+            "laenge": "bis zu 9 Meter",
+            "gewicht": "bis zu 6 Tonnen",
+            "bildUrl": "",
+            "tief": "bis zu 260 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Robben",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Wale",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": []
+        },
+        {
+            "id": 8,
+            "name": "Adeliepinguin",
+            "beschreibung": "Ein kleiner, lebhafter Pinguin, der große Kolonien bildet.",
+            "laenge": "ca. 70 cm",
+            "gewicht": "ca. 5 kg",
+            "bildUrl": "",
+            "tief": "bis zu 175 Meter",
+            "ernaerung": [
+                {
+                    "name": "Krill",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Seeleoparden",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Koloss-Kalmar",
+            "beschreibung": "Der schwerste bekannte Kalmar der Welt, mit riesigen Augen.",
+            "laenge": "bis zu 14 Meter",
+            "gewicht": "bis zu 750 kg",
+            "bildUrl": "",
+            "tief": "bis zu 2.200 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Pottwale",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Antarktischer Silberfisch",
+            "beschreibung": "Ein kleiner Fisch, der eine wichtige Rolle im Nahrungsnetz der Antarktis spielt.",
+            "laenge": "ca. 15 cm",
+            "gewicht": "ca. 30 g",
+            "bildUrl": "",
+            "tief": "lebt unter dem Eis",
+            "ernaerung": [
+                {
+                    "name": "Krill",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Pinguine",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Robben",
+                    "bildUrl": ""
+                }
+            ]
         }
       ],
       "quiz": [
@@ -872,19 +1522,275 @@
     },
     {
       "id": 5,
-      "name": "Arktik - Arktischer Ozean",
+      "name": "Arktischer Ozean",
       "tief": "5.450 m",
       "groesse": "14.056.000 km²",
       "temperatur": "-1.8°C bis 4°C",
       "bildUrl": "assets/maps/arctic_location.png",
       "features": [
         {
-          "feature": "Packeis",
-          "beschreibung": "Ein Großteil ist ganzjährig von Eis bedeckt.",
-          "bildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg"
+          "feature": "Lage des Ozeans",
+          "beschreibung": "Den Arktischen Ozean kannst du auch Nordpolarmeer nennen — er befindet sich nämlich am Nordpol der Erde",
+          "bildUrl": "meere/arktik/eigenschaften/arktik-2.jpg"
+        },
+        {
+            "feature": "Meereis",
+            "beschreibung": "Große Teile des Ozeans sind von einer dicken Eisschicht bedeckt, die im Winter wächst und im Sommer schmilzt.",
+            "bildUrl": "meere/arktik/eigenschaften/meereis.jpg"
+        },
+        {
+            "feature": "Polarlichter (Aurora Borealis)",
+            "beschreibung": "Wunderschöne, tanzende Lichter am Himmel, die man in der Nähe des Nordpols sehen kann.",
+            "bildUrl": "meere/arktik/eigenschaften/aurora-borealis.jpg"
+        },
+        {
+            "feature": "Mitternachtssonne",
+            "beschreibung": "Im Sommer geht die Sonne wochenlang nicht unter und es ist Tag und Nacht hell.",
+            "bildUrl": "meere/arktik/eigenschaften/mitternachtssonne.jpg"
         }
       ],
       "tiere": [
+        {
+            "id": 1,
+            "name": "Eisbär",
+            "beschreibung": "Der König der Arktis, perfekt an das Leben auf dem Meereis angepasst.",
+            "laenge": "bis zu 2,5 Meter",
+            "gewicht": "bis zu 680 kg",
+            "bildUrl": "",
+            "tief": "lebt an Land und auf dem Eis",
+            "ernaerung": [
+                {
+                    "name": "Robben",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": []
+        },
+        {
+            "id": 2,
+            "name": "Narwal",
+            "beschreibung": "Bekannt als das Einhorn des Meeres wegen seines langen Stoßzahns.",
+            "laenge": "bis zu 5,5 Meter",
+            "gewicht": "bis zu 1,6 Tonnen",
+            "bildUrl": "",
+            "tief": "bis zu 1.500 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Garnelen",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Orcas",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Eisbären",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Belugawal",
+            "beschreibung": "Ein weißer Wal, der für seine vielfältigen Laute bekannt ist und auch Kanarienvogel des Meeres genannt wird.",
+            "laenge": "bis zu 5,5 Meter",
+            "gewicht": "bis zu 1,6 Tonnen",
+            "bildUrl": "",
+            "tief": "bis zu 800 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Krebstiere",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Orcas",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Eisbären",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Walross",
+            "beschreibung": "Ein großes Meeressäugetier mit langen Stoßzähnen und einem borstigen Bart.",
+            "laenge": "bis zu 3,5 Meter",
+            "gewicht": "bis zu 1,5 Tonnen",
+            "bildUrl": "",
+            "tief": "bis zu 80 Meter",
+            "ernaerung": [
+                {
+                    "name": "Muscheln",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Orcas",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Eisbären",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Ringelrobbe",
+            "beschreibung": "Die häufigste Robbenart in der Arktis, die Atemlöcher im Eis anlegt.",
+            "laenge": "bis zu 1,5 Meter",
+            "gewicht": "bis zu 70 kg",
+            "bildUrl": "",
+            "tief": "bis zu 45 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Krebstiere",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Eisbären",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Grönlandwal",
+            "beschreibung": "Ein riesiger Wal mit einem massiven Kopf, der Eis brechen kann.",
+            "laenge": "bis zu 18 Meter",
+            "gewicht": "bis zu 100 Tonnen",
+            "bildUrl": "",
+            "tief": "bis zu 150 Meter",
+            "ernaerung": [
+                {
+                    "name": "Plankton",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Orcas",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Polarfuchs",
+            "beschreibung": "Ein kleiner Fuchs mit einem dicken, weißen Winterfell, das ihn perfekt tarnt.",
+            "laenge": "ca. 55 cm",
+            "gewicht": "ca. 3,5 kg",
+            "bildUrl": "",
+            "tief": "lebt an Land",
+            "ernaerung": [
+                {
+                    "name": "Lemminge",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Vögel",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Eisbären",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Polardorsch",
+            "beschreibung": "Ein kleiner Fisch, der eine wichtige Nahrungsquelle für viele arktische Tiere ist.",
+            "laenge": "ca. 25 cm",
+            "gewicht": "ca. 150 g",
+            "bildUrl": "",
+            "tief": "lebt unter dem Eis",
+            "ernaerung": [
+                {
+                    "name": "Plankton",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Robben",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Wale",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Lumme",
+            "beschreibung": "Ein Seevogel, der in riesigen Kolonien auf Klippen brütet.",
+            "laenge": "ca. 40 cm",
+            "gewicht": "ca. 1 kg",
+            "bildUrl": "",
+            "tief": "bis zu 180 Meter",
+            "ernaerung": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Polarfüchse",
+                    "bildUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Eismeergarnele",
+            "beschreibung": "Eine kleine Garnele, die in den kalten Gewässern der Arktis lebt.",
+            "laenge": "bis zu 16 cm",
+            "gewicht": "wenige Gramm",
+            "bildUrl": "",
+            "tief": "20 bis 1.400 Meter",
+            "ernaerung": [
+                {
+                    "name": "Plankton",
+                    "bildUrl": ""
+                }
+            ],
+            "raubtiere": [
+                {
+                    "name": "Fische",
+                    "bildUrl": ""
+                },
+                {
+                    "name": "Robben",
+                    "bildUrl": ""
+                }
+            ]
+        },
         {
           "id": 501,
           "name": "Walross",

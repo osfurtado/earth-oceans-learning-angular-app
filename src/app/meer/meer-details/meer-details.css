@@ -1,14 +1,14 @@
 .meer-details-container {
     padding: 0 150px;
+    height: 100%;
+    width: 100%;
     /*
-    background-image: url('/meere/menu/top-menu.jpg');
+    background-image: url('/meere/background-4.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left 0% bottom 0%;
-    background-size: 200px 200px; */
-    background-color: var(--mat-sys-surface)
-        /*var(--mat-sys-surface-container-high)*/
-    ;
+    background-size: 300px 800px; */
+
 }
 
 .title {
@@ -27,9 +27,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /*
     background-image: url('/meere/welt.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 
@@ -85,7 +86,8 @@
     box-shadow: 2px 4px;
 }
 
-.spinner {
+.spinner{
+    padding: 95px 0;
     height: 100%;
     width: 100%;
     display: flex;

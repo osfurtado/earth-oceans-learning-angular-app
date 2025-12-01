@@ -16,8 +16,8 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 15px;
+    gap: 25px;
+    padding: 25px;
     border-radius: 10px;
     height: 100%;
     border: 2px solid black;
@@ -69,6 +69,7 @@
 
 .feature-detail {
     text-align: center;
+    height: 50px;
     color: black;
     font-size: 15px;
     padding: 10px;

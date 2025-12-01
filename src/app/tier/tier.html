@@ -1,7 +1,7 @@
 <div class="tier-container">
     <div style="margin: 20px 150px; display: flex; align-items: center; justify-content: space-between;">
-        <button matButton="filled" (click)="onBack()">Zurück</button>
-        <button matButton="filled" (click)="onVergleich()">Vergleichen</button>
+        <button class="buttons"  (click)="onBack()">Zurück</button>
+        <button class="buttons"  (click)="onVergleich()">Vergleichen</button>
     </div>
     @if( meerObservable | async){
     <div class="carousel-wrapper">
