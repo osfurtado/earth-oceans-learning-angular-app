@@ -1,0 +1,7 @@
+{
+    "/": "/meere",
+    "/meere/:id": "/meere/:id",
+    "/meere/:id/tiere": "/meere/:id?_embed=tiere",
+    "/meere/:id/tiere/:id": "/meere/:id?_embed=tiere/:id",
+    "/meere/:id/quiz": "/meere/:id?_embed=quiz"
+}
