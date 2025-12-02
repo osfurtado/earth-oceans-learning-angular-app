@@ -8,7 +8,11 @@
             </div>
             <div class="vergleich-content">
                 <div class="bild">
-                     <img [src]="this.selectedMeer1.features[0].bildUrl" [alt]="this.selectedMeer1.name" style="border-radius: 10px;height: 100%; width: 100%; object-fit: contain;">
+                    <img 
+                        [src]="this.source == 'ocean' ? this.selectedMeer1.features[0].bildUrl : this.selectedTier1.bildUrl" 
+                        [alt]="this.source == 'ocean' ? this.selectedMeer1.features[0].feature : this.selectedTier1.bildUrl" 
+                        style="border-radius: 10px;height: 100%; width: 100%; object-fit: contain;"
+                    >
                 </div>
                 <div class="merkmale">
                     <div class="feature">
@@ -37,6 +41,7 @@
         </div>
         <div class="separator"></div>
         <div class="item-2">
+            <div>
                 @if(this.source == 'ocean'){
                 <mat-select [(value)]="selectedMeer2" style="border: 2px solid black; padding: 8px; background-color: var(--mat-sys-primary); color: var(--mat-sys-on-primary); font-weight: bold; font-size: 15px;">
                     @for (item of this.meere; track item.id) {
@@ -50,6 +55,7 @@
                     }
                 </mat-select>
                 }
+            </div>
             <div class="vergleich-content">
                 <div class="merkmale">
                     <div class="feature">
@@ -75,7 +81,11 @@
                     <div class="separator-x"></div>
                 </div>
                 <div class="bild">
-                    <img [src]="this.selectedMeer2.features[0].bildUrl" [alt]="this.selectedMeer2.name" style="border-radius: 10px;height: 100%; width: 100%; object-fit: contain;">
+                    <img 
+                        [src]="this.source == 'ocean' ? this.selectedMeer2.features[0].bildUrl : this.selectedTier2.bildUrl" 
+                        [alt]="this.source == 'ocean' ? this.selectedMeer2.features[0].feature : this.selectedTier2.bildUrl" 
+                        style="border-radius: 10px; height: 100%; max-width: 100%; object-fit: contain;"
+                    >
                 </div>
             </div>
         </div>
