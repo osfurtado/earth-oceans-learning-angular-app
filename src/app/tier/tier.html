@@ -26,7 +26,7 @@
         </button>
     </div>
     <div
-        style="margin: 50px 150px; border: 2px solid black; padding: 30px; ">
+        style="margin: 30px 150px; border: 2px solid black; padding: 30px; ">
         <div>
             <h2>{{this.selectedTier.name}}</h2>
             <p style="font-size: 16px;">{{this.selectedTier.beschreibung}}</p>
@@ -39,10 +39,24 @@
                 <div style="display: flex; flex-direction: column; gap: 15px; flex-grow: 1; border: 2px solid black; box-shadow: 2px 4px; border-radius: 12px; padding: 12px; background-color: var(--mat-sys-surface-container);">
                     <div style="display: flex; align-items: center; gap: 5px;">
                         <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
-                        <span style="font-weight: bold; font-size: 18px;">Tief</span> <br>
+                        <span style="font-weight: bold; font-size: 18px; ">Tief</span> <br>
                     </div>
-                    <span style="margin-left: 25px; font-size: 18px;">{{this.selectedTier.tief}}</span>
+                    <span style="margin-left: 30px; font-size: 18px;">{{this.selectedTier.tief}}</span>
+                    <br>
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
+                        <span style="font-weight: bold; font-size: 18px;">Gewicht</span> <br>
+                    </div>
+                    <span style="margin-left: 30px; font-size: 18px;">{{this.selectedTier.gewicht}}</span>
+                    <br>
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
+                        <span style="font-weight: bold; font-size: 18px;">Länge</span> <br>
+                    </div>
+                    <span style="margin-left: 30px; font-size: 18px;">{{this.selectedTier.laenge}}</span>
+                    <br>
                 </div>
+
             </div>
         </div>
     </div>

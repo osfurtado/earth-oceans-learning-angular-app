@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MeerDto } from '../meer/meer.dto';
 import { TierDto } from '../tier/tier.dto';
 import { lastValueFrom, Observable } from 'rxjs';
-import { MeerService } from '../meer/meer.service';
+import { MeerService, TierWithOcean } from '../meer/meer.service';
 import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,12 +26,12 @@ export class Vergleich implements OnInit {
   selectedMeer2!: MeerDto
   activeTierId: number = 0
   selectedTier1!: TierDto
-  selectedTier2!: TierDto
+  selectedTier2!: TierWithOcean
   meerObservable!: Observable<MeerDto[]>
-  tierObservable!: Observable<TierDto[]>
+  tierObservable!: Observable<TierWithOcean[]>
   meerService = inject(MeerService)
   meere!:MeerDto[]
-  tiere!: TierDto[] 
+  tiere!: TierWithOcean[] 
   source: string = ''
   typ!: string;
   

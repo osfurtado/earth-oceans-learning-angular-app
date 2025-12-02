@@ -4,6 +4,11 @@ import { MeerDto } from './meer.dto';
 import { map, Observable } from 'rxjs';
 import { TierDto } from '../tier/tier.dto';
 
+
+export interface TierWithOcean extends TierDto{
+  ozean: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -27,13 +32,16 @@ export class MeerService {
   }
 
 
-  getAllTiere():Observable<TierDto[]>{
+  getAllTiere():Observable<TierWithOcean[]>{
     const tiere = []
     return this.http.get<MeerDto[]>(this.url).pipe(
       map( data => {
+        
         return data.reduce((acc, item) => {
-          return acc.concat(item.tiere)
-        }, [] as TierDto[])
+          const ozean = item.name
+          const tiere = item.tiere.map( t => ({...t, ozean: ozean }))
+          return acc.concat(tiere)
+        }, [] as TierWithOcean[])
       })
     )
   }

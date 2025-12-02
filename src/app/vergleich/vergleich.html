@@ -15,6 +15,15 @@
                     >
                 </div>
                 <div class="merkmale">
+                    @if(this.source == 'tier'){
+                        <div class="feature">
+                            Ozean
+                        </div>
+                        <div class="feature-detail">
+                            {{this.selectedMeer1.name}}
+                        </div>
+                        <div class="separator-x"></div>
+                    }
                     <div class="feature">
                         {{this.source =='ocean' ? 'Größe': 'Länge'}}
                     </div>
@@ -58,6 +67,15 @@
             </div>
             <div class="vergleich-content">
                 <div class="merkmale">
+                    @if(this.source == 'tier'){
+                        <div class="feature">
+                            Ozean
+                        </div>
+                        <div class="feature-detail">
+                            {{this.selectedTier2.ozean}}
+                        </div>
+                        <div class="separator-x"></div>
+                    }
                     <div class="feature">
                         {{this.source =='ocean' ? 'Größe': 'Länge'}}
                     </div>
