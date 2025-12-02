@@ -10,7 +10,7 @@
                 <mat-button-toggle
                     class="frage-nummer"
                     [class.richtigBeantwortet]="f.richtig"
-                    [class.falshBeantwortet]="f.beantwortet && !f.richtig"
+                    [class.falschBeantwortet]="f.beantwortet && !f.richtig"
                     (click)="onFrageNummerClick(index)"
                     [class.mat-button-toggle-checked]="this.activeFrageIndex == index"
                 >
@@ -39,7 +39,7 @@
                             [value]="option.id"
                             (click)="onOptionClick(option)"
                             [class.istRichtig]="this.activeFrage.beantwortet && option.istRichtig"
-                            [class.istFalsh]="this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id"
+                            [class.istFalsch]="this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id"
                         >
                         <div class="option-content">
                         <span>{{option.optionText}}</span>
@@ -81,7 +81,7 @@
                         <span>Richtig:  {{this.anzahlRichtig}}</span>
                     </div>
                     <div class="anzahl-falsch">
-                        <span>Falsh:  {{this.anzahlFalsch}}</span>
+                        <span>Falsch:  {{this.anzahlFalsch}}</span>
                     </div>
                 </div>            
             </div>

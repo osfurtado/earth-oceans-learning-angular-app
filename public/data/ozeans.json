@@ -6,7 +6,7 @@
       "tief": "11.034 m (Mariannengraben)",
       "groesse": "168.723.000 km²",
       "temperatur": "-1.4°C bis 50°C",
-      "bildUrl": "/meere/pazifik/pazifik.jpg",
+      "bildUrl": "/meere/pazifik/pazifik.png",
       "features": [
         {
           "feature": "Lage des Ozeans",
@@ -518,7 +518,7 @@
       "tief": "8.486 m (Puerto-Rico-Graben)",
       "groesse": "85.133.000 km²",
       "temperatur": "-2°C bis 29°C",
-      "bildUrl": "/meere/atlantik/atlantik.jpg",
+      "bildUrl": "/meere/atlantik/atlantik.png",
       "features": [
         {
           "feature": "Lage des Ozeans",
@@ -861,7 +861,7 @@
       "tief": "7.290 m (Sundagraben)",
       "groesse": "70.560.000 km²",
       "temperatur": "22°C bis 28°C",
-      "bildUrl": "assets/maps/indian_location.png",
+      "bildUrl": "/meere/indik/indik.png",
       "features": [
         {
           "feature": "Lage des Ozeans",
@@ -1116,7 +1116,7 @@
       "tief": "7.236 m (Süd-Sandwich-Graben)",
       "groesse": "20.327.000 km²",
       "temperatur": "-2°C bis 10°C",
-      "bildUrl": "assets/maps/southern_location.png",
+      "bildUrl": "/meere/antarktik/antarktik.png",
       "features": [
         {
           "feature": "Lage des Ozeans",
@@ -1170,7 +1170,7 @@
           "beschreibung": "Ein großes, schlankes Raubtier und der Hauptfeind der Pinguine.",
           "laenge": "bis zu 3,5 Meter",
           "gewicht": "bis zu 600 kg",
-          "bildUrl": "",
+          "bildUrl": "/meere/antarktik/tiere/seeleopard.jpg",
           "tief": "lebt an der Eiskante",
           "ernaerung": [
             {
@@ -1195,7 +1195,7 @@
           "beschreibung": "Eine Robbe, die erstaunlich tief und lange tauchen kann.",
           "laenge": "bis zu 3,5 Meter",
           "gewicht": "bis zu 600 kg",
-          "bildUrl": "",
+          "bildUrl": "/meere/antarktik/tiere/weddellrobbe.jpg",
           "tief": "bis zu 700 Meter",
           "ernaerung": [
             {
@@ -1220,7 +1220,7 @@
           "beschreibung": "Einer der größten flugfähigen Vögel der Welt, mit einer riesigen Flügelspannweite.",
           "laenge": "bis zu 3,5 Meter (Flügelspannweite)",
           "gewicht": "bis zu 12 kg",
-          "bildUrl": "",
+          "bildUrl": "/meere/antarktik/tiere/wanderalbatros.jpg",
           "tief": "lebt auf dem offenen Meer",
           "ernaerung": [
             {
@@ -1240,7 +1240,7 @@
           "beschreibung": "Ein sehr intelligentes und soziales Raubtier an der Spitze der Nahrungskette.",
           "laenge": "bis zu 9 Meter",
           "gewicht": "bis zu 6 Tonnen",
-          "bildUrl": "",
+          "bildUrl": "/meere/antarktik/tiere/schwertwal.jpg",
           "tief": "bis zu 260 Meter",
           "ernaerung": [
             {
@@ -1264,7 +1264,7 @@
           "beschreibung": "Ein kleiner, lebhafter Pinguin, der große Kolonien bildet.",
           "laenge": "ca. 70 cm",
           "gewicht": "ca. 5 kg",
-          "bildUrl": "",
+          "bildUrl": "/meere/antarktik/tiere/adeliepinguin.jpg",
           "tief": "bis zu 175 Meter",
           "ernaerung": [
             {
@@ -1519,7 +1519,7 @@
       "tief": "5.450 m",
       "groesse": "14.056.000 km²",
       "temperatur": "-1.8°C bis 4°C",
-      "bildUrl": "assets/maps/arctic_location.png",
+      "bildUrl": "/meere/arktik/arktik.png",
       "features": [
         {
           "feature": "Lage des Ozeans",
@@ -1549,7 +1549,7 @@
           "beschreibung": "Der König der Arktis, perfekt an das Leben auf dem Meereis angepasst.",
           "laenge": "bis zu 2,5 Meter",
           "gewicht": "bis zu 680 kg",
-          "bildUrl": "",
+          "bildUrl": "meere/arktik/tiere/eisbaer.jpg",
           "tief": "lebt an Land und auf dem Eis",
           "ernaerung": [
             {
@@ -1565,7 +1565,7 @@
           "beschreibung": "Bekannt als das Einhorn des Meeres wegen seines langen Stoßzahns.",
           "laenge": "bis zu 5,5 Meter",
           "gewicht": "bis zu 1,6 Tonnen",
-          "bildUrl": "",
+          "bildUrl": "meere/arktik/tiere/narwal.jpg",
           "tief": "bis zu 1.500 Meter",
           "ernaerung": [
             {
@@ -1594,7 +1594,7 @@
           "beschreibung": "Ein weißer Wal, der für seine vielfältigen Laute bekannt ist und auch Kanarienvogel des Meeres genannt wird.",
           "laenge": "bis zu 5,5 Meter",
           "gewicht": "bis zu 1,6 Tonnen",
-          "bildUrl": "",
+          "bildUrl": "meere/arktik/tiere/belugawal.jpg",
           "tief": "bis zu 800 Meter",
           "ernaerung": [
             {
@@ -1623,7 +1623,7 @@
           "beschreibung": "Ein großes Meeressäugetier mit langen Stoßzähnen und einem borstigen Bart.",
           "laenge": "bis zu 3,5 Meter",
           "gewicht": "bis zu 1,5 Tonnen",
-          "bildUrl": "",
+          "bildUrl": "meere/arktik/tiere/walross.jpg",
           "tief": "bis zu 80 Meter",
           "ernaerung": [
             {
@@ -1648,7 +1648,7 @@
           "beschreibung": "Die häufigste Robbenart in der Arktis, die Atemlöcher im Eis anlegt.",
           "laenge": "bis zu 1,5 Meter",
           "gewicht": "bis zu 70 kg",
-          "bildUrl": "",
+          "bildUrl": "meere/arktik/tiere/ringelrobbe.jpg",
           "tief": "bis zu 45 Meter",
           "ernaerung": [
             {
@@ -1673,7 +1673,7 @@
           "beschreibung": "Ein riesiger Wal mit einem massiven Kopf, der Eis brechen kann.",
           "laenge": "bis zu 18 Meter",
           "gewicht": "bis zu 100 Tonnen",
-          "bildUrl": "",
+          "bildUrl": "meere/arktik/tiere/groenlandwal.jpg",
           "tief": "bis zu 150 Meter",
           "ernaerung": [
             {
@@ -1694,7 +1694,7 @@
           "beschreibung": "Ein kleiner Fuchs mit einem dicken, weißen Winterfell, das ihn perfekt tarnt.",
           "laenge": "ca. 55 cm",
           "gewicht": "ca. 3,5 kg",
-          "bildUrl": "",
+          "bildUrl": "meere/arktik/tiere/polarfuchs.jpg",
           "tief": "lebt an Land",
           "ernaerung": [
             {

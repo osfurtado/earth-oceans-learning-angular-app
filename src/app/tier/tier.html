@@ -15,7 +15,7 @@
                 <div class="image-wrapper">
                     <img class="image" [src]="item.bildUrl" [alt]="item.name">
                 </div>
-                <span class="caption">{{item.name}}</span>
+               <!-- <span class="caption">{{item.name}}</span> -->
             </div>
             }
 
@@ -26,10 +26,24 @@
         </button>
     </div>
     <div
-        style="margin: 50px 150px; border: 2px solid black; box-shadow: 2px 4px black; padding: 30px; border-radius: 10px;">
+        style="margin: 50px 150px; border: 2px solid black; padding: 30px; ">
         <div>
-            <h2>Weitere Info</h2>
+            <h2>{{this.selectedTier.name}}</h2>
             <p style="font-size: 16px;">{{this.selectedTier.beschreibung}}</p>
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 45px; margin-top: 50px;">
+            <div style="height: 400px; width: 400px; background-color: var(--mat-sys-surface-container); border-radius: 15px; border: 2px solid black; box-shadow: 2px 4px black;">
+                <img [src]="this.selectedTier.bildUrl" [alt]="this.selectedTier.name" style="height: 100%; width: 100%; object-fit: contain; ">
+            </div>
+            <div style="display: flex; flex-direction: row; flex-wrap: wrap; flex-grow: 1; gap: 12px;">
+                <div style="display: flex; flex-direction: column; gap: 15px; flex-grow: 1; border: 2px solid black; box-shadow: 2px 4px; border-radius: 12px; padding: 12px; background-color: var(--mat-sys-surface-container);">
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
+                        <span style="font-weight: bold; font-size: 18px;">Tief</span> <br>
+                    </div>
+                    <span style="margin-left: 25px; font-size: 18px;">{{this.selectedTier.tief}}</span>
+                </div>
+            </div>
         </div>
     </div>
     }
