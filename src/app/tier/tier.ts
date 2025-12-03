@@ -25,22 +25,33 @@ export class Tier implements OnInit{
 
   route = inject(ActivatedRoute)
   router = inject(Router)
+  meerService = inject(MeerService)
+
   activeOcean:string | null = null
+  activeOzeanId!: number 
+
   selectedItemId: number | null = null
   selectedTier!: TierDto
-  activeOzeanId!: number 
-  meerObservable!: Observable<MeerDto>
-  meerService = inject(MeerService)
-  selectedMeer!: MeerDto
+  
+  tiereObservable!: Observable<TierDto[]>
+  
   tiere!: TierDto[]
+  meere = [
+            { id: 2, path: 'atlantik'},
+            { id: 3, path: 'indik',},
+            { id: 1, path: 'pazifik'},
+            { id: 5, path: 'artik'},
+            { id: 4, path: 'antarktik'}
+  ]
 
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+
 
   ngOnInit(): void {
     this.route.parent?.paramMap.subscribe( params => {
       this.activeOcean = params.get('ozean')
       this.activeOzeanId = this.meere.filter(m => m.path === this.activeOcean)[0].id
-      this.getMeer(this.activeOzeanId)
+      this.getTiere(this.activeOzeanId)
     })
   }
 
@@ -57,10 +68,9 @@ export class Tier implements OnInit{
     this.selectedTier = this.tiere.filter(t => t.id == this.selectedItemId)[0]
   }
 
-  private async getMeer(id: number){
-    this.meerObservable = this.meerService.getMeerById(id);
-    this.selectedMeer = await lastValueFrom(this.meerObservable)
-    this.tiere = this.selectedMeer.tiere
+  private async getTiere(id: number){
+    this.tiereObservable = this.meerService.getAlleTiereVonOzean(id);
+    this.tiere = await lastValueFrom(this.tiereObservable)
     this.selectItem(this.tiere[0].id)
   }
 
@@ -75,39 +85,7 @@ export class Tier implements OnInit{
     }
   }
 
-  items: TierDtoTemp[] = [
-    { id: 1, src: 'https://via.placeholder.com/250', alt: 'Tier 1' },
-    { id: 2, src: 'https://via.placeholder.com/250', alt: 'Tier 2' },
-    { id: 3, src: 'https://via.placeholder.com/250', alt: 'Tier 3' },
-    { id: 4, src: 'https://via.placeholder.com/250', alt: 'Tier 4' },
-    { id: 5, src: 'https://via.placeholder.com/250', alt: 'Tier 5' },
-    { id: 6, src: 'https://via.placeholder.com/250', alt: 'Tier 6' },
-    { id: 7, src: 'https://via.placeholder.com/250', alt: 'Tier 7' },
-    { id: 8, src: 'https://via.placeholder.com/250', alt: 'Tier 8' },
-  ];
 
-  meere = [
-    {
-      id: 2,
-      path: 'atlantik'
-    },
-    {
-      id: 3,
-      path: 'indik',
-    },
-    {
-      id: 1,
-      path: 'pazifik'
-    },
-    {
-      id: 5,
-      path: 'artik'
-    },
-    {
-      id: 4,
-      path: 'antarktik'
-    }
-  ]
 
 
 }

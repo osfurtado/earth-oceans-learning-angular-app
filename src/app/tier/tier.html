@@ -3,7 +3,7 @@
         <button class="buttons"  (click)="onBack()">Zurück</button>
         <button class="buttons"  (click)="onVergleich()">Vergleichen</button>
     </div>
-    @if( meerObservable | async){
+    @if( tiereObservable | async){
     <div class="carousel-wrapper">
         <button mat-icon-button class="nav-btn left" (click)="scroll('left')">
             <mat-icon>chevron_left</mat-icon>

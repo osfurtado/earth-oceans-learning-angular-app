@@ -42,6 +42,14 @@ export class MeerService {
     )
   }
 
+  getAlleTiereVonOzean(oceanId: number):Observable<TierDto[]>{
+    return this.http.get<MeerDto>(`${this.url}/${oceanId}`).pipe(
+      map( data => {
+        return data.tiere
+      })
+    )
+  }
+
 
 
 }
