@@ -8,6 +8,7 @@ import { MeerService } from '../meer/meer.service';
 import { TierDto } from './tier.dto';
 import { AsyncPipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { environment } from '../../environments/environment.development';
 
 interface TierDtoTemp {
   id: number;
@@ -36,13 +37,7 @@ export class Tier implements OnInit{
   tiereObservable!: Observable<TierDto[]>
   
   tiere!: TierDto[]
-  meere = [
-            { id: 2, path: 'atlantik'},
-            { id: 3, path: 'indik',},
-            { id: 1, path: 'pazifik'},
-            { id: 5, path: 'artik'},
-            { id: 4, path: 'antarktik'}
-  ]
+  meere = environment.meereMenu
 
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
 

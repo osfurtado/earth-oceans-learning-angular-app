@@ -8,6 +8,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-meer-details',
@@ -25,13 +26,7 @@ export class MeerDetails implements OnInit {
   router = inject(Router)
   meerObservable!: Observable<MeerDto>
 
-  meere = [
-    { id: 2, path: 'atlantik', name: 'Atlantik' },
-    { id: 3, path: 'indik', name: 'Indik'},
-    { id: 1, path: 'pazifik', name: 'Pazifik'},
-    { id: 5, path: 'artik', name: 'Artik'},
-    { id: 4, path: 'antarktik', name: 'Antarktik'}
-  ]
+  meere = environment.meereMenu
 
 
   async ngOnInit() {

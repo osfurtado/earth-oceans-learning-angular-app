@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { MeerDto } from './meer.dto';
 import { map, Observable } from 'rxjs';
 import { TierDto } from '../tier/tier.dto';
+import { environment } from '../../environments/environment.development';
 
 
 export interface TierWithOcean extends TierDto{
@@ -15,22 +16,22 @@ export interface TierWithOcean extends TierDto{
 export class MeerService {
   
   http = inject(HttpClient)
-  url: string = 'http://localhost:3000/meere'
+
 
 
 
   public getMeerById(oceanId: number): Observable<MeerDto> {
-    return this.http.get<MeerDto>(`${this.url}/${oceanId}`)
+    return this.http.get<MeerDto>(`${environment.api}/${oceanId}`)
   }
 
   public getAllMeere(): Observable<MeerDto[]> {
-    return this.http.get<MeerDto[]>(this.url)
+    return this.http.get<MeerDto[]>(environment.api)
   }
 
 
   getAllTiere():Observable<TierWithOcean[]>{
     const tiere = []
-    return this.http.get<MeerDto[]>(this.url).pipe(
+    return this.http.get<MeerDto[]>(environment.api).pipe(
       map( data => {
         
         return data.reduce((acc, item) => {
@@ -43,7 +44,7 @@ export class MeerService {
   }
 
   getAlleTiereVonOzean(oceanId: number):Observable<TierDto[]>{
-    return this.http.get<MeerDto>(`${this.url}/${oceanId}`).pipe(
+    return this.http.get<MeerDto>(`${environment.api}/${oceanId}`).pipe(
       map( data => {
         return data.tiere
       })

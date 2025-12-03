@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { RouterLink } from "@angular/router";
+import { environment } from '../../environments/environment.development';
 
 @Component({
   selector: 'app-home',
@@ -10,28 +11,7 @@ import { RouterLink } from "@angular/router";
 })
 export class Home {
 
-  meere = [
-    {
-      name: 'Atlantik',
-      path: 'atlantik'
-    },
-    {
-      name: 'Indik',
-      path: 'indik',
-    },
-    {
-      name: 'Pazifik',
-      path: 'pazifik'
-    },
-    {
-      name: 'Artik',
-      path: 'artik'
-    },
-    {
-      name: 'Antarktik',
-      path: 'antarktik'
-    }
-  ]
+  meere = environment.meereMenu
 
 
 }
