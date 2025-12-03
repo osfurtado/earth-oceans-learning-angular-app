@@ -57,7 +57,12 @@
         </div>
     </div>
     <div class="quiz">
-        <button mat-flat-button (click)="onQuizClick()">Quiz</button>
+        <button 
+            style="border: 2px solid black; box-shadow: 2px 4px black; padding: 10px; background-color: var(--mat-sys-tertiary); color: white; font-weight: bold; font-size: 16px; border-radius: 10px; cursor: pointer;" 
+            (click)="onQuizClick()"
+        >
+            Quiz
+        </button>
     </div>
     } @else {
     <div class="spinner">

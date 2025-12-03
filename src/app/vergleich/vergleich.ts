@@ -1,5 +1,5 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MeerDto } from '../meer/meer.dto';
 import { TierDto } from '../tier/tier.dto';
 import { lastValueFrom, Observable } from 'rxjs';
@@ -20,7 +20,7 @@ export class Vergleich implements OnInit {
 
 
   route = inject(ActivatedRoute)
-  activeOcean: string| null = null 
+  router = inject(Router)
   activeOzeanId: number = 0
   selectedMeer1!: MeerDto
   selectedMeer2!: MeerDto
@@ -64,6 +64,14 @@ export class Vergleich implements OnInit {
       console.log('Nome do animal: ',this.selectedTier1.name)
     }
 
+  }
+
+  onZurueck(){
+    if(this.source == 'ocean'){
+      this.router.navigate([this.selectedMeer1])
+    } else{
+      this.router.navigate([this.selectedMeer1, 'tiere'])
+    }
   }
 
 

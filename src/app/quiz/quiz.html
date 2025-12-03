@@ -59,9 +59,21 @@
         
         <div class="next">
             @if(this.activeFrageIndex === this.quizBeantwortung.length-1){
-                <button mat-flat-button [disabled]="this.anzahlBeantwortet !== this.quizBeantwortung.length" (click)="onQuizEndeClick()">Beenden</button>
+                <button 
+                    [disabled]="this.anzahlBeantwortet !== this.quizBeantwortung.length" 
+                    [class.disabled]="this.anzahlBeantwortet !== this.quizBeantwortung.length"
+                    (click)="onQuizEndeClick()"
+                    class="next-end"
+                >
+                    Beenden
+                </button>
             }@else {
-                <button mat-flat-button (click)="onWeiterClick()">Weiter</button>
+                <button 
+                    class="next-end"
+                    (click)="onWeiterClick()"
+                >
+                    Weiter
+                </button>
             }
         </div>
 

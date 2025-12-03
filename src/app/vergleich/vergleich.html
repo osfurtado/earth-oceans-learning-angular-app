@@ -1,6 +1,12 @@
 @if(meerObservable | async){
 <div class="vergleich-container">
-    <h2 style="margin-bottom: 50px;">{{this.source =='ocean' ? 'Ozeane ': 'Tiere '}} vergleichen </h2>
+    <button
+        class="zurueck"
+        (click)="onZurueck()"
+    >
+        Zurück
+    </button>
+    <h2 style="margin: 40px 0 50px 0; font-size: 25px;">{{this.source =='ocean' ? 'Ozeane ': 'Tiere '}} vergleichen </h2>
     <div class="vergleich-content-container">
         <div class="item-1">
             <div class="name1">

@@ -20,11 +20,7 @@ export class MeerService {
 
 
   public getMeerById(oceanId: number): Observable<MeerDto> {
-    return this.http.get<MeerDto[]>(this.url).pipe(
-      map( data => {
-        return data.filter(m => m.id == oceanId)[0]
-      })
-    )
+    return this.http.get<MeerDto>(`${this.url}/${oceanId}`)
   }
 
   public getAllMeere(): Observable<MeerDto[]> {
@@ -45,5 +41,7 @@ export class MeerService {
       })
     )
   }
+
+
 
 }
