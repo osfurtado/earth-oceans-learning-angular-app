@@ -4,6 +4,7 @@ import { MeerDto } from './meer.dto';
 import { map, Observable } from 'rxjs';
 import { TierDto } from '../tier/tier.dto';
 import { environment } from '../../environments/environment.development';
+import { QuizDto } from '../quiz/quiz.dto';
 
 
 export interface TierWithOcean extends TierDto{
@@ -20,8 +21,8 @@ export class MeerService {
 
 
 
-  public getMeerById(oceanId: number): Observable<MeerDto> {
-    return this.http.get<MeerDto>(`${environment.api}/${oceanId}`)
+  public getMeerById(meerId: number): Observable<MeerDto> {
+    return this.http.get<MeerDto>(`${environment.api}/${meerId}`)
   }
 
   public getAllMeere(): Observable<MeerDto[]> {
@@ -43,14 +44,21 @@ export class MeerService {
     )
   }
 
-  getAlleTiereVonOzean(oceanId: number):Observable<TierDto[]>{
-    return this.http.get<MeerDto>(`${environment.api}/${oceanId}`).pipe(
+  getAlleTiereVonMeer(meerId: number):Observable<TierDto[]>{
+    return this.http.get<MeerDto>(`${environment.api}/${meerId}`).pipe(
       map( data => {
         return data.tiere
       })
     )
   }
 
+  getQuizVonMeer(meerId: number):Observable<QuizDto>{
+    return this.http.get<MeerDto>(`${environment.api}/${meerId}`).pipe(
+      map( data => {
+        return data.quiz[0]
+      })
+    )
+  }
 
 
 }

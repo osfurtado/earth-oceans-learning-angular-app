@@ -64,7 +64,7 @@ export class Tier implements OnInit{
   }
 
   private async getTiere(id: number){
-    this.tiereObservable = this.meerService.getAlleTiereVonOzean(id);
+    this.tiereObservable = this.meerService.getAlleTiereVonMeer(id);
     this.tiere = await lastValueFrom(this.tiereObservable)
     this.selectItem(this.tiere[0].id)
   }
