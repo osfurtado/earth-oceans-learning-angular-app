@@ -11,7 +11,7 @@
 
         <div class="scroll-container" #scrollContainer>
             @for(item of tiere; track item.id){
-            <div class="story-item" (click)="selectItem(item.id)" [class.active]="selectedItemId === item.id">
+            <div class="story-item" (click)="selectTier(item.id)" [class.active]="selectedTierId === item.id">
                 <div class="image-wrapper">
                     <img class="image" [src]="item.bildUrl" [alt]="item.name">
                 </div>

@@ -31,7 +31,7 @@ export class Tier implements OnInit{
   activeOcean:string | null = null
   activeOzeanId!: number 
 
-  selectedItemId: number | null = null
+  selectedTierId: number | null = null
   selectedTier!: TierDto
   
   tiereObservable!: Observable<TierDto[]>
@@ -58,15 +58,15 @@ export class Tier implements OnInit{
     this.router.navigate([ this.activeOcean,'vergleich'], { queryParams: { source:'tier', oceanId: this.activeOzeanId,tierId: this.selectedTier.id } })
   }
 
-  selectItem(id: number): void {
-    this.selectedItemId = id;
-    this.selectedTier = this.tiere.filter(t => t.id == this.selectedItemId)[0]
+  selectTier(id: number): void {
+    this.selectedTierId = id;
+    this.selectedTier = this.tiere.filter(t => t.id == this.selectedTierId)[0]
   }
 
   private async getTiere(id: number){
     this.tiereObservable = this.meerService.getAlleTiereVonMeer(id);
     this.tiere = await lastValueFrom(this.tiereObservable)
-    this.selectItem(this.tiere[0].id)
+    this.selectTier(this.tiere[0].id)
   }
 
   scroll(direction: 'left' | 'right'){
