@@ -25,12 +25,12 @@ export class MeerService {
     return this.http.get<MeerDto>(`${environment.api}/${meerId}`)
   }
 
-  public getAllMeere(): Observable<MeerDto[]> {
+  public getAlleMeere(): Observable<MeerDto[]> {
     return this.http.get<MeerDto[]>(environment.api)
   }
 
 
-  getAllTiere():Observable<TierWithOcean[]>{
+  getAlleTiere():Observable<TierWithOcean[]>{
     const tiere = []
     return this.http.get<MeerDto[]>(environment.api).pipe(
       map( data => {

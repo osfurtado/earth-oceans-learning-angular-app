@@ -47,7 +47,7 @@ export class MeerDetails implements OnInit {
   private async getMeer(id: number){
     this.meerObservable = this.meerService.getMeerById(id);
     this.activeOzean = await lastValueFrom(this.meerObservable)
-    
+    console.log('Daten von Ozean ', this.activeOzeanPath, ' empfangen: ', this.activeOzean)
   }
 
   onVergleich(){

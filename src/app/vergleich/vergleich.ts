@@ -49,9 +49,9 @@ export class Vergleich implements OnInit {
     })
 
     //Meer
-    this.meerObservable = this.meerService.getAllMeere();
+    this.meerObservable = this.meerService.getAlleMeere();
     this.meere = await lastValueFrom(this.meerObservable)
-    this.tierObservable = this.meerService.getAllTiere()
+    this.tierObservable = this.meerService.getAlleTiere()
     this.tiere = await lastValueFrom(this.tierObservable)
     this.selectedMeer1 = this.meere.filter(m => m.id == this.activeOzeanId)[0]
     this.selectedMeer2 = this.meere[0]

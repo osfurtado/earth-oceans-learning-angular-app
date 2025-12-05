@@ -1,7 +1,7 @@
 <div class="quiz-container">
-@if(meerObservable | async){
+@if(quizObservable | async){
     @if (!this.quizBeenden) {
-        <h2>Quiz von {{this.selectedMeer.name}}</h2>
+        <h2>Quiz </h2>
         <mat-button-toggle-group 
             class="frage-nummer-buttons" 
             hideSingleSelectionIndicator="true" 

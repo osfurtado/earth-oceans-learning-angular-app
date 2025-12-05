@@ -1,10 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TierDto } from '../tier/tier.dto';
-import { MeerDto } from '../meer/meer.dto';
 import { lastValueFrom, Observable } from 'rxjs';
 import { MeerService } from '../meer/meer.service';
-import { AsyncPipe, NgStyle } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Frage, Option, QuizDto } from './quiz.dto';
 import { MatAnchor } from "@angular/material/button";
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
@@ -34,11 +32,8 @@ export class Quiz implements OnInit{
   //Ozean Tier Quiz Daten
   activeOcean: string| null = null 
   activeOzeanId: number = 0
-  activeTierId: number = 0
-  selectedTier!: TierDto
-  selectedMeer!: MeerDto
   quiz!: QuizDto
-  meerObservable!: Observable<MeerDto>
+  quizObservable!: Observable<QuizDto>
   meerService = inject(MeerService)
   source: string = ''
   
@@ -60,30 +55,14 @@ export class Quiz implements OnInit{
 
   async ngOnInit() {
     this.route.queryParams.subscribe( params => {
-      this.source = params['source']
       this.activeOzeanId = params['oceanId']
-
-      if(this.source == 'tier'){      
-        this.activeTierId =  params['tierId']
-
-      }     
       
     })
 
-    //Meer
-    this.meerObservable = this.meerService.getMeerById(this.activeOzeanId);
-    this.selectedMeer = await lastValueFrom(this.meerObservable)
+    //Quiz Laden
+    this.quizObservable = this.meerService.getQuizVonMeer(this.activeOzeanId);
+    this.quiz  = await lastValueFrom(this.quizObservable)
 
-    
- 
-    //Tier
-    if(this.source == 'tier'){
-      this.selectedTier = this.selectedMeer.tiere.filter( t => t.id == this.activeTierId)[0]
-
-    }
-
-    //Quiz
-    this.quiz = this.selectedMeer.quiz[0]
     
     this.quiz.frage.forEach( f => {
 
@@ -98,13 +77,8 @@ export class Quiz implements OnInit{
           selectedOptionId: null
         }
       )
-    })
-
-    
+    })    
     this.activeFrage = this.quizBeantwortung[this.activeFrageIndex]
-    
-
-
   }
 
   onOptionClick(op: Option){
@@ -127,22 +101,13 @@ export class Quiz implements OnInit{
     this.quizBeantwortung.forEach( q => {
       if(q.beantwortet){this.anzahlBeantwortet++}
     })
-
     console.log('Soll Quiz beenden: ', !this.quizBeenden, !(this.anzahlBeantwortet !== this.quizBeantwortung.length))
-
-    
-
-
   }
 
   onFrageNummerClick(frageIndex: number){
     this.toggleValue = null
     this.activeFrage = this.quizBeantwortung[frageIndex]
     this.activeFrageIndex = frageIndex
-
-    
-    
-
   }
 
   onWeiterClick(){
@@ -160,7 +125,7 @@ export class Quiz implements OnInit{
   }
 
   // Quiz Ergebnis
-  onWiederholungClick(){
+  async onWiederholungClick(){
 
       // Neustarten
       this.toggleValue = null
@@ -171,11 +136,8 @@ export class Quiz implements OnInit{
       this.quizBeantwortung = []
 
       //Quiz Hochladen
-      this.quiz = this.selectedMeer.quiz[0]
-      
+      this.quiz = await lastValueFrom(this.quizObservable)     
       this.quiz.frage.forEach( f => {
-
-
         this.quizBeantwortung.push(
           {
             id: f.id,
