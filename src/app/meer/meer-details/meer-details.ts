@@ -19,20 +19,18 @@ import { environment } from '../../../environments/environment.development';
 export class MeerDetails implements OnInit {
 
   route = inject(ActivatedRoute)
+  meerService = inject(MeerService)
+  router = inject(Router)
+  
   activeOzean!: MeerDto
   activeOzeanPath: string | null = null
   activeOzeanId!: number 
-  meerService = inject(MeerService)
-  router = inject(Router)
   meerObservable!: Observable<MeerDto>
-
-  meere = environment.meereMenu
-
 
   async ngOnInit() {
     this.route.paramMap.subscribe( params => {
       this.activeOzeanPath = params.get('ozean')
-      this.activeOzeanId = this.meere.filter(m => m.path === this.activeOzeanPath)[0].id
+      this.activeOzeanId = environment.meereMenu.filter(m => m.path === this.activeOzeanPath)[0].id
       this.getMeer(this.activeOzeanId)
     })
 

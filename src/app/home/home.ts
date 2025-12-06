@@ -3,6 +3,12 @@ import { MatButton } from '@angular/material/button';
 import { RouterLink } from "@angular/router";
 import { environment } from '../../environments/environment.development';
 
+export interface meerMenuItem { 
+  id: number, 
+  name: string, 
+  path: string
+}
+
 @Component({
   selector: 'app-home',
   imports: [RouterLink],
@@ -11,7 +17,7 @@ import { environment } from '../../environments/environment.development';
 })
 export class Home {
 
-  meere = environment.meereMenu
+  meere:meerMenuItem[] = environment.meereMenu
 
 
 }

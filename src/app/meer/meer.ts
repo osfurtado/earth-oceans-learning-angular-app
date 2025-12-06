@@ -4,6 +4,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ActivatedRoute, Router, RouterLink, RouterOutlet, RouterLinkWithHref } from '@angular/router';
 import { MeerDetails } from './meer-details/meer-details';
 import { environment } from '../../environments/environment.development';
+import { meerMenuItem } from '../home/home';
 
 @Component({
   selector: 'app-meer',
@@ -15,14 +16,14 @@ export class Meer implements OnInit {
 
   route = inject(ActivatedRoute)
   router = inject(Router)
-  activeOzean: string | null = null
-  meere = environment.meereMenu
+  activeOzeanPath: string | null = null
+  meere:meerMenuItem[] = environment.meereMenu
 
   ngOnInit(): void {
-    this.activeOzean = this.route.snapshot.paramMap.get('ozean');
+    this.activeOzeanPath = this.route.snapshot.paramMap.get('ozean');
   }
 
   onOceanClick(ozean: string){
-    this.activeOzean = ozean
+    this.activeOzeanPath = ozean
   }
 }

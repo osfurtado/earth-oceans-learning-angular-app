@@ -5,14 +5,10 @@
     </a>
     <div class="menu">
         @for(meer of meere; track meer.path){
-            <a 
-                [routerLink]="[`/${meer.path}`]" 
-                [class.active]="meer.path === this.activeOzean"
-                (click)="onOceanClick(meer.path)"
-                class="meu-item"
-            >
-                {{meer.name}}
-            </a>
+        <a [routerLink]="[`/${meer.path}`]" [class.active]="meer.path === this.activeOzeanPath"
+            (click)="onOceanClick(meer.path)" class="meu-item">
+            {{meer.name}}
+        </a>
         }
     </div>
 </div>

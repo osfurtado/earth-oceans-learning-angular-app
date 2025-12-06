@@ -12,10 +12,4 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('ozean-project');
-
-  // meere = ['Atlantik', 'Indik', 'Pazifik', 'Artik', 'Antartik']
-
- baseUrl = 'http://localhost:4200'
-
-
 }

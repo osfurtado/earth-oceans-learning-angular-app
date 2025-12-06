@@ -59,7 +59,7 @@ export class Vergleich implements OnInit {
  
     //Tier
     if(this.source == 'tier'){
-      this.selectedTier1 = this.selectedMeer1.tiere.filter( t => t.id == this.activeTierId)[0]
+      this.selectedTier1 = this.tiere.filter( t => t.id == this.activeTierId)[0]
       this.selectedTier2 = this.tiere[0]
       console.log('Nome do animal: ',this.selectedTier1.name)
     }

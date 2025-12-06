@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 
-interface QuizBeantwortung extends Frage {
+interface QuizAntwortenVervolgung extends Frage {
   beantwortet: boolean;
   richtig: boolean | null;
   selectedOptionId: number | null;
@@ -28,19 +28,17 @@ export class Quiz implements OnInit{
 
   route = inject(ActivatedRoute)
   router = inject(Router)
+  meerService = inject(MeerService)
 
   //Ozean Tier Quiz Daten
-  activeOcean: string| null = null 
   activeOzeanId: number = 0
   quiz!: QuizDto
   quizObservable!: Observable<QuizDto>
-  meerService = inject(MeerService)
-  source: string = ''
   
 
   // Quiz steuern
-  quizBeantwortung: QuizBeantwortung[] = []
-  activeFrage!: QuizBeantwortung
+  quizAntwortenVervolgung: QuizAntwortenVervolgung[] = []
+  activeFrage!: QuizAntwortenVervolgung
   toggleValue: any
   activeFrageIndex: number = 0
   anzahlBeantwortet = 0
@@ -63,11 +61,11 @@ export class Quiz implements OnInit{
     this.quizObservable = this.meerService.getQuizVonMeer(this.activeOzeanId);
     this.quiz  = await lastValueFrom(this.quizObservable)
 
-    
+
     this.quiz.frage.forEach( f => {
 
 
-      this.quizBeantwortung.push(
+      this.quizAntwortenVervolgung.push(
         {
           id: f.id,
           frageText: f.frageText,
@@ -78,7 +76,7 @@ export class Quiz implements OnInit{
         }
       )
     })    
-    this.activeFrage = this.quizBeantwortung[this.activeFrageIndex]
+    this.activeFrage = this.quizAntwortenVervolgung[this.activeFrageIndex]
   }
 
   onOptionClick(op: Option){
@@ -87,41 +85,39 @@ export class Quiz implements OnInit{
     this.anzahlBeantwortet = 0
     this.activeFrage.beantwortet = true
     this.activeFrage.selectedOptionId = op.id
-    this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].beantwortet = true
-    this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].selectedOptionId = op.id
+    this.quizAntwortenVervolgung.filter(f => f.id === this.activeFrage.id)[0].beantwortet = true
+    this.quizAntwortenVervolgung.filter(f => f.id === this.activeFrage.id)[0].selectedOptionId = op.id
 
     if(op.istRichtig){
       this.activeFrage.richtig = true
-      this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].richtig = true
+      this.quizAntwortenVervolgung.filter(f => f.id === this.activeFrage.id)[0].richtig = true
     } else {
       this.activeFrage.richtig = false
-      this.quizBeantwortung.filter(f => f.id === this.activeFrage.id)[0].richtig = false
+      this.quizAntwortenVervolgung.filter(f => f.id === this.activeFrage.id)[0].richtig = false
     }
 
-    this.quizBeantwortung.forEach( q => {
+    this.quizAntwortenVervolgung.forEach( q => {
       if(q.beantwortet){this.anzahlBeantwortet++}
     })
-    console.log('Soll Quiz beenden: ', !this.quizBeenden, !(this.anzahlBeantwortet !== this.quizBeantwortung.length))
+    console.log('Soll Quiz beenden: ', !this.quizBeenden, !(this.anzahlBeantwortet !== this.quizAntwortenVervolgung.length))
   }
 
   onFrageNummerClick(frageIndex: number){
     this.toggleValue = null
-    this.activeFrage = this.quizBeantwortung[frageIndex]
+    this.activeFrage = this.quizAntwortenVervolgung[frageIndex]
     this.activeFrageIndex = frageIndex
   }
 
   onWeiterClick(){
     this.toggleValue = null
     this.activeFrageIndex++
-    this.activeFrage = this.quizBeantwortung[this.activeFrageIndex]
-    
-    
+    this.activeFrage = this.quizAntwortenVervolgung[this.activeFrageIndex]
   }
 
   onQuizEndeClick(){
     this.quizBeenden = true
-    this.anzahlRichtig = this.quizBeantwortung.filter(f => f.richtig).length
-    this.anzahlFalsch = this.quizBeantwortung.length - this.anzahlRichtig
+    this.anzahlRichtig = this.quizAntwortenVervolgung.filter(f => f.richtig).length
+    this.anzahlFalsch = this.quizAntwortenVervolgung.length - this.anzahlRichtig
   }
 
   // Quiz Ergebnis
@@ -133,12 +129,12 @@ export class Quiz implements OnInit{
       this.anzahlBeantwortet = 0
       this.anzahlRichtig = 0
       this.anzahlFalsch = 0
-      this.quizBeantwortung = []
+      this.quizAntwortenVervolgung = []
 
       //Quiz Hochladen
       this.quiz = await lastValueFrom(this.quizObservable)     
       this.quiz.frage.forEach( f => {
-        this.quizBeantwortung.push(
+        this.quizAntwortenVervolgung.push(
           {
             id: f.id,
             frageText: f.frageText,
@@ -150,18 +146,15 @@ export class Quiz implements OnInit{
         )
       })
       this.activeFrageIndex = 0
-      this.activeFrage = this.quizBeantwortung[this.activeFrageIndex]
+      this.activeFrage = this.quizAntwortenVervolgung[this.activeFrageIndex]
 
   }
 
   onQuizExitClick(){
     const url = this.route.snapshot.pathFromRoot[1].url[0].path
-    
     console.log('Active Ocean: ', url)
-
     this.router.navigate([url])
   }
-  
 
 
 }
