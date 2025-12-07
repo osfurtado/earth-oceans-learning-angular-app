@@ -9,14 +9,11 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 
 
-
-
 interface QuizAntwortenVervolgung extends Frage {
   beantwortet: boolean;
   richtig: boolean | null;
   selectedOptionId: number | null;
 }
-
 
 @Component({
   selector: 'app-quiz',
@@ -30,13 +27,12 @@ export class Quiz implements OnInit{
   router = inject(Router)
   meerService = inject(MeerService)
 
-  //Ozean Tier Quiz Daten
+
   activeOzeanId: number = 0
   quiz!: QuizDto
   quizObservable!: Observable<QuizDto>
   
 
-  // Quiz steuern
   quizAntwortenVervolgung: QuizAntwortenVervolgung[] = []
   activeFrage!: QuizAntwortenVervolgung
   toggleValue: any
@@ -44,7 +40,7 @@ export class Quiz implements OnInit{
   anzahlBeantwortet = 0
   quizBeenden = false
 
-  //Quiz Ergegnis
+
   anzahlRichtig: number = 0
   anzahlFalsch: number = 0
 
@@ -57,7 +53,7 @@ export class Quiz implements OnInit{
       
     })
 
-    //Quiz Laden
+
     this.quizObservable = this.meerService.getQuizVonMeer(this.activeOzeanId);
     this.quiz  = await lastValueFrom(this.quizObservable)
 
@@ -110,10 +106,9 @@ export class Quiz implements OnInit{
     this.anzahlFalsch = this.quizAntwortenVervolgung.length - this.anzahlRichtig
   }
 
-  // Quiz Ergebnis
+
   async onWiederholungClick(){
 
-      // Neustarten
       this.toggleValue = null
       this.quizBeenden = false
       this.anzahlBeantwortet = 0
@@ -121,7 +116,7 @@ export class Quiz implements OnInit{
       this.anzahlFalsch = 0
       this.quizAntwortenVervolgung = []
 
-      //Quiz Hochladen
+
       this.quiz = await lastValueFrom(this.quizObservable)     
       this.quiz.frage.forEach( f => {
         this.quizAntwortenVervolgung.push(
