@@ -6,6 +6,7 @@ export interface QuizDto {
 export interface Frage {
     id: number;
     frageText: string;
+    frageBildUrl: string;
     optionen: Option[]
 
 }

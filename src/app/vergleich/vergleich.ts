@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatListOption } from '@angular/material/list';
+import { environment } from '../../environments/environment.development';
 
 @Component({
   selector: 'app-vergleich',
@@ -48,7 +49,7 @@ export class Vergleich implements OnInit {
       
     })
 
-    //Meer
+
     this.meerObservable = this.meerService.getAlleMeere();
     this.meere = await lastValueFrom(this.meerObservable)
     this.tierObservable = this.meerService.getAlleTiere()
@@ -57,20 +58,19 @@ export class Vergleich implements OnInit {
     this.selectedMeer2 = this.meere[0]
     console.log('Selected Meer: ', this.selectedMeer1.name)
  
-    //Tier
+
     if(this.source == 'tier'){
-      this.selectedTier1 = this.tiere.filter( t => t.id == this.activeTierId)[0]
+      this.selectedTier1 = this.tiere.filter( t => t.id == this.activeTierId && t.ozean == this.selectedMeer1.name)[0]
       this.selectedTier2 = this.tiere[0]
-      console.log('Nome do animal: ',this.selectedTier1.name)
     }
 
   }
 
   onZurueck(){
     if(this.source == 'ocean'){
-      this.router.navigate([this.selectedMeer1])
+      this.router.navigate([environment.meereMenu.filter(o => o.id == this.activeOzeanId)[0].path])
     } else{
-      this.router.navigate([this.selectedMeer1, 'tiere'])
+      this.router.navigate([environment.meereMenu.filter(o => o.id == this.activeOzeanId)[0].path, 'tiere'])
     }
   }
 

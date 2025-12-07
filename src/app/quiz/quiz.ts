@@ -69,6 +69,7 @@ export class Quiz implements OnInit{
         {
           id: f.id,
           frageText: f.frageText,
+          frageBildUrl: f.frageBildUrl,
           optionen: f.optionen,
           beantwortet: false,
           richtig: null,
@@ -81,31 +82,20 @@ export class Quiz implements OnInit{
 
   onOptionClick(op: Option){
     if(this.activeFrage.beantwortet){return}
+    
+    this.quizAntwortenVervolgung[this.activeFrageIndex].beantwortet = true
+    this.quizAntwortenVervolgung[this.activeFrageIndex].selectedOptionId = op.id
+    if(op.istRichtig){this.quizAntwortenVervolgung[this.activeFrageIndex].richtig = true} 
+    else{this.quizAntwortenVervolgung[this.activeFrageIndex].richtig = false}
 
-    this.anzahlBeantwortet = 0
-    this.activeFrage.beantwortet = true
-    this.activeFrage.selectedOptionId = op.id
-    this.quizAntwortenVervolgung.filter(f => f.id === this.activeFrage.id)[0].beantwortet = true
-    this.quizAntwortenVervolgung.filter(f => f.id === this.activeFrage.id)[0].selectedOptionId = op.id
-
-    if(op.istRichtig){
-      this.activeFrage.richtig = true
-      this.quizAntwortenVervolgung.filter(f => f.id === this.activeFrage.id)[0].richtig = true
-    } else {
-      this.activeFrage.richtig = false
-      this.quizAntwortenVervolgung.filter(f => f.id === this.activeFrage.id)[0].richtig = false
-    }
-
-    this.quizAntwortenVervolgung.forEach( q => {
-      if(q.beantwortet){this.anzahlBeantwortet++}
-    })
-    console.log('Soll Quiz beenden: ', !this.quizBeenden, !(this.anzahlBeantwortet !== this.quizAntwortenVervolgung.length))
+    this.activeFrage = this.quizAntwortenVervolgung[this.activeFrageIndex]
+    this.anzahlBeantwortet++
   }
 
   onFrageNummerClick(frageIndex: number){
     this.toggleValue = null
-    this.activeFrage = this.quizAntwortenVervolgung[frageIndex]
     this.activeFrageIndex = frageIndex
+    this.activeFrage = this.quizAntwortenVervolgung[this.activeFrageIndex]
   }
 
   onWeiterClick(){
@@ -138,6 +128,7 @@ export class Quiz implements OnInit{
           {
             id: f.id,
             frageText: f.frageText,
+            frageBildUrl: f.frageBildUrl,
             optionen: f.optionen,
             beantwortet: false,
             richtig: null,

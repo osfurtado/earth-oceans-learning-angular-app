@@ -2,20 +2,20 @@
     padding: 95px 150px 0 150px;
 }
 
-.zurueck{
+.zurueck {
     cursor: pointer;
-    border: 2px solid black; 
-    color: var(--mat-sys-on-primary); 
-    background-color: var(--mat-sys-primary); 
-    padding: 8px; 
-    font-weight: bold; 
-    font-size: 15px; 
-    border-radius: 8px; 
+    border: 2px solid black;
+    color: var(--mat-sys-on-primary);
+    background-color: var(--mat-sys-primary);
+    padding: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 8px;
     width: 100px;
 }
 
-.zurueck:hover{
-    box-shadow: 2px 3px black; 
+.zurueck:hover {
+    box-shadow: 2px 3px black;
 }
 
 .vergleich-content-container {
@@ -102,6 +102,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: var(--mat-sys-surface-container);
     border-radius: 10px;
 }

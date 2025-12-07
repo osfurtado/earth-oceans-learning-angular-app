@@ -1,7 +1,7 @@
 <div class="tier-container">
     <div style="margin: 20px 150px; display: flex; align-items: center; justify-content: space-between;">
-        <button class="buttons"  (click)="onBack()">Zurück</button>
-        <button class="buttons"  (click)="onVergleich()">Vergleichen</button>
+        <button class="buttons" (click)="onBack()">Zurück</button>
+        <button class="buttons" (click)="onVergleich()">Vergleichen</button>
     </div>
     @if( tiereObservable | async){
     <div class="carousel-wrapper">
@@ -13,9 +13,9 @@
             @for(item of tiere; track item.id){
             <div class="story-item" (click)="selectTier(item.id)" [class.active]="selectedTierId === item.id">
                 <div class="image-wrapper">
-                    <img class="image" [src]="item.bildUrl" [alt]="item.name">
+                    @if(item.bildUrl){<img class="image" [src]="item.bildUrl" [alt]="item.name">}
                 </div>
-               <!-- <span class="caption">{{item.name}}</span> -->
+                <!-- <span class="caption">{{item.name}}</span> -->
             </div>
             }
 
@@ -25,38 +25,46 @@
             <mat-icon>chevron_right</mat-icon>
         </button>
     </div>
-    <div
-        style="margin: 30px 150px; border: 2px solid black; padding: 30px; ">
-        <div>
-            <h2>{{this.selectedTier.name}}</h2>
-            <p style="font-size: 16px;">{{this.selectedTier.beschreibung}}</p>
-        </div>
-        <div style="display: flex; flex-direction: row; gap: 45px; margin-top: 50px;">
-            <div style="height: 400px; width: 400px; background-color: var(--mat-sys-surface-container); border-radius: 15px; border: 2px solid black; box-shadow: 2px 4px black;">
-                <img [src]="this.selectedTier.bildUrl" [alt]="this.selectedTier.name" style="height: 100%; width: 100%; object-fit: contain; ">
-            </div>
-            <div style="display: flex; flex-direction: row; flex-wrap: wrap; flex-grow: 1; gap: 12px;">
-                <div style="display: flex; flex-direction: column; gap: 15px; flex-grow: 1; border: 2px solid black; box-shadow: 2px 4px; border-radius: 12px; padding: 12px; background-color: var(--mat-sys-surface-container);">
-                    <div style="display: flex; align-items: center; gap: 5px;">
-                        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
-                        <span style="font-weight: bold; font-size: 18px; ">Tief</span> <br>
-                    </div>
-                    <span style="margin-left: 30px; font-size: 18px;">{{this.selectedTier.tief}}</span>
-                    <br>
-                    <div style="display: flex; align-items: center; gap: 5px;">
-                        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
-                        <span style="font-weight: bold; font-size: 18px;">Gewicht</span> <br>
-                    </div>
-                    <span style="margin-left: 30px; font-size: 18px;">{{this.selectedTier.gewicht}}</span>
-                    <br>
-                    <div style="display: flex; align-items: center; gap: 5px;">
-                        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_double_arrow_down</mat-icon>
-                        <span style="font-weight: bold; font-size: 18px;">Länge</span> <br>
-                    </div>
-                    <span style="margin-left: 30px; font-size: 18px;">{{this.selectedTier.laenge}}</span>
-                    <br>
-                </div>
+    <div style="margin: 10px 150px; border: 2px solid black; padding: 30px; ">
 
+        <div style="display: flex; flex-direction: row; gap: 45px; margin-top: 10px;">
+            <div
+                style="height: 400px; min-width: 35%; max-width: 36%;background-color: var(--mat-sys-surface-container); border-radius: 15px; border: 2px solid black; box-shadow: 2px 4px black;">
+                <img [src]="this.selectedTier.bildUrl" [alt]="this.selectedTier.name"
+                    style="height: 100%; width: 100%; object-fit: contain; ">
+            </div>
+            <div style="display: flex; flex-direction: column; flex-wrap: wrap; gap: 12px; flex-grow: 1;">
+                <div>
+                    <h2>{{this.selectedTier.name}}</h2>
+                    <p style="font-size: 16px;">{{this.selectedTier.beschreibung}}</p>
+                </div>
+                <div
+                    style="display: flex; flex-direction: row; gap: 15px; justify-content: space-between;padding: 15px; border-radius: 15px;background-color: var(--mat-sys-surface-container); ">
+                    <div
+                        style="display: flex; flex-direction: column; gap: 5px; border-left: 2px solid gray; padding-left: 10px;">
+                        <div style="display: flex; gap: 5px;">
+                            <mat-icon aria-hidden="false">keyboard_double_arrow_down</mat-icon>
+                            <span style="font-weight: bold; font-size: 16px; ">Tief</span> <br>
+                        </div>
+                        <span style="font-size: 16px;">{{this.selectedTier.tief}}</span>
+                    </div>
+                    <div
+                        style="display: flex; flex-direction: column; gap: 5px; border-left: 2px solid gray; padding-left: 10px;">
+                        <div style="display: flex; gap: 5px;">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">scale</mat-icon>
+                            <span style="font-weight: bold; font-size: 16px;">Gewicht</span>
+                        </div>
+                        <span style="margin-left: 10px;font-size: 16px;">{{this.selectedTier.gewicht}}</span>
+                    </div>
+                    <div
+                        style="display: flex; flex-direction: column; gap: 5px;border-left: 2px solid black; padding-left: 10px;">
+                        <div style="display: flex; gap: 5px;">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">open_in_full</mat-icon>
+                            <span style="font-weight: bold; font-size: 16px;">Länge</span>
+                        </div>
+                        <span style="margin-left: 10px;font-size: 16px;">{{this.selectedTier.laenge}}</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

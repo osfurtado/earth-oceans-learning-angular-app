@@ -1,7 +1,6 @@
 <div class="quiz-container">
     @if(quizObservable | async){
     @if (!this.quizBeenden) {
-    <h2>Quiz </h2>
     <mat-button-toggle-group class="frage-nummer-buttons" hideSingleSelectionIndicator="true">
         @for(f of this.quizAntwortenVervolgung; track f.id; let index = $index){
         <mat-button-toggle class="frage-nummer" [class.richtigBeantwortet]="f.richtig"
@@ -14,7 +13,8 @@
 
     <div class="frage-container">
         <div class="frage-bild">
-            <span>Bild</span>
+            <img [src]="this.activeFrage.frageBildUrl" [alt]="this.activeFrage.frageBildUrl"
+                style="height: 100%; width: 100%; object-fit: contain;">
         </div>
         <div class="frage-text">
             <h4>{{this.activeFrage.frageText}}</h4>
@@ -66,7 +66,7 @@
         </div>
         <div class="ergebnis">
             <div class="ergebnis-bild">
-                <span>Bild</span>
+                <img src="quiz/quiz-5.png" alt="quiz" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
             <div class="ergebnis-noten">
                 <div class="anzahl-richtig">

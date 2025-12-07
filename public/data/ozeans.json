@@ -254,7 +254,7 @@
           "raubtiere": [
             {
               "name": "Orcas (auf Kälber)",
-              "bildUrl": "assets/animals/orca.jpg"
+              "bildUrl": ""
             }
           ]
         },
@@ -386,6 +386,7 @@
             {
               "id": 1,
               "frageText": "Wie heißt der tiefste Punkt im Pazifik?",
+              "frageBildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -407,6 +408,7 @@
             {
               "id": 2,
               "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "frageBildUrl": "meere/ozeane.png",
               "optionen": [
                 {
                   "id": 1,
@@ -433,6 +435,7 @@
             {
               "id": 3,
               "frageText": "Welcher Ozean ist der größte der Welt?",
+              "frageBildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -459,6 +462,7 @@
             {
               "id": 4,
               "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,
@@ -485,6 +489,7 @@
             {
               "id": 5,
               "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,
@@ -702,22 +707,22 @@
           "beschreibung": "Ein großer Raubfisch mit einem perfekten Geruchssinn.",
           "laenge": "4 bis 6 Meter",
           "gewicht": "Bis zu 2 Tonnen",
-          "bildUrl": "assets/animals/great_white.jpg",
+          "bildUrl": "",
           "tief": "0-1200 m",
           "ernaerung": [
             {
               "name": "Robben",
-              "bildUrl": "assets/food/seal.jpg"
+              "bildUrl": ""
             },
             {
               "name": "Thunfisch",
-              "bildUrl": "assets/food/tuna.jpg"
+              "bildUrl": ""
             }
           ],
           "raubtiere": [
             {
               "name": "Orcas",
-              "bildUrl": "assets/animals/orca.jpg"
+              "bildUrl": ""
             }
           ]
         }
@@ -729,6 +734,7 @@
             {
               "id": 1,
               "frageText": "Welcher Ozean liegt zwischen Amerika und Europa?",
+              "frageBildUrl": "meere/atlantik/eigenschaften/atlantik-2.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -750,6 +756,7 @@
             {
               "id": 2,
               "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "frageBildUrl": "meere/ozeane.png",
               "optionen": [
                 {
                   "id": 1,
@@ -776,6 +783,7 @@
             {
               "id": 3,
               "frageText": "Welcher Ozean ist der größte der Welt?",
+              "frageBildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -802,6 +810,7 @@
             {
               "id": 4,
               "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,
@@ -828,6 +837,7 @@
             {
               "id": 5,
               "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,
@@ -961,18 +971,18 @@
           "beschreibung": "Sanfte Riesen, die durch das Wasser 'fliegen'.",
           "laenge": "7 Meter Spannweite",
           "gewicht": "Bis zu 1.350 kg",
-          "bildUrl": "assets/animals/manta.jpg",
+          "bildUrl": "",
           "tief": "0-1000 m",
           "ernaerung": [
             {
               "name": "Plankton",
-              "bildUrl": "assets/food/plankton.jpg"
+              "bildUrl": ""
             }
           ],
           "raubtiere": [
             {
               "name": "Große Haie",
-              "bildUrl": "assets/animals/shark_generic.jpg"
+              "bildUrl": ""
             }
           ]
         }
@@ -984,6 +994,7 @@
             {
               "id": 1,
               "frageText": "Der Indische Ozean ist der ______ größte Ozean.",
+              "frageBildUrl": "meere/indik/eigenschaften/indik-2.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -1005,6 +1016,7 @@
             {
               "id": 2,
               "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "frageBildUrl": "meere/ozeane.png",
               "optionen": [
                 {
                   "id": 1,
@@ -1031,6 +1043,7 @@
             {
               "id": 3,
               "frageText": "Welcher Ozean ist der größte der Welt?",
+              "frageBildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -1057,6 +1070,7 @@
             {
               "id": 4,
               "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,
@@ -1083,6 +1097,7 @@
             {
               "id": 5,
               "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,
@@ -1387,6 +1402,7 @@
             {
               "id": 1,
               "frageText": "Was umgibt der Südliche Ozean?",
+              "frageBildUrl": "meere/antarktik/eigenschaften/antarktik-2.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -1408,6 +1424,7 @@
             {
               "id": 2,
               "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "frageBildUrl": "meere/ozeane.png",
               "optionen": [
                 {
                   "id": 1,
@@ -1434,6 +1451,7 @@
             {
               "id": 3,
               "frageText": "Welcher Ozean ist der größte der Welt?",
+              "frageBildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -1460,6 +1478,7 @@
             {
               "id": 4,
               "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,
@@ -1486,6 +1505,7 @@
             {
               "id": 5,
               "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,
@@ -1790,22 +1810,22 @@
           "beschreibung": "Robbenart mit großen Stoßzähnen.",
           "laenge": "3,5 Meter",
           "gewicht": "Bis zu 1.200 kg",
-          "bildUrl": "assets/animals/walrus.jpg",
+          "bildUrl": "",
           "tief": "10-80 m",
           "ernaerung": [
             {
               "name": "Muscheln",
-              "bildUrl": "assets/food/clams.jpg"
+              "bildUrl": ""
             }
           ],
           "raubtiere": [
             {
               "name": "Eisbär",
-              "bildUrl": "assets/animals/polar_bear.jpg"
+              "bildUrl": ""
             },
             {
               "name": "Orca",
-              "bildUrl": "assets/animals/orca.jpg"
+              "bildUrl": ""
             }
           ]
         }
@@ -1817,6 +1837,7 @@
             {
               "id": 1,
               "frageText": "Welcher Ozean ist der kleinste?",
+              "frageBildUrl": "meere/arktik/eigenschaften/arktik-2.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -1838,6 +1859,7 @@
             {
               "id": 2,
               "frageText": "Wie viele Ozeane gibt es weltweit?",
+              "frageBildUrl": "meere/ozeane.png",
               "optionen": [
                 {
                   "id": 1,
@@ -1864,6 +1886,7 @@
             {
               "id": 3,
               "frageText": "Welcher Ozean ist der größte der Welt?",
+              "frageBildUrl": "meere/pazifik/eigenschaften/pacific-3.jpg",
               "optionen": [
                 {
                   "id": 1,
@@ -1890,6 +1913,7 @@
             {
               "id": 4,
               "frageText": "Welcher Ozean ist bekannt für den höchsten Salzgehalt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,
@@ -1916,6 +1940,7 @@
             {
               "id": 5,
               "frageText": "Welcher Ozean ist der jüngste und wurde offiziell erst 2021 anerkannt?",
+              "frageBildUrl": "",
               "optionen": [
                 {
                   "id": 1,

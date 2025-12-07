@@ -58,6 +58,7 @@
         padding: 6px;
         border: 6px solid transparent;
         transition: all 0.3s ease;
+        background-color: var(--mar-sys-primary) !important;
 
         .image {
             width: 100%;
