@@ -142,5 +142,19 @@ export class Quiz implements OnInit{
     this.router.navigate([url])
   }
 
+  ergebnissNachricht():string{
+    const anteil = (this.anzahlRichtig/this.quizAntwortenVervolgung.length)*100
+    switch(true){
+      case anteil>=80:
+        return "Super gemacht!"
+      case anteil>=50:
+        return "du weißt schon sehr viel!"
+      case anteil>30:
+        return "nicht jeder kann alles wissen!"
+      default:
+        return "erzähl anderen von deinem Wissen!"
+    }
+  }
+
 
 }

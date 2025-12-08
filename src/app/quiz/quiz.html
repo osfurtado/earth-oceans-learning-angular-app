@@ -11,47 +11,51 @@
         }
     </mat-button-toggle-group>
 
-    <div class="frage-container">
-        <div class="frage-bild">
-            <img [src]="this.activeFrage.frageBildUrl" [alt]="this.activeFrage.frageBildUrl"
-                style="height: 100%; width: 100%; object-fit: contain;">
-        </div>
-        <div class="frage-text">
-            <h4>{{this.activeFrage.frageText}}</h4>
-        </div>
-        <div class="frage-optionen">
-            <mat-button-toggle-group class="option-grid" [disabled]="this.activeFrage.beantwortet"
-                hideSingleSelectionIndicator="true" [(value)]="this.toggleValue">
-                @for (option of this.activeFrage.optionen; track option.id) {
-                <mat-button-toggle class="option" [value]="option.id" (click)="onOptionClick(option)"
-                    [class.istRichtig]="this.activeFrage.beantwortet && option.istRichtig"
-                    [class.istFalsch]="this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id">
-                    <div class="option-content">
-                        <span>{{option.optionText}}</span>
-                        @if (this.activeFrage.beantwortet && option.istRichtig) {
-                        <mat-icon>check_circle</mat-icon>
-                        }
-                        @if (this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId ===
-                        option.id) {
-                        <mat-icon>cancel</mat-icon>
-                        }
-                    </div>
+    <div style="display: flex; width: 100%; justify-content: center;">
+        <div class="frage-container">
+            <div class="frage-bild">
+                <img [src]="this.activeFrage.frageBildUrl" [alt]="this.activeFrage.frageBildUrl"
+                    style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div style="padding: 0 25px 0 25px;">
+                <h4>{{this.activeFrage.frageText}}</h4>
+            </div>
+            <div class="frage-optionen">
+                <mat-button-toggle-group class="option-grid" [disabled]="this.activeFrage.beantwortet"
+                    hideSingleSelectionIndicator="true" [(value)]="this.toggleValue">
+                    @for (option of this.activeFrage.optionen; track option.id) {
+                    <mat-button-toggle class="option" [value]="option.id" (click)="onOptionClick(option)"
+                        [class.istRichtig]="this.activeFrage.beantwortet && option.istRichtig"
+                        [class.istFalsch]="this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId === option.id">
+                        <div class="option-content">
+                            <span>{{option.optionText}}</span>
+                            @if (this.activeFrage.beantwortet && option.istRichtig) {
+                            <mat-icon>check_circle</mat-icon>
+                            }
+                            @if (this.activeFrage.beantwortet && !option.istRichtig && this.activeFrage.selectedOptionId
+                            ===
+                            option.id) {
+                            <mat-icon>cancel</mat-icon>
+                            }
+                        </div>
 
-                </mat-button-toggle>
-                }
-            </mat-button-toggle-group>
+                    </mat-button-toggle>
+                    }
+                </mat-button-toggle-group>
+            </div>
         </div>
     </div>
+
 
     <div class="next">
         @if(this.activeFrageIndex === this.quizAntwortenVervolgung.length-1){
         <button [disabled]="this.anzahlBeantwortet !== this.quizAntwortenVervolgung.length"
             [class.disabled]="this.anzahlBeantwortet !== this.quizAntwortenVervolgung.length"
-            (click)="onQuizEndeClick()" class="next-end">
+            (click)="onQuizEndeClick()" class="next-end-wieder-exit">
             Beenden
         </button>
         }@else {
-        <button class="next-end" (click)="onWeiterClick()">
+        <button class="next-end-wieder-exit" (click)="onWeiterClick()">
             Weiter
         </button>
         }
@@ -69,20 +73,20 @@
                 <img src="quiz/quiz-5.png" alt="quiz" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
             <div class="ergebnis-noten">
-                <div class="anzahl-richtig">
+                <div class="anzahl-richtig-falsch">
                     <span>Richtig: {{this.anzahlRichtig}}</span>
                 </div>
-                <div class="anzahl-falsch">
+                <div class="anzahl-richtig-falsch">
                     <span>Falsch: {{this.anzahlFalsch}}</span>
                 </div>
             </div>
         </div>
         <div class="ergebnis-nachricht">
-            <span>Ergebnis Nachricht</span>
+            <span>{{this.ergebnissNachricht()}}</span>
         </div>
         <div class="quiz-wieder-oder-exit">
-            <button mat-flat-button (click)="onWiederholungClick()">Wiederholen</button>
-            <button mat-flat-button (click)="onQuizExitClick()">Exit Quiz</button>
+            <button class="next-end-wieder-exit" (click)="onWiederholungClick()">Wiederholen</button>
+            <button class="next-end-wieder-exit" (click)="onQuizExitClick()">Exit Quiz</button>
         </div>
     </div>
     }
