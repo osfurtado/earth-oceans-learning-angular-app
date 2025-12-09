@@ -17,7 +17,7 @@ interface QuizAntwortenVervolgung extends Frage {
 
 @Component({
   selector: 'app-quiz',
-  imports: [AsyncPipe, MatAnchor, MatButtonToggleModule, MatIconModule],
+  imports: [AsyncPipe, MatButtonToggleModule, MatIconModule],
   templateUrl: './quiz.html',
   styleUrl: './quiz.css',
 })

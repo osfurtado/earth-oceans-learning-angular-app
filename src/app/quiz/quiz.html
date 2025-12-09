@@ -6,7 +6,7 @@
         <mat-button-toggle class="frage-nummer" [class.richtigBeantwortet]="f.richtig"
             [class.falschBeantwortet]="f.beantwortet && !f.richtig" (click)="onFrageNummerClick(index)"
             [class.mat-button-toggle-checked]="this.activeFrageIndex == index">
-            {{f.id}}
+            {{index+1}}
         </mat-button-toggle>
         }
     </mat-button-toggle-group>
