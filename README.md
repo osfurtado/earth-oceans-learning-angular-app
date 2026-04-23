@@ -43,7 +43,7 @@ npm install -g @angular/cli
 
 ### Repository klonen:
 ```bash
-git clone [https://github.com/osfurtado/earth-oceans-learning-angular-app.git](https://github.com/osfurtado/earth-oceans-learning-angular-app.git)
+git clone https://github.com/osfurtado/earth-oceans-learning-angular-app.git
 cd earth-oceans-learning-angular-app
 ```
 
