@@ -1,6 +1,10 @@
 # Earth Oceans Learning App
 
-### 🖼️ Project Screenshots
+
+Eine lehrreiche und interaktive Webanwendung, die mit **Angular** entwickelt wurde. Ihr Ziel ist es, Wissen über die Ozeane unserer Erde und deren Meereslebewesen zu vermitteln und zum Entdecken einzuladen. Die App umfasst verschiedene Themenbereiche sowie ein interaktives Quiz, um das Gelernte zu testen.
+
+
+### App Screenshots
 
 <table align="center">
   <tr>
@@ -16,61 +20,46 @@
 </table>
 
 
+### Verwendete Technologien
+* **Framework:** [Angular](https://github.com/angular/angular-cli) (Version 20.3.7)
+* **Basissprachen:** HTML, TypeScript, CSS und SCSS
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+### Struktur und Funktionen
+Die Anwendung ist in folgende Hauptbereiche unterteilt:
+- **Startseite:** Einführung in die Anwendung und Übersicht.
+- **Meerseite:** Detaillierte Informationen über die Ozeane unseres Planeten.
+- **Tiereseite:** Katalog und spannende Fakten über verschiedene Meeresbewohner.
+- **Vergleichseite:** Funktion zum visuellen und analytischen Vergleichen verschiedener mariner Elemente.
+- **Quizseite:** Ein interaktives Spiel, um das in den anderen Bereichen erworbene Wissen auf die Probe zu stellen.
 
-## Development server
+---
+## Schritt-für-Schritt-Anleitung
 
-To start a local development server, run:
+### Voraussetzungen
+Stelle sicher, dass [Node.js](https://nodejs.org/) sowie die Angular CLI installiert sind. Falls die Angular CLI noch nicht installiert ist, kannst du sie mit folgendem Befehl global hinzufügen:
+```bash
+npm install -g @angular/cli
+```
 
+### Repository klonen:
+```bash
+git clone [https://github.com/osfurtado/earth-oceans-learning-angular-app.git](https://github.com/osfurtado/earth-oceans-learning-angular-app.git)
+cd earth-oceans-learning-angular-app
+```
+
+### Projektabhängigkeiten installieren:
+```bash
+npm install
+```
+
+### Entwicklungsserver starten:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### App aufrufen:
+Öffne deinen Webbrowser und rufe http://localhost:4200/ auf. Die Anwendung wird automatisch neu geladen, sobald du Änderungen an den Quelldateien vornimmst.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Author
+Entwickelt von [Osvaldo Furtado](https://github.com/osfurtado).
